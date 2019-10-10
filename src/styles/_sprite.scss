@@ -1,8 +1,8 @@
 .icon {
 	display: inline-block;
+	vertical-align: middle;
 	width: 1em;
 	height: 1em;
-	fill: currentColor;
 }
 
 .icon-arrow-left {
@@ -22,8 +22,8 @@
 	width:(43/22)*1em;
 }
 .icon-down-menu {
-	font-size:(3/10)*1rem;
-	width:(6/3)*1em;
+	font-size:(8/10)*1rem;
+	width:(8/8)*1em;
 }
 .icon-email {
 	font-size:(13/10)*1rem;
@@ -33,15 +33,23 @@
 	font-size:(20/10)*1rem;
 	width:(16/20)*1em;
 }
+.icon-humburger {
+	font-size:(20/10)*1rem;
+	width:(23/20)*1em;
+}
+.icon-menu {
+	font-size:(32/10)*1rem;
+	width:(32/32)*1em;
+}
 .icon-phone {
 	font-size:(13/10)*1rem;
 	width:(13/13)*1em;
 }
 .icon-search {
-	font-size:(21/10)*1rem;
-	width:(21/21)*1em;
+	font-size:(32/10)*1rem;
+	width:(32/32)*1em;
 }
 .icon-user {
-	font-size:(20/10)*1rem;
-	width:(20/20)*1em;
+	font-size:(32/10)*1rem;
+	width:(32/32)*1em;
 }

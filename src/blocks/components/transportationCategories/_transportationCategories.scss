@@ -1,0 +1,40 @@
+.services {
+	&-item {
+		color: white;
+		height: 100%;
+		min-height: 410px;
+		display: inline-flex;
+		&__wrapper {
+			padding: 60px;
+			position: relative;
+			&:before {
+				position: absolute;
+				right: 0;
+				top: 0;
+				display: block;
+				content: '';
+				opacity: 0.6;
+				height: 100%;
+				width: 100%;
+				background: $blue;
+			}
+		}
+		&__title {
+			position: relative;
+			z-index: 1;
+		}
+		&__image {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			z-index: -1;
+			left: 0;
+			top: 0;
+			img {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}

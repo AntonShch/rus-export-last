@@ -5,9 +5,9 @@ header.header
         .header__menu
             nav
                 ul
-                    li
+                    li.link
                         a(href="") О компании
-                    li.has-dropdown.dropdown-trigger
+                    li.has-dropdown.link.dropdown-trigger
                         a(href="") 
                             span Экспорт
                             +icon('down-menu','')
@@ -36,7 +36,7 @@ header.header
                                     a(href="") Переработка вне таможенной территории
                                 li
                                     a(href="") Таможенный транзит
-                    li.has-dropdown.dropdown-trigger
+                    li.has-dropdown.link.dropdown-trigger
                         a(href="") 
                             span Импорт
                             +icon('down-menu','')
@@ -59,7 +59,7 @@ header.header
                                     a(href="") Продвижение российских товаров на зарубежных рынках
                                 li
                                     a(href="") РеИмпорт
-                    li.has-dropdown.dropdown-trigger
+                    li.has-dropdown.link.dropdown-trigger
                         a(href="") 
                             span Грузоперевозки
                             +icon('down-menu','')
@@ -76,44 +76,67 @@ header.header
                                     a(href="") Переработка вне таможенной территории
                                 li
                                     a(href="") Таможенный транзит
-                    li
+                    li.link
                         a(href="") Таможенное оформление
-                    li
+                    li.link
                         a(href="") Контакты
         .header__languages
-            a(href="") RUS
-            a(href="") En
-            a(href="") 中文
+            a(href="").link RUS
+            a(href="").link En
+            a(href="").link 中文
         .header__contacts
-            .header-phone.dropdown-trigger
-                .header-phone-item.header-phone__trigger
+            .header-phone
+                .header-phone-item.header-phone__trigger.link.dropdown-trigger
                     .header-phone-item__label 
-                        span Телефон в Москве
-                         +icon('down-menu','')
+                        span Москва
+                        +icon('down-menu','')
                     a(href="").header-phone-item__number +7 (495) 795-16-80
-                .header-phone-all.dropdown-menu
-                    .header-phone-item
-                        .header-phone-item__label 
-                            span Телефон в Москве
-                        a(href="").header-phone-item__number +7 (495) 795-16-80
-                    .header-phone-item
-                        .header-phone-item__label 
-                            span Телефон в Москве
-                        a(href="").header-phone-item__number +7 (495) 795-16-80
-                    .header-phone-item
-                        .header-phone-item__label 
-                            span Телефон в Москве
-                        a(href="").header-phone-item__number +7 (495) 795-16-80
-                    .header-phone-item
-                        .header-phone-item__label 
-                            span Телефон в Москве
-                        a(href="").header-phone-item__number +7 (495) 795-16-80
-        .header__search
-            button.button.button-search
-                i.icon-search
-            form(action="./search.html").search
-                .search__container
-                    input(type="text",placeholder="Введите запрос").search__input
-                    button(type="submit").button.button--border Найти
-                    button(type="submit").button.button--action.search__button
-                        i.icon-search
+                .header-phone-all.dropdown-menu.scroll
+                    .header-phone-all__wrappe
+                        .header-phone-item
+                            .header-phone-item__label 
+                                span Телефон в Москве
+                            a(href="").header-phone-item__number +7 (495) 795-16-80
+                        .header-phone-item
+                            .header-phone-item__label 
+                                span Телефон в Москве
+                            a(href="").header-phone-item__number +7 (495) 795-16-80
+                        .header-phone-item
+                            .header-phone-item__label 
+                                span Телефон в Москве
+                            a(href="").header-phone-item__number +7 (495) 795-16-80
+                        .header-phone-item
+                            .header-phone-item__label 
+                                span Телефон в Москве
+                            a(href="").header-phone-item__number +7 (495) 795-16-80
+                        .header-phone-item
+                            .header-phone-item__label 
+                                span Телефон в Москве
+                            a(href="").header-phone-item__number +7 (495) 795-16-80
+                        .header-phone-item
+                            .header-phone-item__label 
+                                span Телефон в Москве
+                            a(href="").header-phone-item__number +7 (495) 795-16-80
+                        .header-phone-item
+                            .header-phone-item__label 
+                                span Телефон в Москве
+                            a(href="").header-phone-item__number +7 (495) 795-16-80
+                        .header-phone-item
+                            .header-phone-item__label 
+                                span Телефон в Москве
+                            a(href="").header-phone-item__number +7 (495) 795-16-80
+                        
+        .header__buttons
+            .header-search
+                button.header-search__trigger.link.dropdown-trigger
+                    +icon('search','')
+                form(action="./search.html").header-search__form.dropdown-menu
+                    .header-search__container
+                        input(type="text",placeholder="Поиск").header-search__input
+                        button(type="submit").button.header-search__submit
+                            +icon('search','')
+                            span Искать
+            button.button-user.link
+                +icon('user','')
+            button.button-menu.link
+                +icon('humburger','')

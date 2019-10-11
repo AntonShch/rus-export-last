@@ -4,8 +4,17 @@
 		height: 100%;
 		min-height: 410px;
 		display: inline-flex;
+		&:hover {
+			.services-item__image {
+				transform: scale(1.05);
+			}
+			.services-item__wrapper:before {
+				opacity: 0;
+			}
+		}
 		&__wrapper {
 			padding: 60px;
+			overflow: hidden;
 			position: relative;
 			&:before {
 				position: absolute;
@@ -13,9 +22,10 @@
 				top: 0;
 				display: block;
 				content: '';
-				opacity: 0.6;
+				opacity: 0.4;
 				height: 100%;
 				width: 100%;
+				transition: 0.3s;
 				background: $main;
 			}
 		}
@@ -24,6 +34,7 @@
 			z-index: 1;
 		}
 		&__image {
+			transition: 0.3s;
 			position: absolute;
 			height: 100%;
 			width: 100%;

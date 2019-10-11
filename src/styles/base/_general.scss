@@ -39,11 +39,12 @@ input,button,select,div {
 	overflow-y: hidden;
 }
 
-html,body {
+html {
 	height: 100%;
 }
 
 body {
+	height: auto;
 	min-width: 320px;
 	overflow-x: hidden;
 	position: relative;
@@ -51,7 +52,7 @@ body {
 	font-style: normal;
 	font-weight: normal;
 	font-size: 16px;
-	line-height: 2;
+	line-height: 1.5;
 	color: black;
 	margin: 0;
 	padding: 0;
@@ -65,7 +66,6 @@ html {
 main {
 	position: relative;
 	flex: 1 0 auto;
-	padding-top: $header;
 }
 
 header,footer {
@@ -85,17 +85,34 @@ p {
     padding: 0;
 }
 
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.logo {
+	width: 140px;
+	display: -webkit-inline-flex;
+	display: -moz-inline-flex;
+	display: -ms-inline-flex;
+	display: -o-inline-flex;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .button {
 	padding: 0;
 	margin: 0;
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 16px;
 	line-height: 1.5;
 	background: none;
 	border: 1px solid transparent;
 	transition: 0.3s;
+	font-size: 16px;
 	font-style: normal;
 	text-align: center;
 	width: auto;
@@ -103,6 +120,8 @@ p {
 	&--action {
 		color: white;
 		background: $main;
+		font-weight: bold;
+		padding: 12px 35px 14px;
 		border-color: $main;
 		&:hover {
 			background: transparent;
@@ -111,6 +130,7 @@ p {
 	}
 	&--border {
 		color: $main;
+		padding: 12px 35px 14px;
 		border-color: $main;
 		&:hover {
 			background: $main;
@@ -143,12 +163,19 @@ a {
 
 .text-20 {
 	font-size: 20px;
-	line-height: 1.5;
 	font-weight: normal;
 	font-style: normal;
 }
 
-.mini-text {
+.text-bold {
+	font-weight: bold;
+}
+
+.text-big-lh {
+	line-height: 2;
+}
+
+.text-mini {
 	font-size: 12px;
 	font-weight: normal;
 	font-style: normal;
@@ -156,13 +183,41 @@ a {
 	color: $minitext;
 }
 
-
-img {
-	display: block;
-	max-width: 100%;
-	height: auto;
+.title-offset {
+	padding-bottom: 25px;
 }
 
-section {
-	padding: 68px 0px
+.section-offset {
+	padding: 65px 0px
+}
+
+.slider-arrows {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	width: 80px;
+	flex: 0 0 auto;
+	align-items: flex-end;
+	justify-content: space-between;
+	.icon {
+		fill: $main;
+		width: 0.4em;
+		transition: 0.3s;
+	}
+	> * {
+		transition: 0.2s;
+		cursor: pointer;
+		&:hover {
+			.icon {
+				fill: $hover;
+			}
+		}
+		&[aria-disabled="true"] {
+			opacity: 0.3;
+			cursor: default;
+			pointer-events: none;
+		}
+	}
 }

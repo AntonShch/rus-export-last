@@ -1,7 +1,7 @@
 header.header
     .header__wrapper
         a(href="/").header__logo
-            img(src="./img/logo.png", alt="РусЭкспорт логотип")
+            img(src="./img/logo.png", class="logo" ,alt="РусЭкспорт логотип")
         .header__menu
             nav
                 ul
@@ -10,7 +10,7 @@ header.header
                     li.has-dropdown.link.dropdown-trigger
                         a(href="") 
                             span Экспорт
-                            +icon('down-menu','')
+                            +icon('drop-down-triangle','')
                         .dropdown-menu
                             a(href="").subtitle Экспорт из России
                             ul
@@ -39,7 +39,7 @@ header.header
                     li.has-dropdown.link.dropdown-trigger
                         a(href="") 
                             span Импорт
-                            +icon('down-menu','')
+                            +icon('drop-down-triangle','')
                         .dropdown-menu
                             a(href="").subtitle Импорт из России
                             ul
@@ -62,7 +62,7 @@ header.header
                     li.has-dropdown.link.dropdown-trigger
                         a(href="") 
                             span Грузоперевозки
-                            +icon('down-menu','')
+                            +icon('drop-down-triangle','')
                         .dropdown-menu
                             a(href="").subtitle Грузоперевозки из России
                             ul
@@ -89,7 +89,7 @@ header.header
                 .header-phone-item.header-phone__trigger.link.dropdown-trigger
                     .header-phone-item__label 
                         span Москва
-                        +icon('down-menu','')
+                        +icon('drop-down-triangle','')
                     a(href="").header-phone-item__number +7 (495) 795-16-80
                 .header-phone-all.dropdown-menu.scroll
                     .header-phone-all__wrappe
@@ -137,6 +137,6 @@ header.header
                             +icon('search','')
                             span Искать
             button.button-user.link
-                +icon('user','')
+                +icon('login','')
             button.button-menu.link
-                +icon('humburger','')
+                +icon('menu','')

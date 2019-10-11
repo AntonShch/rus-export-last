@@ -1,0 +1,31 @@
+.advantages {
+	&-item {
+		margin-top: 30px;
+		&__wrapper {
+			height: 100%;
+			width: 100%;
+			padding: 50px 44px 40px;
+			@include border(1px)
+		}
+		&__image {
+			height: 140px;
+			width: 140px;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			align-content: center;
+			margin-bottom: 12px;
+		}
+		&__label {
+			color: $main;
+		}
+		&--title {
+			.advantages-item__wrapper {
+				padding: 0;
+				border: none;
+			}
+		}
+	}
+}

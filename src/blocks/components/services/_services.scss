@@ -1,4 +1,6 @@
 .services {
+	position: relative;
+	z-index: 2;
 	&-item {
 		color: white;
 		height: 100%;

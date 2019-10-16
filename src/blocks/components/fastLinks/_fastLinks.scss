@@ -1,0 +1,108 @@
+.fast-links {
+	position: fixed;
+	right: 0;
+	z-index: 10;
+	top: 40%;
+	transition: 0.3s;
+	&--mini {
+		transform: translateX(130px);
+		&:hover {
+			transform: translateX(0);
+		}
+	}
+	&__wrapper {
+		display: flex;
+		align-items: flex-end;
+		flex-direction: column;
+	}
+	&-item {
+		width: 155px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		background: white;
+		transition: 0.3s;
+		box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+		&:hover {
+			width: 165px;
+		}
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+		.icon {
+			fill: inherit;
+		}
+		&__icon {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-right: 8px;
+			flex: 0 0 auto;
+			.icon {
+				width: 20px;
+				font-size: 20px;
+			}
+		}
+		&__label {
+			transition: 0.3s;
+			font-size: 12px;
+			line-height: 1.1;
+			font-weight: 900;
+			font-style: normal;
+			color: #292627;
+			letter-spacing: 0.2em;
+			text-transform: uppercase;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+		}
+		&__incoterms {
+			display: flex;
+			align-items: center;
+			color: inherit;
+			margin-top: 2px;
+			span {
+				line-height: 1;
+				color: inherit;
+				letter-spacing: normal;
+			}
+			.icon {
+				margin-left: 4px;
+				width: 35px;
+			}
+		}
+		&--invest {
+			.icon {
+				fill: $main;
+			}
+			&:hover {
+				.fast-links-item__label {
+					color: $main;
+				}
+			}
+		}
+		&--special {
+			.icon {
+				fill: $red;
+			}
+			&:hover {
+				.fast-links-item__label {
+					color: $red;
+				}
+			}
+		}
+		&--incoterms {
+			.fast-links-item__incoterms {
+				color: #7AD726;
+			}
+			.icon {
+				fill: #7AD726;
+			}
+			&:hover {
+				.fast-links-item__label {
+					color: #7AD726;
+				}
+			}
+		}
+	}
+}

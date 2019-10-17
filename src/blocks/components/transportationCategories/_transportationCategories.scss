@@ -47,7 +47,6 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
 	}
 	&__image {
 		height: 235px;
@@ -71,6 +70,29 @@
 	&__text {
 		padding-top: 20px;
 		position: relative;
+		text-align: center;
 		z-index: 1;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.transportation-categories {
+		&__insurance {
+			justify-content: flex-end;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.transportation-categories {
+		&__insurance {
+			display: none;
+		}
+	}
+	.transportation-category {
+		margin-top: 20px;
+		&__text {
+			padding-top: 0;
+		}
 	}
 }

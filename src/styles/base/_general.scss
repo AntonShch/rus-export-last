@@ -161,7 +161,7 @@ a {
 	font-style: normal;
 }
 
-.text-20 {
+.text-larger {
 	font-size: 20px;
 	font-weight: normal;
 	font-style: normal;
@@ -328,4 +328,50 @@ a {
 			}
 		}
 	}
+}
+
+
+@media screen and (max-width: 1600px) {
+	.title {
+		font-size: 30px;
+	}
+	.title-offset {
+		padding-bottom: 15px;
+	}
+	
+	.section-offset {
+		padding: 45px 0px
+	}
+}
+  
+  
+@media screen and (max-width: 1200px) {
+	.title {
+		font-size: 26px;
+	}
+	.subtitle {
+		font-size: 20px;
+	}
+	.mini-title {
+		font-size: 18px;
+	}
+	.text-larger {
+		font-size: 16px;
+	}
+	.title-offset {
+		padding-bottom: 15px;
+	}
+	
+	.section-offset {
+		padding: 45px 0px
+	}
+}
+@media screen and (max-width: 992px) {
+	body,.text-larger  {
+		font-size: 14px;
+	}
+	.section-offset {
+		padding: 25px 0px
+	}
+
 }

@@ -9,7 +9,8 @@
     z-index: 10;
 		left: 0;
 		transition: 0.3s background;
-		top: 0;
+        top: 0;
+    display: none;
     &:before {
 			position: absolute;
 			transition: 0.3s;

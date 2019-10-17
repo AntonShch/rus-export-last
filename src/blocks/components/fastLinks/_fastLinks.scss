@@ -106,3 +106,10 @@
 		}
 	}
 }
+
+@media screen and (max-width: 1200px) {
+	.fast-links {
+		transform: translateX(130px);
+		top: 30%;
+	}
+}

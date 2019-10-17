@@ -1,6 +1,5 @@
 .about-company-block {
 	&__image {
-		height: 100%;
 		width: 100%;
 		display: -webkit-flex;
 		display: -moz-flex;
@@ -28,5 +27,18 @@
 		.button {
 			margin-top: 45px;
 		}
+	}
+}
+
+ 
+  
+@media screen and (max-width: 992px) {
+	.about-company-block__text .title {
+		padding-top: 0;
+	}
+}
+@media screen and (max-width: 767px) {
+	.about-company-block__image {
+		margin-bottom: 20px;
 	}
 }

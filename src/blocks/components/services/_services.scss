@@ -3,8 +3,7 @@
 	z-index: 2;
 	&-item {
 		color: white;
-		height: 100%;
-		min-height: 410px;
+		margin-top: 30px;
 		display: inline-flex;
 		&:hover {
 			.services-item__image {
@@ -15,7 +14,9 @@
 			}
 		}
 		&__wrapper {
-			padding: 60px;
+			padding: 14% 14% 56% 14%;
+			height: 100%;
+			width: 100%;
 			overflow: hidden;
 			position: relative;
 			&:before {
@@ -49,5 +50,30 @@
 				object-fit: cover;
 			}
 		}
+	}
+}
+
+
+@media screen and (max-width: 992px) {
+	.services-item {
+		&__wrapper {
+			padding: 40px 50px 240px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 767px) {
+	.services-item {
+		&__wrapper {
+			padding: 14% 14% 56% 14%;
+		}
+	}
+}
+
+
+@media screen and (max-width: 565px) {
+	.services-item {
+		margin-top: 20px;
 	}
 }

@@ -25,7 +25,7 @@ html {
 	
 }
 
-@media (max-width: 1400px) {
+@media screen and (max-width: 1400px) {
   .container {
 		max-width: 1160px;
 	}
@@ -54,6 +54,11 @@ html {
 }
 .row--right {
 	justify-content: flex-end;
+}
+
+.no-gutters-row {
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .no-gutters {
@@ -301,7 +306,7 @@ html {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .d-xl-none {
     display: none !important;
   }
@@ -600,7 +605,7 @@ html {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .col-xl {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;

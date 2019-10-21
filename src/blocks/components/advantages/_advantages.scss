@@ -4,7 +4,7 @@
 		&__wrapper {
 			height: 100%;
 			width: 100%;
-			padding: 50px 44px 40px;
+			padding: 16% 14% 13%;
 			@include border(1px)
 		}
 		&__image {
@@ -27,5 +27,14 @@
 				border: none;
 			}
 		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.advantages-item__wrapper {
+		padding: 6% 12% 12%;
+	}
+	.advantages-item--title {
+		margin-top: 0;
 	}
 }

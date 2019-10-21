@@ -1,4 +1,5 @@
 .our-team {
+	overflow: hidden;
 	&__title {
 		display: -webkit-flex;
 		display: -moz-flex;
@@ -48,6 +49,20 @@
 		&__name {
 			padding-bottom: 22px;
 			line-height: 1.2;
+		}
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.our-team {
+		&__title {
+			align-items: center;
+			padding-bottom: 20px;
+		}
+		&-item {
+			&__image {
+				max-height: 450px;
+			}
 		}
 	}
 }

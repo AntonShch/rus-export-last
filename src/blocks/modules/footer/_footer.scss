@@ -232,3 +232,13 @@
 		}
 	}
 }
+
+@media screen and (max-width: 767px) {
+	.footer {
+		&__accordion  {
+			.icon {
+				width: 1em;
+			}
+		}
+	}
+}

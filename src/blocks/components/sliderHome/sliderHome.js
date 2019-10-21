@@ -37,6 +37,9 @@ const swiperOptions = {
   breakpoints: {
 	// when window width is >= 320px
 	320: {
+	  spaceBetween: 49
+	},
+	992: {
 	  spaceBetween: 59
 	},
 	// when window width is >= 640px

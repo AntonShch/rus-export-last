@@ -7,76 +7,83 @@ header.header
                 ul
                     li.link-nav
                         a(href="") О компании
-                    li.has-dropdown.link-nav.dropdown-trigger
+                    li.has-dropdown.link-nav.notebook-link
+                        a(href="") 
+                            span Все услуги
+                            +icon('drop-down-triangle','')
+                    li.has-dropdown.link-nav.dropdown-trigger.desktop-link
                         a(href="") 
                             span Экспорт
                             +icon('drop-down-triangle','')
-                        .dropdown-menu
-                            a(href="").subtitle Экспорт из России
-                            ul
-                                li
-                                    a(href="") Заключение контрактов и согласование условий поставки
-                                li
-                                    a(href="") Таможенное оформление и сертификация
-                                li
-                                    a(href="") Доставка товара иностранному покупателю
-                                li
-                                    a(href="") Завершение сделки
-                                li
-                                    a(href="") Документы для Экспорта
-                                li
-                                    a(href="") Поиск поставщиков
-                                li
-                                    a(href="") Продвижение российских товаров на зарубежных рынках
-                                li
-                                    a(href="") Реэкспорт
-                                li
-                                    a(href="") Временный вывоз
-                                li
-                                    a(href="") Переработка вне таможенной территории
-                                li
-                                    a(href="") Таможенный транзит
-                    li.has-dropdown.link-nav.dropdown-trigger
+                        ul.dropdown-menu
+                            li
+                                a(href="").subtitle Экспорт из России
+                                ul
+                                    li
+                                        a(href="") Заключение контрактов и согласование условий поставки
+                                    li
+                                        a(href="") Таможенное оформление и сертификация
+                                    li
+                                        a(href="") Доставка товара иностранному покупателю
+                                    li
+                                        a(href="") Завершение сделки
+                                    li
+                                        a(href="") Документы для Экспорта
+                                    li
+                                        a(href="") Поиск поставщиков
+                                    li
+                                        a(href="") Продвижение российских товаров на зарубежных рынках
+                                    li
+                                        a(href="") Реэкспорт
+                                    li
+                                        a(href="") Временный вывоз
+                                    li
+                                        a(href="") Переработка вне таможенной территории
+                                    li
+                                        a(href="") Таможенный транзит
+                    li.has-dropdown.link-nav.dropdown-trigger.desktop-link
                         a(href="") 
                             span Импорт
                             +icon('drop-down-triangle','')
-                        .dropdown-menu
-                            a(href="").subtitle Импорт из России
-                            ul
-                                li
-                                    a(href="") Заключение контрактов и согласование условий поставки
-                                li
-                                    a(href="") Таможенное оформление и сертификация
-                                li
-                                    a(href="") Доставка товара иностранному покупателю
-                                li
-                                    a(href="") Завершение сделки
-                                li
-                                    a(href="") Документы для Импора
-                                li
-                                    a(href="") Поиск поставщиков
-                                li
-                                    a(href="") Продвижение российских товаров на зарубежных рынках
-                                li
-                                    a(href="") РеИмпорт
-                    li.has-dropdown.link-nav.dropdown-trigger
+                        ul.dropdown-menu
+                            li 
+                                a(href="").subtitle Импорт из России
+                                ul
+                                    li
+                                        a(href="") Заключение контрактов и согласование условий поставки
+                                    li
+                                        a(href="") Таможенное оформление и сертификация
+                                    li
+                                        a(href="") Доставка товара иностранному покупателю
+                                    li
+                                        a(href="") Завершение сделки
+                                    li
+                                        a(href="") Документы для Импора
+                                    li
+                                        a(href="") Поиск поставщиков
+                                    li
+                                        a(href="") Продвижение российских товаров на зарубежных рынках
+                                    li
+                                        a(href="") РеИмпорт
+                    li.has-dropdown.link-nav.dropdown-trigger.desktop-link
                         a(href="") 
                             span Грузоперевозки
                             +icon('drop-down-triangle','')
-                        .dropdown-menu
-                            a(href="").subtitle Грузоперевозки из России
-                            ul
-                                li
-                                    a(href="") Заключение контрактов и согласование условий поставки
-                                li
-                                    a(href="") Таможенное оформление и сертификация
-                                li
-                                    a(href="") Временный вывоз
-                                li
-                                    a(href="") Переработка вне таможенной территории
-                                li
-                                    a(href="") Таможенный транзит
-                    li.link-nav
+                        ul.dropdown-menu
+                            li
+                                a(href="").subtitle Грузоперевозки из России
+                                ul
+                                    li
+                                        a(href="") Заключение контрактов и согласование условий поставки
+                                    li
+                                        a(href="") Таможенное оформление и сертификация
+                                    li
+                                        a(href="") Временный вывоз
+                                    li
+                                        a(href="") Переработка вне таможенной территории
+                                    li
+                                        a(href="") Таможенный транзит
+                    li.link-nav.desktop-link
                         a(href="") Таможенное оформление
                     li.link-nav
                         a(href="") Контакты
@@ -90,7 +97,7 @@ header.header
                     .header-phone-item__label 
                         span Москва
                         +icon('drop-down-triangle','')
-                    a(href="").header-phone-item__number +7 (495) 795-16-80
+                    a(href="tel:+74957951680").header-phone-item__number +7 (495) 795-16-80
                 .header-phone-all.dropdown-menu.scroll
                     .header-phone-all__wrapper
                         .header-phone-item
@@ -167,6 +174,8 @@ header.header
                         button(type="submit").button.header-search__submit
                             +icon('search','')
                             span Искать
+            a(href="tel:+74957951680").button-phone.link-nav.mobile-link
+                +icon('contacts-phone','')
             button.button-user.link-nav
                 +icon('login','')
             button.button-menu.link-nav

@@ -3,34 +3,39 @@
 }   
 
 .header {
+    display: none;
     height: $header;
-		width: 100%;
+    width: 100%;
     position: sticky;
     z-index: 10;
-		left: 0;
-		transition: 0.3s background;
-		top: 0;
+    left: 0;
+    top: 0;
     &:before {
-			position: absolute;
-			transition: 0.3s;
-			right: 0;
-			top: 0;
-			display: block;
-			opacity: 0;
-			content: '';
-			height: 100%;
-			width: 100%;
-			box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
-	}
-		&--fixed,&:hover {
-			background: rgba(255,255,255,0.8);
-			-webkit-backdrop-filter: saturate(180%) blur(8px);
-			backdrop-filter: saturate(180%) blur(8px);
-			&:before {
-				opacity: 1;
-			}
-		}
+         position: absolute;
+         z-index: 1;
+         transition: 0.3s ease-in-out;
+         right: 0;
+         top: 0%;
+         transform: translateY(-100%);
+         background: rgba(255,255,255,0.8);
+         display: block;
+         content: '';
+         height: 100%;
+         width: 100%;
+         opacity: 0;
+         -webkit-backdrop-filter: saturate(180%) blur(8px);
+         backdrop-filter: saturate(180%) blur(8px);
+         box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+     }
+    &--fixed,&:hover {
+         &:before {
+            opacity: 1;
+            transform: translateY(0%);
+        }
+    }
     &__wrapper {
+        position: relative;
+        z-index: 2;
         height: 100%;
         margin-left: auto;
         margin-right: auto;
@@ -39,20 +44,20 @@
         padding-right: 15px;
         max-width: 1800px;
         display: flex;
-				align-items: center;
-				justify-content: space-between;
+        align-items: center;
+        justify-content: space-between;
         > * {
             height: 100%;
         }
     }
     &__logo {
-				flex: 0 0 auto;
+        flex: 0 0 auto;
         display: flex;
         align-items: center;
         justify-content: center;
     }
     &__menu {
-				margin-left: -34px;
+        margin-left: -34px;
         > nav {
             height: 100%;
             ul {
@@ -149,10 +154,10 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-				}
-				.is-active {
-					color: $main;
-				}
+        }
+        .is-active {
+           color: $main;
+       }
     }
 
     &-phone {
@@ -164,67 +169,67 @@
         flex: 0 0 auto;
         width: 190px;
         &__trigger {
-						height: 100%;
-						cursor: pointer;
-            width: 100%;
+          height: 100%;
+          cursor: pointer;
+          width: 100%;
+          padding-left: 22px;
+          padding-right: 22px;
+          justify-content: center;
+      }
+      &-item {
+        display: flex;
+        transition: 0.3s;
+        flex-direction: column;
+        > * {
+            display: block;
+            line-height: 1;
+        }
+        &__label {
+            cursor: pointer;
+            font-size: 12px;
+            line-height: 1.4;
+            padding-bottom: 9px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &-all {
+        position: absolute;
+        right: 0;
+        top: $header;
+        width: 100%;
+        height: 290px;
+        .header-phone-item {
+            min-height: 72px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             padding-left: 22px;
             padding-right: 22px;
-            justify-content: center;
-        }
-        &-item {
-            display: flex;
-						transition: 0.3s;
-            flex-direction: column;
-            > * {
-                display: block;
-                line-height: 1;
-            }
-            &__label {
-                cursor: pointer;
-                font-size: 12px;
-								line-height: 1.4;
-                padding-bottom: 9px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-        }
-        &-all {
-            position: absolute;
-						right: 0;
-            top: $header;
-            width: 100%;
-            height: 290px;
-            .header-phone-item {
-								min-height: 72px;
-								display: flex;
-								flex-direction: column;
-								justify-content: center;
-								padding-left: 22px;
-								padding-right: 22px;
-								position: relative;
-								border-bottom: 1px solid $grey;
-								&:before {
-									content: '';
-									display: block;
-									position: absolute;
-									left: 0;
-									bottom: 0;
-									z-index: 0;
-									background: $hover;
-									width: 0%;
-									transition: 0.3s;
-									height: 2px;
-								}
-								> * {
-									position: relative;
-									z-index: 1;
-								}
-            }
+            position: relative;
+            border-bottom: 1px solid $grey;
+            &:before {
+               content: '';
+               display: block;
+               position: absolute;
+               left: 0;
+               bottom: 0;
+               z-index: 0;
+               background: $hover;
+               width: 0%;
+               transition: 0.3s;
+               height: 2px;
+           }
+               > * {
+                   position: relative;
+                   z-index: 1;
+               }
+           }
             .header-phone-item:hover {
-							color: $hover;
-            }
-            &__wrapper {
+                 color: $hover;
+             }
+             &__wrapper {
                 height: 100%;
                 width: 100%;
             }
@@ -245,7 +250,7 @@
             height: 100%;
             width: 70px;
             .icon {
-                width: 0.7em;
+                font-size: 40px;
                 fill: $main;
             }
             &:hover {
@@ -281,7 +286,7 @@
             border-bottom: 1px solid $grey;
             width: 100%;
             margin: 0px 10px 0px 20px;
-            
+
         }
         &__submit {
             height: 100%;
@@ -315,34 +320,34 @@
         margin-left: 10px;
     }
     .link-nav {
-        @include transition;
-        border: none;
-        background: none;
-        position: relative;
-        &:after {
-            width: 100%;
-            height: 3px;
             @include transition;
-            display: block;
-            right: 0;
-            bottom: 0;
-            background: $main;
-            content: '';
-            opacity: 0;
-            position: absolute;
-        }
-        &:hover {
-            .dropdown-menu {
-               opacity: 1;
-               transform: translateY(0px);
-               pointer-events: auto;
-               > * {
-                   opacity: 1;
-                   transform: translateY(0);
-               }
-           }
-       }
-        &--active,&.dropdown-trigger--active , &:hover {
+            border: none;
+            background: none;
+            position: relative;
+            &:after {
+                width: 100%;
+                height: 3px;
+                @include transition;
+                display: block;
+                right: 0;
+                bottom: 0;
+                background: $main;
+                content: '';
+                opacity: 0;
+                position: absolute;
+            }
+            &:hover {
+                .dropdown-menu {
+                 opacity: 1;
+                 transform: translateY(0px);
+                 pointer-events: auto;
+                 > * {
+                     opacity: 1;
+                     transform: translateY(0);
+                 }
+             }
+         }
+         &--active,&.dropdown-trigger--active , &:hover {
             background: white;
             color: $hover;
             &:after {
@@ -354,29 +359,29 @@
         }
     }
     .dropdown-menu {
-        opacity: 0;
-        pointer-events: none;
-        overflow: hidden;
-        transform: translateY(10px);
-        transition: 0.3s;
-        background: white;
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-        backdrop-filter: saturate(180%) blur(8px);
-        top: $header;
-        > * {
-            transition: 0.2s 0.1s;
-            transform: translateY(20px);
             opacity: 0;
-        }
-        &--active {
-            opacity: 1;
-            transform: translateY(0px);
-            pointer-events: auto;
+            pointer-events: none;
+            overflow: hidden;
+            transform: translateY(10px);
+            transition: 0.3s;
+            background: white;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            backdrop-filter: saturate(180%) blur(8px);
+            top: $header;
             > * {
+                transition: 0.2s 0.1s;
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            &--active {
                 opacity: 1;
-                transform: translateY(0);
-            }     
+                transform: translateY(0px);
+                pointer-events: auto;
+                > * {
+                    opacity: 1;
+                    transform: translateY(0);
+                }     
+            }
         }
-    }
-      
 }
+

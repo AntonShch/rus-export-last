@@ -182,9 +182,9 @@
 			margin-right: auto;
 			width: 100%;
 			max-width: 1530px;
-			transition: all 500ms cubic-bezier(0.455, 0.030, 0.515, 0.955) 0s;
+			transition: all 1.65s cubic-bezier(0.4555, 0.630, 0.515, 1.35) 0s;
 			> * {
-				transition: 0.3s;
+				transition: .4s cubic-bezier(0.4555, 0.630, 0.515, 1.35) 0s;
 			}
 			&-main {
 				content: '';
@@ -228,7 +228,7 @@
 			height: 100%;
 			width: 100%;
 			max-width: 1530px;
-			transition: all 500ms cubic-bezier(0.455, 0.030, 0.515, 0.955) 0s;
+			transition: all 1.65s cubic-bezier(0.4555, 0.630, 0.515, 1.35) 0s;
 		}
 		&.swiper-slide-active {
 			z-index: 1;

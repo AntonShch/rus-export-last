@@ -1,6 +1,9 @@
 .footer {
+	z-index: 0;
 	position: relative;
-	margin-top: 100px;
+	overflow: hidden;
+	padding-top: 298px;
+	margin-top: -190px;
 	a {
 		transition: 0.3s;
 		&:hover {
@@ -13,7 +16,7 @@
 		height: 298px;
 		position: absolute;
 		left: 0;
-		top: -298px;
+		top: 0;
 		display: block;
 		background: linear-gradient(360deg, #ECEFF5 -0.17%, rgba(255, 255, 255, 0) 99.85%, #FFFFFF 99.85%);
 	}
@@ -26,7 +29,7 @@
 		display: block;
 		height: 298px;
 		width: 100%;
-		top: -298px;
+		top: 0;
 	}
 	> * {
 		padding-left: 0;
@@ -53,12 +56,6 @@
 		flex-wrap: wrap;
 	}
 	&__menu {
-		display: -webkit-flex;
-		display: -moz-flex;
-		display: -ms-flex;
-		display: -o-flex;
-		display: flex;
-		flex-direction: column;
 		margin-bottom: 30px;
 		a {
 			color: $main;
@@ -68,6 +65,7 @@
 		}
 		.footer__menu-label {
 			color: black;
+			display: block;
 			font-weight: bold;
 			padding-bottom: 18px;
 		}

@@ -1,0 +1,44 @@
+.page-title {
+	color: black;
+	.breadcrumbs {
+		padding-top: 20px;
+		padding-bottom: 10px;
+		opacity: 0.5;
+	}
+	&__content {
+		margin-bottom: 40px;
+	}
+	&--with-bg {
+		color: white;
+		text-align: center;
+		padding-bottom: 130px;
+		margin-bottom: 60px;
+		position: relative;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		.breadcrumbs {
+			opacity: 0.8;
+			padding-top: 70px;
+			padding-bottom: 60px;
+			> ol {
+				justify-content: center;
+				align-items: center;
+			}
+		}
+		&:before {
+			content: '';
+			right: 0;
+			top: 0;
+			height: 100%;
+			width: 100%;
+			background: rgba(0,0,0,0.45);
+			position: absolute;
+			z-index: 0;
+		}
+		> * {
+			position: relative;
+			z-index: 1;
+		}	
+	}
+}

@@ -66,6 +66,7 @@ html {
 main {
 	position: relative;
 	flex: 1 0 auto;
+	z-index: 1;
 }
 
 header,footer {
@@ -93,11 +94,11 @@ img {
 
 .logo {
 	width: 140px;
-	display: -webkit-inline-flex;
-	display: -moz-inline-flex;
-	display: -ms-inline-flex;
-	display: -o-inline-flex;
-	display: inline-flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
 	justify-content: center;
 	align-items: center;
 }
@@ -161,6 +162,28 @@ a {
 	font-style: normal;
 }
 
+.link {
+	font-style: normal;
+	font-weight: bold;
+	color: $main;
+	font-size: 16px;
+	transition: 0.3s;
+	line-height: 1.5;
+	.icon {
+		fill: $main;
+	}
+	&:hover {
+		color: $hover;
+		.icon {
+			fill: $hover;
+		}
+	}
+}
+
+.title-offset {
+	padding-bottom: 25px;
+}
+
 .text-larger {
 	font-size: 20px;
 	font-weight: normal;
@@ -183,24 +206,24 @@ a {
 	color: $minitext;
 }
 
-.link {
-	font-style: normal;
-	font-weight: bold;
-	color: $main;
-	font-size: 16px;
-	transition: 0.3s;
-	line-height: 1.5;
-	&:hover {
-		color: $hover;
-	}
-}
-
-.title-offset {
-	padding-bottom: 25px;
-}
-
 .section-offset {
 	padding: 65px 0px
+}
+
+.page {
+	&__content {
+		> p {
+			padding-top: 20px;
+			a {
+				color: $main;
+			}
+		}
+	}
+	&--services {
+		width: 100%;
+		margin-left: auto;
+		max-width: 970px;
+	}
 }
 
 .slider-arrows {
@@ -266,6 +289,37 @@ a {
 	}
 }
 
+.custom-textarea {
+	padding: 0;
+	margin: 0;
+	position: relative;
+	&__area {
+		width: 100%;
+		padding-left: 10px;
+		padding-right: 10px;
+		min-height: 100px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border: 1px solid $grey;
+		background: transparent;
+		box-sizing: border-box;
+		transition: 0.3s;
+		resize: none;
+		box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.05);
+	}
+	&__label {
+		pointer-events: none;
+		padding-left: 10px;
+		transition: 0.3s;
+		margin-bottom: 5px;
+		display: block;
+	}
+	&--error {
+		textarea {
+			border-color: $red;
+		}
+	}
+}
 .custom-checkbox {
 	position: relative;
 	input {
@@ -285,6 +339,14 @@ a {
 				opacity: 1;
 			}
 		}
+	}
+	&__text {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-direction: column;
 	}
 	&__toggle {
 		content: '';
@@ -309,6 +371,7 @@ a {
 	}
 	label {
 		display: inline-flex;
+		align-items: center;
 		position: relative;
 		color: black;
 		cursor: pointer;
@@ -316,13 +379,12 @@ a {
 		line-height: 1.2;
 		a {
 			color: $main;	
-			border-bottom: 1px solid transparent;
 			transition: 0.3s;
-			&:hover {
-				border-bottom: 1px solid $main;
-			}
 		}
 		&:hover {
+			a {
+				color: $hover;
+			}
 			.custom-checkbox__toggle{
 				border-color: $hover;
 			}
@@ -378,6 +440,10 @@ a {
 @media screen and (max-width: 767px) {
 	.logo {
 		width: 100px;
+	}
+	main {
+		margin-top: -$mobileHeader;
+		padding-top: $mobileHeader;
 	}
 }
 

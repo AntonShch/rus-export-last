@@ -1,5 +1,12 @@
+.slider {
+	width: 100%;
+	height: 150vh;
+	overflow: hidden;
+	margin-top: -$header;
+	padding-top: $header;
+	margin-bottom: -50vh;
+}
 .slider-home {
-	margin-bottom: 200px;
 	z-index: 0;
 	position: relative;
 	height: 100vh;
@@ -36,7 +43,6 @@
 		max-width: 510px;
 		padding-top: 54px;
 		.title {
-			line-height: 1.5;
 			display: flex;
 			flex-direction: column;
 		}
@@ -183,9 +189,9 @@
 			margin-right: auto;
 			width: 100%;
 			max-width: 1530px;
-			transition: all 1.65s cubic-bezier(0.4555, 0.630, 0.515, 1.35) 0s;
+			transition: all 1.05s ease-in-out 0s;
 			> * {
-				transition: .4s cubic-bezier(0.4555, 0.630, 0.515, 1.35) 0s;
+				transition: .4s ease-in-out 0s;
 			}
 			&-main {
 				content: '';
@@ -229,7 +235,7 @@
 			height: 100%;
 			width: 100%;
 			max-width: 1530px;
-			transition: all 1.65s cubic-bezier(0.4555, 0.630, 0.515, 1.35) 0s;
+			transition: all 1.05s ease-in-out 0s;
 		}
 		&.swiper-slide-active {
 			z-index: 1;

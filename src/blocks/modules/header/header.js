@@ -8,10 +8,9 @@ class Header {
     }
 
     toScrollFixHeader(header) {
-			let target = header.offsetHeight;
 			window.addEventListener("scroll", function(){
 				let scrolled = pageYOffset || document.body.scrollTop;
-				if (scrolled > target) {
+				if (scrolled > 0) {
 					header.classList.add('header--fixed');
 				} else {
 					header.classList.remove('header--fixed');

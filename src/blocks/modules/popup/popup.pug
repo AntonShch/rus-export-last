@@ -1,39 +1,42 @@
 .popup.popup--user
 	.popup__wrapper
-		.popup__header
-			button.popup__close.button.popup__close-user
-				+icon('close', '')
-			.title Вход
-		.popup__content
-			form.popup__form
-				.custom-input
-					label.custom-input__label Логин
-					input(required,type="text",name="login").custom-input__input
-				.custom-input
-					label.custom-input__label Пароль
-					input(required,type="password",name="password").custom-input__input
-				.custom-checkbox
-					input(type="checkbox", id="remember" , name="remember")
-					label(for="remember")
-						span.custom-checkbox__toggle
-							<svg height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M1 6L5 10L11.5 1" stroke="#1E428F" stroke-width="2"/>
-							</svg>
-						span Запомнить на этом компьютере
-				button(type="submit").button.button--action Войти
-			.popup__footer
-				p Если у вас нет аккаунта вы можете
-				button.button.link.button-user-register Зарегистрироваться
+		button.popup__close.button.popup__close-user
+			+icon('close', 'close-mode')
+		include ../form/form
+		+form('Вход','form',[
+			{
+				'label' : 'Логин',
+				'name' : 'login',
+				'type' : 'text',
+			},
+			{
+				'label' : 'Пароль',
+				'name' : 'password',
+				'type' : 'password',
+			}],
+			{
+				'p' : 'Если у вас нет аккаунта вы можете' ,
+				'button' : 'Зарегистрироваться',
+				'name' : 'button-user-register',
+			},
+			{
+				'text' : 'Запомнить на этом компьютере',
+				'name' : 'remember'
+			},
+			'Войти'
+		)
 .popup.popup--user-register
 	.popup__wrapper
-		.popup__header
-			button.popup__close.button.popup__close-user
-				+icon('close', '')
-			.title Регистрация
-		.popup__content
-			p.text-larger Для регистрации обратитесь к вашему менеджеру по телефону +7 (495) 795-16-80
-			button.button.button--action.popup__close-user Хорошо
-			.popup__footer
-				p Если у вас уже есть аккаунт
-				button.button.link.button-user Войти
+		button.popup__close.button.popup__close-user
+			+icon('close', '')
+		include ../form/form
+		+form('Регистрация','form-alert','Для регистрации обратитесь к вашему менеджеру по телефону +7 (495) 795-16-80',
+			{
+				'p' : 'Если у вас уже есть аккаунта' ,
+				'button' : 'Войти',
+				'name' : 'button-user',
+			},
+			'',
+			'Хорошо'
+		)
 .overlay

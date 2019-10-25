@@ -20,10 +20,6 @@
 	transform: translate(-50%,-50%);
 	width: 100%;
 	max-width: 910px;
-	&__header {
-		padding-bottom: 40px;
-		text-align: center;
-	}
 	&__close {
 		right: 0px;
 		height: 70px;
@@ -45,60 +41,20 @@
 	}
 	&__wrapper {
 		width: 100%;
-		padding: 60px 0px 80px;
 		position: relative;
 		background: white;
 	}
-	&__content {
-		width: 100%;
-		max-width: 600px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	&__form {
-		> *:not(:last-child) {
-			margin-bottom: 20px;
-		}
-		.button {
-			display: flex;
-			margin: auto;
-		}
-	}
-	&--user {
-		.popup__footer {
-			padding-top: 50px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			.button {
-				display: inline-flex;
-				margin-left: 20px;
-			}
-		}
-		.custom-checkbox {
-			margin-top: 45px;
-			margin-bottom: 45px;
-		}
-	}
-	&--user-register {
-		.popup__content {
-			text-align: center;
-			max-width: 490px;
-			margin-left: auto;
-			margin-right: auto;
-			.text-larger {
-				margin-bottom: 40px;
-			}
-		}
-		.popup__footer {
-			padding-top: 50px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			.button {
-				display: inline-flex;
-				margin-left: 20px;
-			}
+	
+}
+
+@media screen and (max-width: 992px) {
+	.popup {
+		overflow-y: auto;
+		max-height: 90%;
+		max-width: 90%;
+		&__wrapper {
+			padding-left: 30px;
+			padding-right: 30px;
 		}
 	}
 }

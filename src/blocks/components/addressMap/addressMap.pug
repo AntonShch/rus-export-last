@@ -1,0 +1,24 @@
+.address-map
+	.address-map__container.container
+		.address-map__wrapper.row
+			.address-map__content.col-12
+				.address-map__image
+					img(src="./img/addresses.png", alt="address-map")
+				.address-map-popup
+					.address-item
+						.address-item__wrapper
+							.address-item__title.subtitle Челябинск
+							.address-item__content
+								a(href="tel:+73517000204").address-item__link
+									+icon('contacts-phone','')
+									span +7 (351) 700-02-04
+								a(href="mailto:info@trans-s.su").address-item__link
+									+icon('contacts-email','')
+									span info@trans-s.su
+								address.address-item__link
+									+icon('contacts-adress','')
+									span ул. Энтузиастов 30, офис 405, 406 <br>454020, г. Челябинск
+
+				.address-map__list
+					a(href="", style="top: 38%; left: 12%") Санкт-Петербург
+					a(href="", style="top: 48%; left: 22%") Санкт-Петербург

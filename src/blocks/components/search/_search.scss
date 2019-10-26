@@ -1,0 +1,48 @@
+.search {
+	&__form {
+		display: flex;
+		border-bottom: 1px solid $grey;
+		transition: 0.3s;
+	}
+	&__input {
+		border: none;
+		background: none;
+		width: 100%;
+		font-size: 20px;
+	}
+	&__button {
+		flex: 0 0 auto;
+		height: 80px;
+		width: 80px;
+		border: none;
+		position: relative;
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			height: 2px;
+			background: $main;
+			width: 100%;
+			transition: 0.3s;
+		}
+		.icon {
+			position: relative;
+			z-index: 1;
+			transition: 0.3s 0.05s;
+			fill: $main;
+			font-size: 30px;
+		}
+		&:hover {
+			&:before {
+				height: 100%;
+				background: $main;
+			}
+			.icon {
+				fill: white;
+			}
+		}
+
+	}
+}

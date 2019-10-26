@@ -1,3 +1,137 @@
 .services {
-	
+	&-special-offers {
+		margin-top: 60px;
+		&__header {
+			display: flex;
+			align-items: center;
+			margin-bottom: 32px;
+			.link {
+				margin-left: 50px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-bottom: -4px;
+			}
+		}
+		&__arrows {
+			margin-left: auto;
+		}
+		&__slider {
+			overflow: hidden;
+		}
+	}
+	&-request {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		line-height: 1.5;
+		&__wrapper {
+			background: #FCFDFF;
+			border: 2px solid #F1F5FC;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 64px 104px;
+			position: relative;
+			.button {
+				margin-top: 40px;
+			}
+			&:before {
+				content: '';
+				display: block;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-image: url('../img/services-request-before.svg');
+				position: absolute;
+				bottom: 36px;
+				right: 36px;
+				width: 180px;
+				height: 100px;
+			}
+		}
+	}
+	&-definition {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		line-height: 1.5;
+		&__wrapper {
+			display: flex;
+			border: 2px solid #ECEFF5;
+			padding: 42px 64px;
+		}
+		&__icon {
+			flex: 0 0 auto;
+			max-width: 44px;
+			margin-right: 24px;
+		}
+	}
+	&-accordions {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		.subtitle {
+			padding-bottom: 20px;
+		}
+		&-item {
+			height: 85px;
+			border: 2px solid #ECEFF5;
+			overflow: hidden;
+			margin-bottom: 15px;
+			background: white;
+			&__button {
+				color: $main;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				min-height: 85px;
+				padding-left: 30px;
+				padding-right: 30px;
+				cursor: pointer;
+				.icon {
+					transition: 0.3s;
+					fill: $main;
+					font-size: 10px;
+				}
+			}
+			&__content {
+				padding-left: 30px;
+				padding-right: 30px;
+				transition: 0.3s 0.1s;
+				opacity: 0;
+				> * {
+					padding-bottom: 30px;
+				}
+			}
+			&.accordion--active {
+				.accordion__button {
+					.icon {
+						transform: rotate(180deg);
+					}
+				}
+				.accordion__content {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	&-text-with-icon {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		&__wrapper {
+			display: flex;
+		}
+		&__icon {
+			flex: 0 0 auto;
+			width: 70px;
+			height: 70px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-right: 30px;
+		}
+		&__content {
+			.subtitle {
+				padding-bottom: 10px;
+			}
+		}
+	}
 }
+

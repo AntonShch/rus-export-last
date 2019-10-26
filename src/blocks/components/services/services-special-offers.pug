@@ -1,0 +1,14 @@
+.services-special-offers
+	.services-special-offers__header
+		h2.subtitle Узнайте подробнее о наших акциях
+		a(href="./special-offers.html").link Все акции
+		.slider-arrows.services-special-offers__arrows
+			.slider-arrows__left
+				+icon('arrow-left','')
+			.slider-arrows__right
+				+icon('arrow-right','')
+	.services-special-offers__slider
+		.services-special-offers__slider-wrapper.swiper-wrapper
+			- for(var i = 0; i < 6; i++)
+				include ./../special-offers/special-offers-item
+				+special-offers-item('swiper-slide')

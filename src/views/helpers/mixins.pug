@@ -20,3 +20,9 @@ mixin checkbox(text,name, link)
 				| #{text}
 				- if(link)
 					a(href=link.href) #{link.title}
+
+mixin toAllLink(text,link)
+	.back-link.col-12
+		a(href=link).text-larger.text-bold
+			+icon('arrow-left', '')
+			span #{text}

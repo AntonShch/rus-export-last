@@ -55,7 +55,6 @@
 
 			&:not(:last-child) {
 				border-bottom: 1px solid #F2F4F8;
-				// border-bottom: 1px solid $main;
 			}
 		}
 		&--second-level {
@@ -70,6 +69,17 @@
 						color: #576789;
 						padding: 7px;
 						width: 100%;
+						position: relative;
+						&:before {
+							content: '';
+							display: block;
+							width: 4px;
+							height: 100%;
+							background: #F2F4F8;
+							position: absolute;
+							left: -20px;
+							top: 0;
+						}
 						&:hover {
 							color: $hover;
 						}

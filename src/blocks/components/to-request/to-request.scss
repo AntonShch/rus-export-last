@@ -1,0 +1,24 @@
+
+.to-request {
+	&__wrapper {
+		@include border(5px);
+		display: flex;
+		align-items: center;
+		padding: 44px 110px;
+	}
+	&__image {
+		width: 130px;
+		flex: 0 0 auto;
+		margin-right: 68px;
+	}
+	&__content {
+		width: 100%;
+		max-width: 610px;
+		.subtitle {
+			padding-bottom: 10px;
+		}
+	}
+	&__button {
+		margin-left: auto;
+	}
+}

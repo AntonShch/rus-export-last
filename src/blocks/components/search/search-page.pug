@@ -1,0 +1,13 @@
+.search-field.col-12
+	include ./search
+.search-results
+	- for(var i = 0; i < 6; i++)
+		.search-results-item.col-lg-10.col--center
+			a(href="./article.html").search-results-item__wrapper
+				span.search-results-item__date.text-mini Среда, 04 сентября 2019 13:06
+				.search-results-item__title.subtitle Последние изменения в международных правилах <span class="seleted-search-text">Инкотермс</span>
+				.search-results-item__description.text-big-lh <span class="seleted-search-text">Инкоте́рмс</span> — международные правила в формате словаря, обеспечивающие однозначные толкования наиболее широко используемых торговых терминов в области внешней торговли частного характера, прежде всего, относительно франко — места перехода ответственности от продавца к покупателю.
+include ../to-request/to-request
++to-request('./img/search-request.svg' , 'Не нашли то, что искали?', 'Возможно вы найдете нужную вам информацию в справочном разделе нашего сайта или услугах, которые предоставляет наша компания. Или оставьте заявку для получения консультации от наших специалистов' , 'Оставить заявку')
+
+

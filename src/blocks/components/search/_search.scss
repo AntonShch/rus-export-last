@@ -37,12 +37,27 @@
 		&:hover {
 			&:before {
 				height: 100%;
-				background: $main;
+				background: $main;	
 			}
 			.icon {
 				fill: white;
 			}
 		}
-
+	}
+	&-field {
+		margin-top: -20px;
+	}
+	&-results {
+		margin-top: 50px;
+		&-item {
+			margin-bottom: 40px;
+			&__title {
+				color: $main;
+				padding: 12px 0;
+			}
+			.seleted-search-text {
+				background: #ECEFF5;
+			}
+		}
 	}
 }

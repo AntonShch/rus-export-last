@@ -46,6 +46,7 @@ class Accordion {
 		const allAccordions = currentDropdown.parentElement.querySelectorAll('.accordion--active');
 		for (let activeAccordion of allAccordions) {
 			let btn = activeAccordion.querySelector('.accordion__button');
+			console.log(btn);
 			$this.close(btn);
 		}
 	}

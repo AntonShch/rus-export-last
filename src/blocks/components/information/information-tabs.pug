@@ -1,0 +1,6 @@
+mixin information-tabs(page)
+	.information-tabs.col-12
+		.information-tabs__wrapper
+			a(href="./information-helpful.html", class={"is-active": page === "helpful"}) Полезная информация
+			a(href="./information-incoterms.html", class={"is-active": page === "incoterms"})  Инкотермс
+			a(href="./information-tamozhny.html", class={"is-active": page === "tamozhny"})  Таможенный кодекс

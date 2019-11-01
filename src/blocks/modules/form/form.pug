@@ -16,7 +16,7 @@ mixin form(title,typeForm,inputs,footer, checkbox, button)
 				-if (checkbox)
 					+checkbox(checkbox.text, checkbox.name, checkbox.link)
 				button(type="submit").button.button--action #{button}
-		if(footer)
+		if(footer.p)
 			.form__footer
 				p #{footer.p}
 				button(class="button link " + footer.name + "") #{footer.button}

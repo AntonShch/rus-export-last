@@ -1,0 +1,25 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Таможенный кодекс"
+
+block content
+	include ../../blocks/modules/header/header
+	main
+		include ../../blocks/modules/page-title/page-title
+		+page-title(title,[title])
+		.content
+			.content__container.container
+				.content__wrapper.row
+					.content__information
+						include ../../blocks/components/information/information-tabs
+						+information-tabs('tamozhny')
+						include ../../blocks/components/information/information-tamozhny
+
+	include ../../blocks/modules/footer/footer
+	include ../../blocks/modules/popup/popup
+
+block scripts
+	script(src="./js/main.js")
+	script(src="./js/vendor.js")

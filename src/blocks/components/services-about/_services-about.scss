@@ -1,0 +1,38 @@
+.services-about {
+	margin-top: 50px;
+	position: relative;
+	&__image {
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		position: absolute;
+		&-bg {
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 920px;
+			height: 600px;
+			background-position:  center right;
+			background-image: url('../img/service-about.png');
+		}
+		&:before {
+			z-index: -1;
+			content: '';
+			display: block;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			background: #E5E7EB;
+			width: 789px;
+			height: 400px;
+		}
+	}
+	&__content {
+		.button {
+			margin-top: 50px;
+		}
+	}
+	&__text {
+		max-width: 590px;
+	}
+}

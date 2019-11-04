@@ -67,6 +67,17 @@
 			}
 		}
 	}
+	&-incoterms {
+		&__header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding-bottom: 40px;
+		}
+		&__text {
+			max-width: 900px;
+		}
+	}
 }
 
 .article {

@@ -1,38 +1,38 @@
 .information-codex
-	.information-codex__wrapper.row.no-gutters-row
-		.information-codex__content.col-md-8
-			include ../../components/codex/codex
-		.information-codex__form.col-md-4.form-side
-			include ../../modules/form/form
-			+form('Оставьте заявку на бесплатную консультацию','form',[
-				{
-					'label' : 'Имя',
-					'name' : 'name',
-					'type' : 'text',
-				},
-				{
-					'label' : 'Телефон',
-					'name' : 'phone',
-					'type' : 'tel',
-				},
-				{
-					'label' : 'E-mail',
-					'name' : 'email',
-					'type' : 'email',
-				},
-				{
-					'label' : 'Сообщение',
-					'name' : 'message',
-					'type' : 'textarea',
-				},],
-				{},
-				{
-					'text' : 'Согласен на обработку персональных данных.',
-					'link' : {
-						'title' : 'Политика конфиденциальности',
-						'href' : '/politic'
-					},
-					'name' : 'politic'
-				},
-				'Отправить'
-			)
+    .information-codex__wrapper.row.no-gutters-row
+        .information-codex__content.col-md-8
+            include ../../components/codex/codex
+        .information-codex__form.col-md-4.form-side
+            include ../../modules/form/form
+            +form('Оставьте заявку на бесплатную консультацию','form',[
+                {
+                    'label' : 'Имя',
+                    'name' : 'name',
+                    'type' : 'text',
+                },
+                {
+                    'label' : 'Телефон',
+                    'name' : 'phone',
+                    'type' : 'tel',
+                },
+                {
+                    'label' : 'E-mail',
+                    'name' : 'email',
+                    'type' : 'email',
+                },
+                {
+                    'label' : 'Сообщение',
+                    'name' : 'message',
+                    'type' : 'textarea',
+                },],
+                {},
+                {
+                    'text' : 'Согласен на обработку персональных данных.',
+                    'link' : {
+                        'title' : 'Политика конфиденциальности',
+                        'href' : '/politic'
+                    },
+                    'name' : 'politic'
+                },
+                'Отправить'
+            )

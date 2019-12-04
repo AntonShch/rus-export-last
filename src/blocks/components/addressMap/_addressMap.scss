@@ -1,58 +1,64 @@
 .address-map {
-	&__content {
-		position: relative;
-	}
-	&__image {
-	}
-	&__list {
-		position: absolute;
-		left: 0;
-		top: 0;
-		height: 100%;
-		width: 100%;
-		a {
-			position: absolute;
-			display: -webkit-flex;
-			display: -moz-flex;
-			display: -ms-flex;
-			display: -o-flex;
-			display: flex;
-			align-items: center;
-			font-weight: bold;
-			max-width: 48px;
-			font-size: 8px;
-			color: black;
-			text-decoration: none;
-			&:before {
-				flex: 0 0 auto;
-				content: '';
-				display: block;
-				height: 8px;
-				width: 8px;
-				margin-right: 6px;
-				background: black;
-				border: 2px solid white;
-				border-radius: 50%;
-				overflow: hidden;
-			}
-		}
-	}
-	&-popup {
-		position: absolute;
-		left: 0;
-		opacity: 0;
-		top: 0;
-		z-index: 2;
-		margin-left: 40px;
-		pointer-events: none;
-		&:hover {
-			opacity: 1;
-			pointer-events: auto;
-		}
-		&__wrapper {
-			height: 100px;
-			width: 100px;
-			background: white;
-		}
-	}
+    &__content {
+        position: relative;
+    }
+
+    &__image {}
+
+    &__list {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        a {
+            position: absolute;
+            max-width: 48px;
+            display: -webkit-flex;
+            display:    -moz-flex;
+            display:     -ms-flex;
+            display:      -o-flex;
+            display:         flex;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+            font-size: 8px;
+            font-weight: bold;
+
+            &:before {
+                content: "";
+                width: 8px;
+                height: 8px;
+                display: block;
+                overflow: hidden;
+                flex: 0 0 auto;
+                margin-right: 6px;
+                border: 2px solid white;
+                border-radius: 50%;
+                background: black;
+            }
+        }
+    }
+
+    &-popup {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        margin-left: 40px;
+        pointer-events: none;
+        opacity: 0;
+
+        &:hover {
+            pointer-events: auto;
+            opacity: 1;
+        }
+
+        &__wrapper {
+            width: 100px;
+            height: 100px;
+            background: white;
+        }
+    }
 }

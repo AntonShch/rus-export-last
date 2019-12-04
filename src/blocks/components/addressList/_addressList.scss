@@ -1,46 +1,55 @@
 .address-list {
-	padding-top: 40px;
-	margin-bottom: 80px;
-	ul {
-		list-style-type: none;
-	}
-	.address-item {
-		margin-top: 20px;
-		margin-bottom: 20px;
-	}
+    margin-bottom: 80px;
+    padding-top: 40px;
+
+    ul {
+        list-style-type: none;
+    }
+
+    .address-item {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 }
+
 .address-item {
-	&__title {
-		color: $main;
-		margin-bottom: 15px;
-	}
-	&__wrapper {
-		background: white;
-		border: 2px solid #ECEFF5;
-		padding: 30px 42px;
-	}
-	&__link {
-		color: $contactsText;
-		display: -webkit-flex;
-		display: -moz-flex;
-		display: -ms-flex;
-		display: -o-flex;
-		transition: 0.3s;
-		display: flex;
-		font-style: normal;
-		&:not(:last-child) {
-			margin-bottom: 10px;
-		}
-		.icon {
-			width: 26px;
-			fill: $main;
-			height: 26px;
-			margin-right: 14px;
-		}
-		&:hover {
-			color: $main;
-		}
-	}
-	&:hover {
-	}
+    &__title {
+        margin-bottom: 15px;
+        color: $main;
+    }
+
+    &__wrapper {
+        padding: 30px 42px;
+        border: 2px solid #eceff5;
+        background: white;
+    }
+
+    &__link {
+        display: -webkit-flex;
+        display:    -moz-flex;
+        display:     -ms-flex;
+        display:      -o-flex;
+        display:         flex;
+        transition: 0.3s;
+        color: $contactsText;
+        font-style: normal;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        .icon {
+            width: 26px;
+            height: 26px;
+            margin-right: 14px;
+
+            fill: $main;
+        }
+
+        &:hover {
+            color: $main;
+        }
+    }
+
+    &:hover {}
 }

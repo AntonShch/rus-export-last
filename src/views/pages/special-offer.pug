@@ -2,22 +2,22 @@ extends ../layouts/default
 include ../helpers/mixins
 
 block variables
-	- const title = "Акция"
+    - const title = "Акция"
 
 block content
-	include ../../blocks/modules/header/header
-	main
-		include ../../blocks/modules/page-title/page-title
-		+page-title(title,[title],true)
-		.content
-			.content__container.container
-				.content__wrapper.row
-					.content__information
-						include ../../blocks/components/special-offers/special-offer-article
+    include ../../blocks/modules/header/header
+    main
+        include ../../blocks/modules/page-title/page-title
+        +page-title(title,[title],true)
+        .content
+            .content__container.container
+                .content__wrapper.row
+                    .content__information
+                        include ../../blocks/components/special-offers/special-offer-article
 
-	include ../../blocks/modules/footer/footer
-	include ../../blocks/modules/popup/popup
+    include ../../blocks/modules/footer/footer
+    include ../../blocks/modules/popup/popup
 
 block scripts
-	script(src="./js/main.js")
-	script(src="./js/vendor.js")
+    script(src="./js/main.js")
+    script(src="./js/vendor.js")

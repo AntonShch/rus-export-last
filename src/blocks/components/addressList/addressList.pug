@@ -1,17 +1,17 @@
 .address-list
-  .address-list__container.container
-    ul.address-list__wrapper.row
-      -for (var i = 0; i < 24; i++)
-        li.address-item.col-md-4
-          .address-item__wrapper
-            .address-item__title.subtitle Челябинск
-            .address-item__content
-                a(href="tel:+73517000204").address-item__link
-                  +icon('contacts-phone','')
-                  span +7 (351) 700-02-04
-                a(href="mailto:info@trans-s.su").address-item__link
-                  +icon('contacts-email','')
-                  span info@trans-s.su
-                address.address-item__link
-                  +icon('contacts-adress','')
-                  span ул. Энтузиастов 30, офис 405, 406 <br>454020, г. Челябинск
+    .address-list__container.container
+        ul.address-list__wrapper.row
+            -for (var i = 0; i < 24; i++)
+                li.address-item.col-md-4
+                    .address-item__wrapper
+                        .address-item__title.subtitle Челябинск
+                        .address-item__content
+                            a(href="tel:+73517000204").address-item__link
+                                +icon('contacts-phone','')
+                                span +7 (351) 700-02-04
+                            a(href="mailto:info@trans-s.su").address-item__link
+                                +icon('contacts-email','')
+                                span info@trans-s.su
+                            address.address-item__link
+                                +icon('contacts-adress','')
+                                span ул. Энтузиастов 30, офис 405, 406 <br>454020, г. Челябинск

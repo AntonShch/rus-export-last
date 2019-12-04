@@ -2,22 +2,22 @@ extends ../layouts/default
 include ../helpers/mixins
 
 block variables
-	- const title = "О компании | РусЭкспорт"
+    - const title = "О компании | РусЭкспорт"
 
 block content
-	include ../../blocks/modules/header/header
-	main
-		include ../../blocks/components/team/team
-		include ../../blocks/components/specialists/specialists
-		include ../../blocks/components/video-about/video-about
-		include ../../blocks/components/advantages/advantages
-		include ../../blocks/components/services-about/services-about
-		include ../../blocks/components/partnership/partnership
-		include ../../blocks/components/our-partners/our-partners
-	
-	include ../../blocks/modules/footer/footer
-	include ../../blocks/modules/popup/popup
+    include ../../blocks/modules/header/header
+    main
+        include ../../blocks/components/team/team
+        include ../../blocks/components/specialists/specialists
+        include ../../blocks/components/video-about/video-about
+        include ../../blocks/components/advantages/advantages
+        include ../../blocks/components/services-about/services-about
+        include ../../blocks/components/partnership/partnership
+        include ../../blocks/components/our-partners/our-partners
+
+    include ../../blocks/modules/footer/footer
+    include ../../blocks/modules/popup/popup
 
 block scripts
-	script(src="./js/main.js")
-	script(src="./js/vendor.js")
+    script(src="./js/main.js")
+    script(src="./js/vendor.js")

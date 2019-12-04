@@ -1,44 +1,49 @@
 .about-company-block {
-	&__image {
-		width: 100%;
-		display: -webkit-flex;
-		display: -moz-flex;
-		display: -ms-flex;
-		display: -o-flex;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		img {
-			height: 100%;
-			width: 100%;
-			object-fit: cover;
-		}
-	}
-	&__text {
-		position: sticky;
-		min-height: 2em;
-		top: $header;
-		.title {
-			padding-top: 40px;
-		}
-		p:not(:last-of-type){
-			padding-bottom: 25px;
-		}
-		.button {
-			margin-top: 45px;
-		}
-	}
+    &__image {
+        width: 100%;
+        display: -webkit-flex;
+        display:    -moz-flex;
+        display:     -ms-flex;
+        display:      -o-flex;
+        display:         flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+    }
+
+    &__text {
+        position: sticky;
+        top: $header;
+        min-height: 2em;
+
+        .title {
+            padding-top: 40px;
+        }
+
+        p:not(:last-of-type) {
+            padding-bottom: 25px;
+        }
+
+        .button {
+            margin-top: 45px;
+        }
+    }
 }
 
- 
-  
 @media screen and (max-width: 992px) {
-	.about-company-block__text .title {
-		padding-top: 0;
-	}
+    .about-company-block__text .title {
+        padding-top: 0;
+    }
 }
+
 @media screen and (max-width: 767px) {
-	.about-company-block__image {
-		margin-bottom: 20px;
-	}
+    .about-company-block__image {
+        margin-bottom: 20px;
+    }
 }

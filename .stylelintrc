@@ -1,13 +1,16 @@
 {
+    "extends": [
+        "stylelint-config-prettier",
+        "stylelint-config-recommended-scss"
+    ],
     "syntax": "scss",
     "plugins": [
+        "stylelint-scss",
         "stylelint-order",
         "stylelint-selector-bem-pattern"
     ],
     "rules": {
-        "indentation": 4,
-        "plugin/selector-bem-pattern": [
-            {
+        "plugin/selector-bem-pattern": [{
                 "implicitComponents": true,
                 "componentName": "[-a-z]+",
                 "componentSelectors": {
@@ -29,7 +32,7 @@
                     "^&:empty",
                     "#{\\$[-a-z]+}__[-a-z]+",
                     "^\\*$"
-                ],
+                ]
             },
             {
                 "severity": "warning",
@@ -62,70 +65,6 @@
                 "selector": "^&--[-a-z0-9]+"
             }
         ],
-        "order/properties-order": [
-            [{
-                "properties": [
-                    "content",
-                    "box-sizing",
-                    "display",
-                    "flex",
-                    "flex-wrap",
-                    "flex-basis",
-                    "flex-direction",
-                    "flex-flow",
-                    "flex-grow",
-                    "flex-shrink",
-                    "align-content",
-                    "align-items",
-                    "align-self",
-                    "justify-content",
-                    "order",
-                    "grid",
-                    "grid-area",
-                    "grid-auto-*",
-                    "grid-column",
-                    "grid-column-*",
-                    "grid-gap",
-                    "grid-row",
-                    "grid-row-*",
-                    "grid-template",
-                    "grid-template-*",
-                    "position",
-                    "z-index",
-                    "top",
-                    "right",
-                    "bottom",
-                    "left",
-                    "width",
-                    "min-width",
-                    "max-width",
-                    "height",
-                    "min-height",
-                    "max-height",
-                    "overflow",
-                    "overflow-*",
-                    "margin",
-                    "margin-*",
-                    "border",
-                    "border-*",
-                    "padding",
-                    "padding-*",
-                ]
-            },
-            {
-                "properties": [
-                    "transform",
-                    "transform-*",
-                    "backface-visibility",
-                    "perspective",
-                    "perspective-origin",
-                    "transition",
-                    "transition-*",
-                    "animation",
-                    "animation-*",
-                ],
-            }
-        ]],
         "color-hex-case": ["lower", {
             "severity": "warning",
             "message": "HEX-цвета нужно указывать строчными буквами"
@@ -165,9 +104,6 @@
             "message": "Лишний (необязательный) нуль в дроби"
         }],
 
-        "declaration-colon-space-after": ["always-single-line", {
-            "message": "Следует ставить один пробел после двоеточия"
-        }],
         "declaration-colon-space-before": ["never", {
             "message": "Не следует ставить пробел перед двоеточием"
         }],
@@ -229,7 +165,7 @@
 
         "value-keyword-case": ["lower", {
             "message": "Значения свойств следует писать строчными буквами",
-            "ignoreProperties": ["/font-/", ]
+            "ignoreProperties": ["/font-/"]
         }],
         "value-list-comma-space-after": ["always-single-line", {
             "message": "Необходим пробел в значениях после запятой"
@@ -251,9 +187,11 @@
             "message": "В проекте двойные кавычки"
         }],
 
-        "selector-attribute-operator-blacklist": [["id"], {
-            "message": "Для стилизации ID использовать нельзя"
-        }],
+        "selector-attribute-operator-blacklist": [
+            ["id"], {
+                "message": "Для стилизации ID использовать нельзя"
+            }
+        ],
         "selector-pseudo-class-case": ["lower", {
             "message": "Псевдоклассы необходимо писать строчными буквами"
         }],
@@ -278,7 +216,7 @@
         "selector-max-empty-lines": [0, {
             "message": "Пустые строки в селекторах недопустимы"
         }],
-        "selector-list-comma-newline-after": ["never-multi-line", {
+        "selector-list-comma-newline-after": ["always-multi-line", {
             "message": "После запятой необходим перенос строки"
         }],
         "selector-list-comma-newline-before": ["never-multi-line", {

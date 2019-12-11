@@ -1,0 +1,48 @@
+.gridLinks {
+    &__header {
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        padding-left: 10px;
+    }
+
+    &__content ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+
+        li {
+            list-style-type: none;
+
+            a {
+                min-height: 136px;
+                display: block;
+                padding: 30px;
+                border: 2px solid $lightGrey;
+                transition: 0.3s;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 150%;
+                color: $main;
+                &:hover {
+                    border-color: $main;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .gridLinks__content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .gridLinks__content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

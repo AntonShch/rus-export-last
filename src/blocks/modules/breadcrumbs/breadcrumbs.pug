@@ -8,5 +8,5 @@ mixin breadcrumbs (paths)
             each path,index in paths
                 li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
                     a(itemscope, itemtype="http://schema.org/Thing", itemprop="item", href="/"+ path + "")
-                        <span itemprop="name">#{path}</span>
+                        <span itemprop="name">!{path}</span>
                     <meta itemprop="position" content="#{index + 1}" />

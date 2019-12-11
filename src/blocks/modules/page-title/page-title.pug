@@ -6,7 +6,7 @@ mixin page-title-bg (title,path,image)
                     include ../breadcrumbs/breadcrumbs
                     +breadcrumbs(path)
                 .page-title__content.col-md-8
-                    h1.title #{title}
+                    h1.title !{title}
 mixin page-title (title,path,hideTitle)
         .page-title
             .page-title__container.container
@@ -16,4 +16,4 @@ mixin page-title (title,path,hideTitle)
                         +breadcrumbs(path)
                     -if (!hideTitle)
                         .page-title__content.col-12
-                            h1.title #{title}
+                            h1.title !{title}

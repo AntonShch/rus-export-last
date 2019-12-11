@@ -1,0 +1,67 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Таможенное оформление и&nbsp;сертификация"
+
+block content
+    include ../../blocks/modules/header/header
+    main
+        include ../../blocks/modules/page-title/page-title
+        +page-title-bg(title,[title],'tamozhennoe-oformlenie.png')
+        .content
+            .content__container.container
+                .content__wrapper.row
+                    .content__sidebar.col-lg-3
+                        include ../../blocks/modules/sidebar/sidebar
+                    .content__information.col-lg-9
+                        .page.page--services
+                            .page__content.text-big-lh
+                                p Этап таможенного оформления и&nbsp;сертификации, а&nbsp;так&nbsp;же получения разрешительной документации необходимой для выпуска товара с&nbsp;территории России и&nbsp;ввоза товара на&nbsp;территорию иностранного государства является немаловажным. Данный этап требует высокой квалификации и&nbsp;опыта, аккуратности и&nbsp;внимания при взаимодействии с&nbsp;разрешительными, надзорными и&nbsp;таможенными органами. Ошибки на&nbsp;данном этапе могут повлечь увеличение финансовых и&nbsp;временных затрат, а&nbsp;так&nbsp;же привести к&nbsp;административной ответственности и&nbsp;наложению штрафов.
+                                include ../../blocks/components/services/services-request
+                                +request('Наша компания профессионально оказывает услуги таможенного оформления, сертификации товаров и&nbsp;получения необходимой разрешительной документации.')
+                                include ../../blocks/components/services/services-definition
+                                +definition('Таможенное оформление&nbsp;&mdash; это комплекс мероприятий выполняемых участником внешнеэкономической деятельности с&nbsp;целью помещения товаров под таможенную процедуру путем заявления таможенному органу сведений о&nbsp;товарах при помощи таможенной декларации с&nbsp;дальнейшим перемещением этих товаров через таможенную границу.')
+                                include ../../blocks/components/services/services-accordions
+                                include ../../blocks/components/services/services-text-with-icon
+                                +textWithIcon('Выпуск товаров таможенным органом через 2-3 часа', 'При правильном оформлении и&nbsp;подаче таможенной декларации, а&nbsp;так&nbsp;же при условии достаточности представленной разрешительной документации выпуск товаров таможенным органом происходит в&nbsp;среднем за&nbsp;2-3 часа с&nbsp;момента регистрации таможенной декларации.')
+                                include ../../blocks/modules/form/form.pug
+                                +form('Свяжитесь с нами','form',[
+                                    {
+                                        'label' : 'Имя',
+                                        'name' : 'name',
+                                        'type' : 'text',
+                                    },
+                                    {
+                                        'label' : 'Телефон',
+                                        'name' : 'phone',
+                                        'type' : 'tel',
+                                    },
+                                    {
+                                        'label' : 'E-mail',
+                                        'name' : 'email',
+                                        'type' : 'email',
+                                    },
+                                    {
+                                        'label' : 'Сообщение',
+                                        'name' : 'message',
+                                        'type' : 'textarea',
+                                    },],
+                                    {},
+                                    {
+                                        'text' : 'Согласен на обработку персональных данных.',
+                                        'link' : {
+                                            'title' : 'Политика конфиденциальности',
+                                            'href' : '/politic'
+                                        },
+                                        'name' : 'politic'
+                                    },
+                                    'Отправить'
+                                )
+
+    include ../../blocks/modules/footer/footer
+    include ../../blocks/modules/popup/popup
+
+block scripts
+    script(src="./js/main.js")
+    script(src="./js/vendor.js")

@@ -1,0 +1,19 @@
+mixin p(title, ...text)
+        .paragraph
+            if title === false
+                each item in text
+                    p !{item}
+            else
+                h3 !{title}
+                each item in text
+                    p !{item}
+
+mixin p--top(title, ...text)
+        .paragraph--first
+            if title === false
+                each item in text
+                    p !{item}
+            else
+                h3 !{title}
+                each item in text
+                    p !{item}

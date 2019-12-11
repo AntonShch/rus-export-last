@@ -1,0 +1,68 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Заключение контрактов и&nbsp;согласование условий поставки"
+
+block content
+    include ../../blocks/modules/header/header
+    main
+        include ../../blocks/modules/page-title/page-title
+        +page-title-bg(title,[title],'services-oformlenie-kontraktov.jpg')
+        .content
+            .content__container.container
+                .content__wrapper.row
+                    .content__sidebar.col-lg-3
+                        include ../../blocks/modules/sidebar/sidebar
+                    .content__information.col-lg-9
+                        .page.page--services
+                            .page__content.text-big-lh
+                                p Этап заключения контрактов и&nbsp;согласования условий поставки несомненно является главнымв&nbsp;жизненном цикле любого экспортного проекта или экспортной сделки.
+                                p Обусловлено это тем, что на&nbsp;данном этапе происходит определение всех ключевых параметров, определяется сама возможность экспорта, а&nbsp;так&nbsp;же экономическая целесообразность сделки.
+                                include ../../blocks/components/services/services-request
+                                +request('Наша компания возьмет на&nbsp;себя все вопросы связанные с&nbsp;согласованием условий поставки и&nbsp;заключением внешнеторгового контракта с&nbsp;иностранным покупателем, при этом, с&nbsp;российским поставщиком мы&nbsp;заключим привычный договор поставки.')
+                                include ../../blocks/components/services/services-definition
+                                +definition('Таможенное оформление&nbsp;&mdash; это комплекс мероприятий выполняемых участником внешнеэкономической деятельности с&nbsp;целью помещения товаров под таможенную процедуру путем заявления таможенному органу сведений о&nbsp;товарах при помощи таможенной декларации с&nbsp;дальнейшим перемещением этих товаров через таможенную границу.')
+                                include ../../blocks/components/services/services-accordions
+                                include ../../blocks/components/services/services-text-with-icon
+                                +textWithIcon('Выпуск товаров таможенным органом через 2-3 часа', 'При правильном оформлении и подаче таможенной декларации, а так же при условии достаточности представленной разрешительной документации выпуск товаров таможенным органом происходит в среднем за 2-3 часа с момента регистрации таможенной декларации.')
+                                include ../../blocks/modules/form/form
+                                +form('Свяжитесь с нами','form',[
+                                    {
+                                        'label' : 'Имя',
+                                        'name' : 'name',
+                                        'type' : 'text',
+                                    },
+                                    {
+                                        'label' : 'Телефон',
+                                        'name' : 'phone',
+                                        'type' : 'tel',
+                                    },
+                                    {
+                                        'label' : 'E-mail',
+                                        'name' : 'email',
+                                        'type' : 'email',
+                                    },
+                                    {
+                                        'label' : 'Сообщение',
+                                        'name' : 'message',
+                                        'type' : 'textarea',
+                                    },],
+                                    {},
+                                    {
+                                        'text' : 'Согласен на обработку персональных данных.',
+                                        'link' : {
+                                            'title' : 'Политика конфиденциальности',
+                                            'href' : '/politic'
+                                        },
+                                        'name' : 'politic'
+                                    },
+                                    'Отправить'
+                                )
+
+    include ../../blocks/modules/footer/footer
+    include ../../blocks/modules/popup/popup
+
+block scripts
+    script(src="./js/main.js")
+    script(src="./js/vendor.js")

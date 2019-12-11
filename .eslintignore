@@ -1,5 +1,7 @@
 /node_modules/**
 /gulp-tasks/**
+/src/js/import/
+/src/js/index.js
 .babelrc.js
 .bemrc.js
 .csscomb.json

@@ -14,21 +14,22 @@ class Fade {
         let { flag } = this;
         flag = true;
         const { el } = this;
-        if (flag === false) {
+        if (flag !== false) {
+            anime({
+                targets: el,
+                opacity: 1,
+                easing: 'linear',
+                duration: delay,
+                begin() {
+                    el.style.display = display;
+                },
+                complete() {
+                    flag = false;
+                },
+            });
+        } else {
             return false;
         }
-        anime({
-            targets: el,
-            opacity: 1,
-            easing: 'linear',
-            duration: delay,
-            begin() {
-                el.style.display = display;
-            },
-            complete() {
-                flag = false;
-            },
-        });
     }
 
     fadeOut(delay) {
@@ -36,19 +37,20 @@ class Fade {
         let { flag } = this;
         flag = true;
         const { el } = this;
-        if (flag === false) {
+        if (flag !== false) {
+            anime({
+                targets: el,
+                opacity: 0,
+                easing: 'linear',
+                duration: delay,
+                complete() {
+                    flag = false;
+                    el.style.display = 'none';
+                },
+            });
+        } else {
             return false;
         }
-        anime({
-            targets: el,
-            opacity: 0,
-            easing: 'linear',
-            duration: delay,
-            complete() {
-                flag = false;
-                el.style.display = 'none';
-            },
-        });
     }
 }
 

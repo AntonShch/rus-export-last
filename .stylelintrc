@@ -26,7 +26,6 @@
                     "thead",
                     "tr",
                     "img",
-                    "img",
                     "p",
                     "table",
                     "^&:empty",

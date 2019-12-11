@@ -1,0 +1,69 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Доставка товара иностранному покупателю"
+
+block content
+    include ../../blocks/modules/header/header
+    main
+        include ../../blocks/modules/page-title/page-title
+        +page-title-bg(title,[title],'services-dostavka-tovara.jpg')
+        .content
+            .content__container.container
+                .content__wrapper.row
+                    .content__sidebar.col-lg-3
+                        include ../../blocks/modules/sidebar/sidebar
+                    .content__information.col-lg-9
+                        .page.page--services
+                            .page__content.text-big-lh
+                                p Этот этап имеет важное значение, так как оказывает значительное влияние на&nbsp;конечную стоимость товара и&nbsp;как следствие на&nbsp;его конкурентоспособность в&nbsp;целом. Оптимальная логистическая схема доставки обычно выбирается еще на&nbsp;этапе согласования условий поставки и&nbsp;заключения контрактов. А&nbsp;превышение бюджета на&nbsp;доставку товара, согласованного контрактом, приведет к&nbsp;снижению прибыли.
+                                include ../../blocks/components/services/services-request
+                                +request('Наша компания профессионально оказывает услуги по&nbsp;доставке и&nbsp;экспедированию грузов включая страхование и&nbsp;таможенное оформление.')
+                                include ../../blocks/components/services/services-text-with-helpbox
+                                include ../../blocks/components/paragraph/paragraph
+                                +p(
+                                    'Партнерские отношения с&nbsp;ведущими операторами',
+                                    'Партнерские отношения с&nbsp;ведущими автомобильными, железнодорожными и&nbsp;морскими и&nbsp;авиа операторами дают нашей компании возможность осуществлять перевозки на&nbsp;межконтинентальные расстояния без ограничений по&nbsp;объему груза и&nbsp;видам транспортных средств.'
+                                )
+                                include ../../blocks/components/sliderMini/sliderMini
+                                include ../../blocks/modules/form/form
+                                +form('Свяжитесь с нами','form',[
+                                    {
+                                        'label' : 'Имя',
+                                        'name' : 'name',
+                                        'type' : 'text',
+                                    },
+                                    {
+                                        'label' : 'Телефон',
+                                        'name' : 'phone',
+                                        'type' : 'tel',
+                                    },
+                                    {
+                                        'label' : 'E-mail',
+                                        'name' : 'email',
+                                        'type' : 'email',
+                                    },
+                                    {
+                                        'label' : 'Сообщение',
+                                        'name' : 'message',
+                                        'type' : 'textarea',
+                                    },],
+                                    {},
+                                    {
+                                        'text' : 'Согласен на обработку персональных данных.',
+                                        'link' : {
+                                            'title' : 'Политика конфиденциальности',
+                                            'href' : '/politic'
+                                        },
+                                        'name' : 'politic'
+                                    },
+                                    'Отправить'
+                                )
+
+    include ../../blocks/modules/footer/footer
+    include ../../blocks/modules/popup/popup
+
+block scripts
+    script(src="./js/main.js")
+    script(src="./js/vendor.js")

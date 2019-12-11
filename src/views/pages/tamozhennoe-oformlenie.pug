@@ -2,7 +2,7 @@ extends ../layouts/default
 include ../helpers/mixins
 
 block variables
-    - const title = "Таможенное оформление и сертификация"
+    - const title = "Таможенное оформление"
 
 block content
     include ../../blocks/modules/header/header
@@ -15,7 +15,44 @@ block content
                     .content__sidebar.col-lg-3
                         include ../../blocks/modules/sidebar/sidebar
                     .content__information.col-lg-9
-                        include ../../blocks/components/services/services-tamozhennoe-oformlenie
+                        .page.page--services
+                            .page__content.text-big-lh
+                                h3.subtitle Таможенное оформление
+                                p Таможенное оформление&nbsp;&mdash; вывоз, за&nbsp;границу товаров, проданных иностранным покупателям, предназначенных для продажи на&nbsp;иностранных рынках или для переработки в&nbsp;другой стране.
+                                include ../../blocks/components/gridLinks/gridLinks-customClearance.pug
+                                include ../../blocks/modules/form/form
+                                +form('Свяжитесь с нами','form',[
+                                    {
+                                        'label' : 'Имя',
+                                        'name' : 'name',
+                                        'type' : 'text',
+                                    },
+                                    {
+                                        'label' : 'Телефон',
+                                        'name' : 'phone',
+                                        'type' : 'tel',
+                                    },
+                                    {
+                                        'label' : 'E-mail',
+                                        'name' : 'email',
+                                        'type' : 'email',
+                                    },
+                                    {
+                                        'label' : 'Сообщение',
+                                        'name' : 'message',
+                                        'type' : 'textarea',
+                                    },],
+                                    {},
+                                    {
+                                        'text' : 'Согласен на обработку персональных данных.',
+                                        'link' : {
+                                            'title' : 'Политика конфиденциальности',
+                                            'href' : '/politic'
+                                        },
+                                        'name' : 'politic'
+                                    },
+                                    'Отправить'
+                                )
 
     include ../../blocks/modules/footer/footer
     include ../../blocks/modules/popup/popup

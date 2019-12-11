@@ -1,0 +1,127 @@
+.keypoints {
+    line-height: 150%;
+    transition: all 0.3s;
+
+    .item {
+        margin-top: 65px;
+
+        &__img {
+            max-height: 130px;
+            margin: -70px -12px 0;
+            display: flex;
+            justify-content: center;
+            transition: all 0.3s;
+
+            img {
+                object-fit: contain;
+            }
+        }
+
+        &__title {
+            position: absolute;
+            top: 0;
+            min-height: 100px;
+            padding-top: 110px;
+            text-align: center;
+            transition: all 0.3s;
+
+            h4 {
+                font-weight: 400;
+                transition: all 0.3s;
+            }
+        }
+
+        &__text {
+            display: none;
+            position: absolute;
+            top: 0;
+            padding-top: 220px;
+            transition: all 0.3s;
+        }
+
+        &__wrapper {
+            position: relative;
+            min-height: 260px;
+            padding: 20px 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: $lighterGrey;
+            border: 2px solid $lightGrey;
+            &:hover {
+                .item__img {
+                    opacity: 0;
+                }
+
+                .item__title {
+                    padding-top: 10px;
+
+                    h4 {
+                        font-weight: 700;
+                        line-height: 130%;
+                    }
+                }
+
+                .item__text {
+                    padding-top: 40px;
+                }
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+
+        .subtitle {
+            text-align: center;
+        }
+    }
+
+    &__content {
+        position: relative;
+        margin-right: -20px;
+        margin-left: -20px;
+
+        .button-wrapper {
+            position: relative;
+            z-index: 1;
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #ffffff;
+        }
+
+        .button {
+            &:hover {
+                background-color: #ffffff;
+            }
+        }
+    }
+
+    &__background {
+        position: absolute;
+        top: 170px;
+        width: 100%;
+        height: 200px;
+        border: 2px solid $lightGrey;
+        transform: translateY(20px);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .keypoints__background {
+        top: auto;
+        bottom: 55px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .keypoints {
+        .button-wrapper {
+            padding: 0;
+        }
+
+        &__background {
+            display: none;
+        }
+    }
+}

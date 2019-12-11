@@ -28,9 +28,9 @@
             a {
                 position: relative;
                 padding-bottom: 24px;
-                color: black;
+                color: #000000;
                 font-size: 20px;
-                font-weight: bold;
+                font-weight: 700;
 
                 &:before {
                     content: "";
@@ -123,5 +123,82 @@
             }
         }
     }
+}
 
+.helpbox {
+    width: 390px;
+    max-height: 360px;
+    padding: 50px;
+    padding-top: 40px;
+    border: 2px solid $grey;
+
+    @media only screen and (max-width: 425px) {
+        padding: 20px;
+        width: 100%;
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__content {
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        @media only screen and (max-width: 425px) {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 150%;
+            color: #000000;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 150%;
+            color: #000000;
+        }
+    }
+
+    &__navigation {
+        position: absolute;
+        top: 0;
+        right: -15px;
+        width: 30%;
+        height: 50px;
+
+        @media only screen and (max-width: 425px) {
+            width: 50%;
+        }
+
+        .swiper-button-prev::after,
+        .swiper-button-next::after {
+            content: "";
+            width: 15px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+
+        .swiper-button-prev::after {
+            background-image: url(../img/svg/arrow-left.svg);
+        }
+        .swiper-button-next::after {
+            background-image: url(../img/svg/arrow-right.svg);
+        }
+    }
 }

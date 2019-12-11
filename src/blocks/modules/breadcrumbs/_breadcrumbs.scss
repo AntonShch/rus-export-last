@@ -4,10 +4,13 @@
     > ol {
         display: flex;
         list-style: none;
+        flex-wrap: wrap;
 
         > li {
             position: relative;
             display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
             align-items: center;
 
             &:not(:first-child) {

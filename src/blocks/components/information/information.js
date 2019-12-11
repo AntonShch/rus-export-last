@@ -1,6 +1,9 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-empty-function */
 /* eslint-disable no-useless-constructor */
+
+import Swiper from 'swiper';
+
 class Tabs {
     constructor() {}
 
@@ -36,3 +39,14 @@ class Tabs {
 }
 
 const tabs = new Tabs().init('.tab-link', '.tab-content');
+
+const helpbox = new Swiper('.helpbox .swiper-container', {
+    init: true,
+    initialSlide: 0,
+    direction: 'horizontal',
+    slidesPerView: 1,
+    navigation: {
+        nextEl: '.helpbox .swiper-navigation .swiper-button-next',
+        prevEl: '.helpbox .swiper-navigation .swiper-button-prev',
+    },
+});

@@ -12,8 +12,6 @@ if (addressDiv) {
     var address = addressDiv.getAttribute('data-address');
 }
 
-console.log(address);
-
 var isMobile = {
     Android() {
         return navigator.userAgent.match(/Android/i);

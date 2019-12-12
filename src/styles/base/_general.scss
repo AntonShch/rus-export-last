@@ -71,8 +71,9 @@ html {
 
 main {
 	position: relative;
-	flex: 1 0 auto;
+	top: $header;
 	z-index: 1;
+	flex: 1 0 auto;
 }
 
 header,

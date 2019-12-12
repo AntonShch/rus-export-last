@@ -7,9 +7,10 @@
 
         &__img {
             max-height: 130px;
-            margin: -70px -12px 0;
+            margin: -50px -12px 0;
             display: flex;
             justify-content: center;
+            pointer-events: none;
             transition: all 0.3s;
 
             img {
@@ -17,10 +18,21 @@
             }
         }
 
+        &__text-wrapper {
+            position: absolute;
+            top: 140px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 0 12px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
         &__title {
-            position: relative;
-            min-height: 100px;
+            padding-bottom: 12px;
             text-align: center;
+            pointer-events: none;
             transition: all 0.3s;
 
             h4 {
@@ -30,30 +42,44 @@
         }
 
         &__text {
-            display: none;
+            min-height: 130px;
+            margin-top: 150px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 150%;
+            pointer-events: none;
             transition: all 0.3s;
         }
 
         &__wrapper {
             position: relative;
-            min-height: 260px;
+            height: 260px;
             padding: 20px 12px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-start;
+            align-items: center;
             background-color: $lighterGrey;
             border: 2px solid $lightGrey;
             &:hover {
                 .item__img {
-                    margin-top: -200px;
                     opacity: 0;
                 }
 
+                .item__text-wrapper {
+                    top: 20px;
+                }
+
                 .item__title {
-                    top: 0;
                     h4 {
                         font-weight: 700;
+                        line-height: 130%;
                     }
+                }
+
+                .item__text {
+                    margin-top: 0;
                 }
             }
         }
@@ -97,7 +123,7 @@
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
     .keypoints__background {
         top: auto;
         bottom: 55px;

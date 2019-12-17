@@ -1,11 +1,12 @@
 mixin to-request(image,title,text,button)
     .to-request.col-12
         .to-request__wrapper
-            .to-request__image
-                img(src=image, alt="search-request.svg")
             .to-request__content
-                - if(title)
+                .to-request__image
+                    img(src=image, alt="search-request.svg")
+                .to-request__text
+                    - if(title)
                         p.subtitle #{title}
-                p #{text}
+                    p #{text}
             .to-request__button
                 button.button.button--action #{button}

@@ -101,3 +101,28 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .specialists__wrapper {
+        padding-bottom: 30px;
+        
+        &--back-rect::before {
+            top: 460px;
+            right: 550px;
+        }
+    }
+
+    .specialists-item {
+        &:not(:first-of-type) {
+            margin-top: 10px;
+        }
+
+        &__wrapper {
+            margin: 0 auto;
+        }
+
+        &__button {
+            bottom: 80px;
+        }
+    }
+}

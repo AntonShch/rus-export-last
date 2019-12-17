@@ -84,6 +84,7 @@
         "no-extra-semicolons": [true, {
             "message": "Две точки с запятой подряд не должны быть"
         }],
+        "no-descending-specificity": null,
 
         "font-family-name-quotes": ["always-where-recommended", {
             "message": "Название шрифта следует брать в кавычки"

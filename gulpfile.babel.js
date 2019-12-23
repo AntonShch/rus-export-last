@@ -30,10 +30,10 @@ const requireDir = require('require-dir'),
             dist: './dist/img/',
             watch: './src/img/**/*.{jpg,jpeg,png,gif,svg}',
         },
-        animates: {
-            src: './src/img/animates/*.json',
-            dist: './dist/img/animates/',
-            watch: './src/img/animates/*.json',
+        animations: {
+            src: './src/img/animations/*.json',
+            dist: './dist/img/animations/',
+            watch: './src/img/animations/*.json',
         },
         webp: {
             src: [
@@ -77,7 +77,7 @@ export const development = gulp.series(
         'styles',
         'scripts',
         'images',
-        'animates',
+        'animations',
         'sprites',
         'fonts',
         'favicons',
@@ -92,6 +92,7 @@ export const prod = gulp.series(
         'styles',
         'scripts',
         'images',
+        'animations',
         'sprites',
         'fonts',
         'favicons',

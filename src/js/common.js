@@ -4,6 +4,7 @@
 /* eslint-disable consistent-return */
 /* eslint-disable no-useless-constructor */
 import anime from 'animejs';
+import AOS from 'aos';
 
 class Accordion {
     constructor() {}
@@ -92,3 +93,7 @@ const buttonsAccordion = document.querySelectorAll('.accordion__button');
 for (const button of buttonsAccordion) {
     DropDownAccordion.init(button);
 }
+
+AOS.init({
+    duration: 500,
+});

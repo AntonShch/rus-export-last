@@ -9,3 +9,4 @@ import '%components%/information/information';
 import '%components%/team/team';
 import '%components%/sliderMini/sliderMini';
 import '%components%/specialists/specialists';
+import '%components%/advantages/advantages';

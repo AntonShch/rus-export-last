@@ -13,7 +13,6 @@
 .popup {
     position: fixed;
     z-index: 21;
-    // top: 50%;
     top: 55vh;
     left: 50%;
     width: 100%;
@@ -50,17 +49,38 @@
         width: 100%;
         background: #ffffff;
     }
+
+    &--menu {
+        top: 100px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        max-width: none;
+        transform: none;
+
+        .popup__container {
+            max-width: none;
+            padding: 0;
+        }
+
+        .popup__wrapper {
+            height: 100%;
+            margin: 0;
+        }
+    }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
     .popup {
         max-width: 90%;
         max-height: 90%;
         overflow-y: auto;
 
-        &__wrapper {
-            padding-right: 30px;
-            padding-left: 30px;
+        &--menu {
+            top: 70px;
+            max-width: none;
+            max-height: none;
+            height: calc(100vh - 70px);
         }
     }
 }

@@ -3,7 +3,6 @@ import lottie from 'lottie-web';
 class Animate {
     constructor(icon, speed) {
         this.icon = icon;
-        // this.speed = speed || 1;
         this.speed = speed;
 
         const animation = lottie.loadAnimation({
@@ -18,23 +17,28 @@ class Animate {
             const elem = document.querySelector(
                 `.js-lottie-icon--${this.icon}`
             );
-            const targetPosition = {
-                top: window.pageYOffset + elem.getBoundingClientRect().top,
-                bottom:
-                    window.pageYOffset + elem.getBoundingClientRect().bottom,
-            };
-            const windowPosition = {
-                top: window.pageYOffset,
-                bottom:
-                    window.pageYOffset + document.documentElement.clientHeight,
-            };
 
-            if (
-                targetPosition.bottom - 200 > windowPosition.top &&
-                targetPosition.top + 300 < windowPosition.bottom
-            ) {
-                animation.play();
-                animation.setSpeed(speed);
+            if (elem) {
+                const targetPosition = {
+                    top: window.pageYOffset + elem.getBoundingClientRect().top,
+                    bottom:
+                        window.pageYOffset +
+                        elem.getBoundingClientRect().bottom,
+                };
+                const windowPosition = {
+                    top: window.pageYOffset,
+                    bottom:
+                        window.pageYOffset +
+                        document.documentElement.clientHeight,
+                };
+
+                if (
+                    targetPosition.bottom - 200 > windowPosition.top &&
+                    targetPosition.top + 300 < windowPosition.bottom
+                ) {
+                    animation.play();
+                    animation.setSpeed(speed);
+                }
             }
         });
     }

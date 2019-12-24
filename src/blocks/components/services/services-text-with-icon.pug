@@ -1,8 +1,8 @@
 mixin textWithIcon(title, text)
     .services-text-with-icon
         .services-text-with-icon__wrapper
-            .services-text-with-icon__icon
+            .services-text-with-icon__icon(data-aos="fade-up-left")
                 img(src="./img/services-text-with-icon.svg", alt="services-text-with-icon.svg")
-            .services-text-with-icon__content
+            .services-text-with-icon__content(data-aos="fade-up")
                 p.subtitle !{title}
                 p.text-big-lh !{text}

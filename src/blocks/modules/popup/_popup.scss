@@ -17,9 +17,14 @@
     left: 50%;
     width: 100%;
     max-width: 910px;
+    max-height: calc(100vh - 150px);
     display: none;
     transform: translate(-50%, -50%);
     opacity: 0;
+
+    .form {
+        border: none;
+    }
 
     &__close {
         position: absolute;
@@ -50,22 +55,13 @@
         background: #ffffff;
     }
 
-    &--menu {
-        top: 100px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        max-width: none;
-        transform: none;
-
-        .popup__container {
-            max-width: none;
-            padding: 0;
-        }
-
-        .popup__wrapper {
-            height: 100%;
-            margin: 0;
+    &--consultation {
+        &-success {
+            .form__content {
+                p {
+                    text-align: center;
+                }
+            }
         }
     }
 }
@@ -73,7 +69,7 @@
 @media screen and (max-width: 768px) {
     .popup {
         max-width: 90%;
-        max-height: 90%;
+        max-height: calc(100vh - 100px);
         overflow-y: auto;
 
         &--menu {

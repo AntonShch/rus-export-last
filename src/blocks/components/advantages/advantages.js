@@ -1,9 +1,6 @@
 import PerfectScrollbar from 'perfect-scrollbar';
 import Fade from '../../modules/popup/popup';
 
-new PerfectScrollbar('.popup-advantages__content-wrapper');
-new PerfectScrollbar('.popup-advantages__list > ul');
-
 class Cross {
     constructor(link) {
         this.link = link;
@@ -39,6 +36,18 @@ const popupAdvContents = document.querySelectorAll(
 );
 
 if (advLinks) {
+    const advPopupListScroll = document.querySelector(
+        '.popup-advantages__content-wrapper'
+    );
+    const advPopupContentScroll = document.querySelector(
+        '.popup-advantages__list > ul'
+    );
+
+    if (advPopupListScroll && advPopupContentScroll) {
+        new PerfectScrollbar(advPopupListScroll);
+        new PerfectScrollbar(advPopupContentScroll);
+    }
+
     let advLinkData;
     let popupAdvLinkData;
     let popupAdvContentData;

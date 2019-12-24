@@ -43,4 +43,51 @@
     .popup__container.container
         .popup__wrapper.row
             include ../menu/menu
+.popup.popup--consultation
+    .popup__wrapper
+        button.popup__close.button.popup__close-consultation
+            +icon('close', '')
+        include ../form/form
+        +form('Оставьте заявку на консультацию','form',[
+            {
+                'label' : 'Имя',
+                'name' : 'name',
+                'type' : 'text',
+            },
+            {
+                'label' : 'Телефон',
+                'name' : 'phone',
+                'type' : 'tel',
+            },
+            {
+                'label' : 'E-mail',
+                'name' : 'email',
+                'type' : 'email',
+            },
+            {
+                'label' : 'Сообщение',
+                'name' : 'message',
+                'type' : 'textarea',
+            },],
+            {},
+            {
+                'text' : 'Согласен на обработку персональных данных.',
+                'link' : {
+                    'title' : 'Политика конфиденциальности',
+                    'href' : '/politic'
+                },
+                'name' : 'politic'
+            },
+            'Отправить'
+        )
+.popup.popup--consultation-success
+    .popup__wrapper
+        button.popup__close.button.popup__close-consultation
+            +icon('close', '')
+        include ../form/form
+        +form('Спасибо','form-alert','Мы свяжемся с вами в ближайшее время',
+            '',
+            '',
+            'Хорошо'
+        )
 .overlay

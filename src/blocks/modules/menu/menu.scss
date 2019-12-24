@@ -1,3 +1,23 @@
+.popup--menu {
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: none;
+    transform: none;
+    max-height: 90%;
+
+    .popup__container {
+        max-width: none;
+        padding: 0;
+    }
+
+    .popup__wrapper {
+        height: 100%;
+        margin: 0;
+    }
+}
+
 .menu {
     position: relative;
     z-index: 1;
@@ -23,7 +43,7 @@
         height: calc(100vh - 331px);
 
         @media screen and (max-width: 768px) {
-            height: calc(100vh - 359px);
+            height: calc(100vh - 420px);
         }
 
         &:hover {
@@ -79,10 +99,16 @@
     }
 
     &__fast-links {
+        max-width: none !important;
         display:         flex;
         align-items: center;
         flex-wrap: wrap;
+        flex-basis: 100% !important;
         justify-content: space-between;
+
+        a {
+            margin-right: 20px;
+        }
     }
 
     &__menu-item {
@@ -154,6 +180,7 @@
         &__fast-links {
             align-items: flex-start;
             flex-direction: column;
+            flex-basis: 100%;
         }
 
         &__menu {
@@ -161,6 +188,10 @@
 
             &:not(.menu__accordion) {
                 display: none;
+            }
+
+            &-item {
+                margin-bottom: 0;
             }
         }
 

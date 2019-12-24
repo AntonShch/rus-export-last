@@ -1,5 +1,5 @@
 mixin p(title, ...text)
-        .paragraph
+        .paragraph(data-aos="fade-up")
             if title === false
                 each item in text
                     p !{item}
@@ -9,7 +9,7 @@ mixin p(title, ...text)
                     p !{item}
 
 mixin p--top(title, ...text)
-        .paragraph--first
+        .paragraph--first(data-aos="fade-up")
             if title === false
                 each item in text
                     p !{item}

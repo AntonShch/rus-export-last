@@ -25,12 +25,31 @@
             display: flex;
             border-bottom: 1px solid #eceff5;
 
+            @media screen and (max-width: 480px) {
+                flex-direction: column;
+            }
+
             a {
                 position: relative;
                 padding-bottom: 24px;
                 color: #000000;
                 font-size: 20px;
                 font-weight: 700;
+
+                @media screen and (max-width: 480px) {
+                    margin-bottom: 10px;
+                    padding-left: 20px;
+                    padding-bottom: 0;
+                }
+
+                @media screen and (min-width: 480px) and (max-width: 767px) {
+                    flex-basis: calc(100% / 3);
+                    text-align: center;
+                }
+
+                @media screen and (max-width: 767px) {
+                    font-size: 18px;
+                }
 
                 &:before {
                     content: "";
@@ -42,10 +61,24 @@
                     display: block;
                     transition: 0.3s;
                     background: transparent;
+
+                    @media screen and (max-width: 480px) {
+                        top: 0;
+                        width: 2px;
+                        height: 100%;
+                    }
                 }
 
                 &:not(:last-child) {
                     margin-right: 90px;
+
+                    @media screen and (max-width: 480px) {
+                        margin-right: 0;
+                    }
+
+                    @media screen and (min-width: 480px) and (max-width: 767px) {
+                        margin-right: 50px;
+                    }
                 }
 
                 &.is-active {

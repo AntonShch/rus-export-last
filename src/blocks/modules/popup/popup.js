@@ -1,6 +1,7 @@
-/* eslint-disable no-restricted-syntax */
+// /* eslint-disable no-restricted-syntax */
 /* eslint-disable consistent-return */
 import disableScroll from 'disable-scroll';
+import PerfectScrollbar from 'perfect-scrollbar';
 import anime from 'animejs';
 
 export default class Fade {
@@ -58,33 +59,33 @@ export default class Fade {
     }
 }
 
-const userPopupLogin = new Fade('.popup--user');
-const userPopupRegister = new Fade('.popup--user-register');
-const overlayFade = new Fade('.overlay');
-
 const overlay = document.querySelector('.overlay');
 const userButtonsLogin = document.querySelectorAll('.button-user');
 const userButtonRegister = document.querySelector('.button-user-register');
 const userButtonsClose = document.querySelectorAll('.popup__close-user');
 
+const userPopupLogin = new Fade('.popup--user');
+const userPopupRegister = new Fade('.popup--user-register');
+const overlayFade = new Fade('.overlay');
+
 if (userButtonsLogin) {
-    for (const button of userButtonsLogin) {
-        button.addEventListener('click', function() {
+    userButtonsLogin.forEach(button => {
+        button.addEventListener('click', () => {
             overlayFade.fadeIn(350, 'block');
             userPopupRegister.fadeOut(250);
             userPopupLogin.fadeIn(350, 'flex');
         });
-    }
+    });
 }
 
 if (userButtonRegister) {
-    userButtonRegister.addEventListener('click', function() {
+    userButtonRegister.addEventListener('click', () => {
         userPopupLogin.fadeOut(250);
         userPopupRegister.fadeIn(350, 'flex');
     });
 }
 if (overlay) {
-    overlay.addEventListener('click', function() {
+    overlay.addEventListener('click', () => {
         overlayFade.fadeOut(350);
         userPopupLogin.fadeOut(350);
         userPopupRegister.fadeOut(350);
@@ -92,11 +93,70 @@ if (overlay) {
 }
 
 if (userButtonsClose) {
-    for (const button of userButtonsClose) {
-        button.addEventListener('click', function() {
+    userButtonsClose.forEach(button => {
+        button.addEventListener('click', () => {
             overlayFade.fadeOut(250);
             userPopupLogin.fadeOut(250);
             userPopupRegister.fadeOut(250);
         });
-    }
+    });
+}
+
+const consultationButtons = document.querySelectorAll(
+    '.services-about button.button'
+);
+const consultationSuccessButtons = document.querySelectorAll(
+    '.popup--consultation button[type="button"]'
+);
+const consultationButtonsClose = document.querySelectorAll(
+    '.popup__close-consultation'
+);
+const consultationPopup = new Fade('.popup--consultation');
+const consultationSuccessPopup = new Fade('.popup.popup--consultation-success');
+const consultationPopupContent = document.querySelector(
+    '.popup--consultation .popup__wrapper'
+);
+
+if (consultationButtons) {
+    consultationButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            overlayFade.fadeIn(350, 'block');
+            consultationPopup.fadeIn(350, 'flex');
+        });
+
+        if (consultationPopupContent) {
+            new PerfectScrollbar(consultationPopupContent);
+        }
+    });
+}
+
+if (consultationSuccessButtons) {
+    consultationSuccessButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            consultationPopup.fadeOut(250);
+            consultationSuccessPopup.fadeIn(350, 'flex');
+        });
+
+        if (consultationPopupContent) {
+            new PerfectScrollbar(consultationPopupContent);
+        }
+    });
+}
+
+if (overlay) {
+    overlay.addEventListener('click', () => {
+        overlayFade.fadeOut(350);
+        consultationPopup.fadeOut(350);
+        consultationSuccessPopup.fadeOut(350);
+    });
+}
+
+if (consultationButtonsClose) {
+    consultationButtonsClose.forEach(button => {
+        button.addEventListener('click', () => {
+            overlayFade.fadeOut(250);
+            consultationPopup.fadeOut(250);
+            consultationSuccessPopup.fadeOut(250);
+        });
+    });
 }

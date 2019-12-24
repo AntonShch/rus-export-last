@@ -72,7 +72,7 @@ header.header
                                     li
                                         a(href="") Заключение контрактов и согласование условий поставки
                                     li
-                                        a(href="") Таможенное оформление и сертификация
+                                        a(href="./services-tamozhennoe-oformlenie.html") Таможенное оформление и сертификация
                                     li
                                         a(href="") Временный вывоз
                                     li
@@ -201,4 +201,12 @@ header.header
             button.button-user.link-nav
                 +icon('login','')
             button.button-menu.link-nav
-                +icon('menu','')
+                //- +icon('menu','')
+                .burger
+                    .burger-closed
+                        span
+                        span
+                        span
+                    .burger-opened
+                        span
+                        span

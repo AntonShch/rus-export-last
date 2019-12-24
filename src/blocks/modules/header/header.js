@@ -8,13 +8,13 @@ class Header {
         this.dropdowns = dropdowns;
     }
 
-    toScrollFixHeader(header) {
-        window.addEventListener('scroll', function() {
+    toScrollFixHeader() {
+        window.addEventListener('scroll', () => {
             const scrolled = pageYOffset || document.body.scrollTop;
             if (scrolled > 0) {
-                header.classList.add('header--fixed');
+                this.header.classList.add('header--fixed');
             } else {
-                header.classList.remove('header--fixed');
+                this.header.classList.remove('header--fixed');
             }
         });
     }
@@ -43,8 +43,8 @@ class Header {
         }
     }
 
-    dropDownClose(dropdowns) {
-        for (const dropdown of dropdowns) {
+    dropDownClose() {
+        this.dropdowns.forEach(dropdown => {
             const dropdownContainer = document.querySelector(dropdown);
             const dropdownButton = dropdownContainer.querySelector(
                 '.dropdown-trigger'
@@ -54,14 +54,17 @@ class Header {
             );
             dropdownButton.classList.remove('dropdown-trigger--active');
             dropdownMenu.classList.remove('dropdown-menu--active');
-        }
+        });
     }
 
     perfectScroll(dropdownPhones) {
-        new PerfectScrollbar(dropdownPhones, {
-            wheelSpeed: 0.3,
-            wheelPropagation: false,
-        });
+        this.dropdownPhones = dropdownPhones;
+        if (dropdownPhones) {
+            new PerfectScrollbar(dropdownPhones, {
+                wheelSpeed: 0.3,
+                wheelPropagation: false,
+            });
+        }
     }
 
     init() {

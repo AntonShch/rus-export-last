@@ -1,0 +1,217 @@
+.menu {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    overflow: hidden;
+
+    a {
+        transition: 0.3s;
+
+        &:hover {
+            color: $hover;
+        }
+    }
+
+    > * {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    &__nav {
+        position: relative;
+        width: 100%;
+        height: calc(100vh - 331px);
+
+        @media screen and (max-width: 768px) {
+            height: calc(100vh - 359px);
+        }
+
+        &:hover {
+            .ps__rail-y {
+                opacity: 1;
+            }
+        }
+
+        .ps__rail-y {
+            right: 30px !important;
+            width: 3px;
+            background-color: $grey;
+            border-radius: 5px;
+            opacity: 1;
+            transition:
+                background-color 0.2s linear,
+                opacity 0.2s linear,
+                width 0.2s linear,
+                right 0.2s linear;
+
+            &:hover,
+            &:active {
+                right: 27px !important;
+                width: 10px;
+
+                .ps__thumb-y {
+                    width: 10px;
+                    background-color: $main;
+                }
+            }
+
+            .ps__thumb-y {
+                right: 0;
+                width: 3px;
+
+                &:hover,
+                &:active {
+                    background-color: $main;
+                }
+            }
+        }
+    }
+
+    &__logo {
+        align-items: center;
+    }
+
+    &__top {
+        display:         flex;
+        align-items: center;
+        margin-top: 55px;
+        margin-bottom: 40px;
+    }
+
+    &__fast-links {
+        display:         flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__menu-item {
+        margin-bottom: 30px;
+
+        a {
+            color: $main;
+
+            &:not(:last-child) {
+                padding-bottom: 10px;
+            }
+        }
+
+        .menu__menu-label {
+            display: block;
+            padding-bottom: 18px;
+            color: #000000;
+            font-weight: 700;
+        }
+    }
+
+    &__accordion {
+        position: relative;
+
+        &-button {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__copyright {
+        padding: 36px 0;
+
+        @media screen and (max-width: 768px) {
+            padding: 10px 0;
+        }
+
+        &-content {
+            display:         flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .menu {
+        &__top {
+            align-items: flex-start;
+            margin-top: 30px;
+            margin-right: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+        }
+
+        &__nav {
+            margin-right: 0;
+            margin-bottom: 20px;
+            margin-left: 0;
+        }
+
+        &__fast-links {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        &__menu {
+            margin-bottom: 0;
+
+            &:not(.menu__accordion) {
+                display: none;
+            }
+        }
+
+        &__accordion {
+            height: 30px;
+            overflow: hidden;
+
+            &.accordion--active {
+                .menu__accordion-content {
+                    opacity: 1;
+                }
+
+                .icon {
+                    transform: rotate(180deg);
+                }
+            }
+
+            .icon {
+                transition: 0.3s;
+            }
+
+            &-content {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                margin-left: 10px;
+                padding-left: 10px;
+                transition: 0.3s 0.1s;
+                opacity: 0;
+                border-left: 1px solid $grey;
+            }
+        }
+
+        &__copyright {
+            &-content {
+                flex-direction: column;
+
+                a {
+                    display: inline-flex;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .menu {
+        &__accordion {
+            .icon {
+                width: 1em;
+            }
+        }
+    }
+}

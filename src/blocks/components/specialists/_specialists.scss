@@ -28,8 +28,12 @@
         justify-content: center;
 
         svg {
-            max-height: 350px;
+            max-height: 500px;
         }
+    }
+
+    &__content {
+        padding-top: 20px;
     }
 
     &-item {
@@ -102,13 +106,21 @@
     }
 }
 
+@media screen and (width: 768px) {
+    .specialists-item {
+        &__wrapper {
+            height: 400px;
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
     .specialists__wrapper {
         padding-bottom: 30px;
-        
+
         &--back-rect::before {
-            top: 460px;
-            right: 550px;
+            top: 200px;
+            right: 580px;
         }
     }
 

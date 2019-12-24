@@ -55,6 +55,18 @@
     }
 }
 
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    .to-request {
+        &__image {
+            margin-right: 40px;
+        }
+
+        &__button {
+            margin-left: 170px;
+        }
+    }
+}
+
 @media screen and (max-width: 425px) {
     .to-request {
         &__content {

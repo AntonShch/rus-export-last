@@ -53,3 +53,11 @@
         color: #7e8aa3;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .partnership__text {
+        .title-offset {
+            padding-top: 15px;
+        }
+    }
+}

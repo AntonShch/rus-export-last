@@ -10,12 +10,24 @@
         &__wrapper {
             width: 100%;
             height: 100%;
+            padding: 40px 20px;
             display: flex;
             align-items: center;
             justify-content: center;
 
             img {
+                height: auto;
+                max-height: 100%;
                 opacity: 0.45;
+                filter: grayscale(100%);
+                transition: 0.3s;
+            }
+
+            &:hover {
+                img {
+                    opacity: 1;
+                    filter: none;
+                }
             }
         }
     }

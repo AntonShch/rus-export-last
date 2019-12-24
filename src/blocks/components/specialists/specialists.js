@@ -1,53 +1,56 @@
 import lottie from 'lottie-web';
 
 class Animate {
-    constructor(container, path) {
-        this.container = container;
-        this.path = path;
+    constructor(icon, speed) {
+        this.icon = icon;
+        this.speed = speed;
 
         const animation = lottie.loadAnimation({
-            container: document.querySelector(this.container),
+            container: document.querySelector(`.js-lottie-icon--${this.icon}`),
             renderer: 'svg',
             loop: false,
             autoplay: false,
-            path: this.path,
+            path: `/img/animations/${this.icon}.json`,
         });
 
         document.addEventListener('scroll', () => {
-            const elem = document.querySelector(this.container);
-            const targetPosition = {
-                top: window.pageYOffset + elem.getBoundingClientRect().top,
-                bottom:
-                    window.pageYOffset + elem.getBoundingClientRect().bottom,
-            };
-            const windowPosition = {
-                top: window.pageYOffset,
-                bottom:
-                    window.pageYOffset + document.documentElement.clientHeight,
-            };
+            const elem = document.querySelector(
+                `.js-lottie-icon--${this.icon}`
+            );
 
-            if (
-                targetPosition.bottom - 200 > windowPosition.top &&
-                targetPosition.top + 300 < windowPosition.bottom
-            ) {
-                animation.play();
+            if (elem) {
+                const targetPosition = {
+                    top: window.pageYOffset + elem.getBoundingClientRect().top,
+                    bottom:
+                        window.pageYOffset +
+                        elem.getBoundingClientRect().bottom,
+                };
+                const windowPosition = {
+                    top: window.pageYOffset,
+                    bottom:
+                        window.pageYOffset +
+                        document.documentElement.clientHeight,
+                };
+
+                if (
+                    targetPosition.bottom - 200 > windowPosition.top &&
+                    targetPosition.top + 300 < windowPosition.bottom
+                ) {
+                    animation.play();
+                    animation.setSpeed(speed);
+                }
             }
         });
     }
 }
 
-const countries = new Animate(
-    '.js-lottie-icon--counties',
-    '/img/animates/countries.json'
-);
+const countries = new Animate('countries2', 1);
 
-const head = new Animate('.js-lottie-icon--head', '/img/animates/head.json');
+const head = new Animate('head', 1);
 
-const impa = new Animate('.js-lottie-icon--impa', '/img/animates/impa.json');
+const impa = new Animate('impa', 1);
 
-const flags = new Animate('.js-lottie-icon--flags', '/img/animates/head.json');
+const city = new Animate('city', 1);
 
-const hexagon = new Animate(
-    '.js-lottie-icon--hexagon',
-    '/img/animates/hexagon.json'
-);
+const hexagon = new Animate('hexagon1', 1.5);
+// hexagon.speed(2);

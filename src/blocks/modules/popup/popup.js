@@ -3,7 +3,7 @@
 import disableScroll from 'disable-scroll';
 import anime from 'animejs';
 
-class Fade {
+export default class Fade {
     constructor(el) {
         this.el = document.querySelector(el);
         this.flag = false;
@@ -15,6 +15,10 @@ class Fade {
         flag = true;
         const { el } = this;
         if (flag !== false) {
+            const popups = document.querySelectorAll('.popup');
+            popups.forEach(e => {
+                e.style.display = 'none';
+            });
             anime({
                 targets: el,
                 opacity: 1,

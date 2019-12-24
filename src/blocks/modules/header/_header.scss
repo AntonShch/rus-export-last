@@ -27,6 +27,7 @@
 
         -webkit-backdrop-filter: saturate(180%) blur(8px);
                 backdrop-filter: saturate(180%) blur(8px);
+        transition: 0.3s;
     }
 
     &--fixed, &:hover {

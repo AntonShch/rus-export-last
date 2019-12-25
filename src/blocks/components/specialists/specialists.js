@@ -1,22 +1,20 @@
 import lottie from 'lottie-web';
 
 class Animate {
-    constructor(icon, speed) {
-        this.icon = icon;
+    constructor(container, pathToSVG, speed) {
+        // this.icon = icon;
         this.speed = speed;
 
         const animation = lottie.loadAnimation({
-            container: document.querySelector(`.js-lottie-icon--${this.icon}`),
+            container: document.querySelector(container),
             renderer: 'svg',
             loop: false,
             autoplay: false,
-            path: `/img/animations/${this.icon}.json`,
+            path: pathToSVG,
         });
 
         document.addEventListener('scroll', () => {
-            const elem = document.querySelector(
-                `.js-lottie-icon--${this.icon}`
-            );
+            const elem = document.querySelector(container);
 
             if (elem) {
                 const targetPosition = {
@@ -44,13 +42,33 @@ class Animate {
     }
 }
 
-const countries = new Animate('countries2', 1);
+const countries = new Animate(
+    '.js-lottie-icon--countries2',
+    './img/animations/countries2.json',
+    1
+);
 
-const head = new Animate('head', 1);
+const head = new Animate(
+    '.js-lottie-icon--head',
+    './img/animations/head.json',
+    1
+);
 
-const impa = new Animate('impa', 1);
+const impa = new Animate(
+    '.js-lottie-icon--impa',
+    './img/animations/impa.json',
+    1
+);
 
-const city = new Animate('city', 1);
+const city = new Animate(
+    '.js-lottie-icon--city',
+    './img/animations/city.json',
+    1
+);
 
-const hexagon = new Animate('hexagon1', 1.5);
+const hexagon = new Animate(
+    '.js-lottie-icon--hexagon1',
+    './img/animations/hexagon1.json',
+    1.5
+);
 // hexagon.speed(2);

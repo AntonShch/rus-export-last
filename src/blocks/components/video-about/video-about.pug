@@ -1,7 +1,9 @@
 section.video-about
     .video-about__background
         video(preload, autoplay, muted, loop)
-            source(src="./video/video.mp4", type='video/mp4')
+            //- source(src="./video/video.av1.mp4", type='video/mp4; codecs=av01.0.05M.08')
+            //- source(src="./video/video.webm", type='video/webm')
+            source(src="./video/video.h264.mp4", type='video/mp4; codecs=avc1.4D401E')
     .video-about__container.container
         .video-about__wrapper.row
             .video-about__content.col-md-6

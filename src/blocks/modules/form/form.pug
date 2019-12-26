@@ -6,7 +6,7 @@ mixin form(title, typeForm, inputs, footer, checkbox, button)
                 -if (typeForm == 'form')
                     -for (var i = 0; i < inputs.length; i++)
                         - if (inputs[i].type != 'textarea')
-                            +input(inputs[i].label,inputs[i].type, inputs[i].name)
+                            +input(inputs[i].label,inputs[i].type, inputs[i].name, inputs[i].required)
                         - else
                             .custom-textarea
                                 label.custom-textarea__label #{inputs[i].label}

@@ -3,4 +3,3 @@ import '%modules%/header/header';
 import '%modules%/footer/footer';
 import '%modules%/popup/popup';
 import '%modules%/menu/menu';
-import '%modules%/form/form';

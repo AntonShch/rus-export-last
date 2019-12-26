@@ -160,3 +160,43 @@ if (consultationButtonsClose) {
         });
     });
 }
+
+const partnersButtons = document.querySelectorAll(
+    '.partnership__text button.button'
+);
+const partnersButtonsClose = document.querySelectorAll(
+    '.popup__close-partners'
+);
+const partnersPopup = new Fade('.popup--partners');
+const partnersPopupContent = document.querySelector(
+    '.popup--partners .popup__wrapper'
+);
+
+if (partnersButtons) {
+    partnersButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            overlayFade.fadeIn(350, 'block');
+            partnersPopup.fadeIn(350, 'flex');
+        });
+
+        if (partnersPopupContent) {
+            new PerfectScrollbar(partnersPopupContent);
+        }
+    });
+}
+
+if (overlay) {
+    overlay.addEventListener('click', () => {
+        overlayFade.fadeOut(350);
+        partnersPopup.fadeOut(350);
+    });
+}
+
+if (partnersButtonsClose) {
+    partnersButtonsClose.forEach(button => {
+        button.addEventListener('click', () => {
+            overlayFade.fadeOut(250);
+            partnersPopup.fadeOut(250);
+        });
+    });
+}

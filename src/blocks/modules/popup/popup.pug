@@ -1,3 +1,5 @@
+<!-- MODAL POPUPS -->
+
 .popup.popup--user
     .popup__wrapper
         button.popup__close.button.popup__close-user
@@ -8,11 +10,13 @@
                 'label' : 'Логин',
                 'name' : 'login',
                 'type' : 'text',
+                'required' : 'true',
             },
             {
                 'label' : 'Пароль',
                 'name' : 'password',
                 'type' : 'password',
+                'required' : 'true',
             }],
             {
                 'p' : 'Если у вас нет аккаунта вы можете' ,
@@ -53,16 +57,19 @@
                 'label' : 'Имя',
                 'name' : 'name',
                 'type' : 'text',
+                'required' : 'true',
             },
             {
                 'label' : 'Телефон',
                 'name' : 'phone',
                 'type' : 'tel',
+                'required' : 'true',
             },
             {
                 'label' : 'E-mail',
                 'name' : 'email',
                 'type' : 'email',
+                'required' : 'true',
             },
             {
                 'label' : 'Сообщение',
@@ -80,6 +87,49 @@
             },
             'Отправить'
         )
+.popup.popup--partners
+    .popup__wrapper
+        button.popup__close.button.popup__close-partners
+            +icon('close', '')
+        .form(data-aos="fade-up")
+            form.form__wrapper
+                .title Стать партнером РУСЭКСПОРТ
+                .form__content
+                    .custom-input
+                        label.custom-input__label Наименование компании или ФИО
+                        input(type="text",name="name").custom-input__input
+                    .radio-block
+                        p Вы хотите стать:
+                        .custom-input
+                            label.custom-input__label Клиентом
+                            input(type="radio",name="become").custom-input__input
+                        .custom-input
+                            label.custom-input__label Клиентом
+                            input(type="radio",name="become").custom-input__input
+                        .custom-input
+                            label.custom-input__label Клиентом
+                            input(type="radio",name="become").custom-input__input
+                    .custom-textarea
+                        label.custom-textarea__label Сообщение
+                        textarea.custom-textarea__area(name="message")
+                    .custom-input-file
+                        //- CUSTOM INPUT FILE
+                    .custom-input
+                        label.custom-input__label E-mail
+                            input(type="email",name="email").custom-input__input
+                    .custom-input
+                        label.custom-input__label Телефон
+                            input(required,type="tel",name="tel").custom-input__input
+                    .custom-checkbox
+                        input(type="checkbox", id="politic", name="politic")
+                        label(for="politic")
+                            span.custom-checkbox__toggle
+                                <svg height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 6L5 10L11.5 1" stroke="#1E428F" stroke-width="2"/>
+                                </svg>
+                            span.custom-checkbox__text Согласен на обработку персональных данных
+                                a(href="/politic") Политика конфиденциальности
+                    button.button.button--action(type="submit") Отправить
 .popup.popup--consultation-success
     .popup__wrapper
         button.popup__close.button.popup__close-consultation

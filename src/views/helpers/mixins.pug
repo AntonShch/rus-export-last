@@ -3,10 +3,15 @@ mixin icon(name,mod)
     svg(class="icon icon-" + name + ' ' + mod)
         use(xlink:href="./img/svg/sprite.svg#" + name)
 
-mixin input(label,type,name)
-    .custom-input
-        label.custom-input__label #{label}
-        input(required,type=type,name=name).custom-input__input
+mixin input(label,type,name,required)
+    if required == 'true'
+        .custom-input
+            label.custom-input__label #{label}*
+            input(required,type=type,name=name).custom-input__input
+    else
+        .custom-input
+            label.custom-input__label #{label}
+            input(type=type,name=name).custom-input__input
 
 mixin checkbox(text,name, link)
     .custom-checkbox

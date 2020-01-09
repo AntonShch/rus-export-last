@@ -55,11 +55,36 @@
         background: #ffffff;
     }
 
-    &--consultation {
-        &-success {
-            .form__content {
-                p {
-                    text-align: center;
+    &--success {
+        max-width: 720px;
+
+        .form__wrapper {
+            text-align: center;
+
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &--partners {
+        .radio-block {
+            margin-bottom: 20px;
+
+            > p {
+                padding-left: 10px;
+            }
+
+            &__wrapper {
+                margin-top: 10px;
+                margin-bottom: 15px;
+                display: flex;
+                align-items: center;
+
+                .custom-radio {
+                    &:not(:first-of-type) {
+                        margin-left: 50px;
+                    }
                 }
             }
         }

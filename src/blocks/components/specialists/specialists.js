@@ -5,18 +5,15 @@ class Animate {
         this.icon = icon;
         this.speed = speed;
 
-        const animation = lottie.loadAnimation({
-            container: document.querySelector(`.js-lottie-icon--${this.icon}`),
-            renderer: 'svg',
-            loop: false,
-            autoplay: false,
-            path: `./img/animations/${this.icon}.json`,
-        });
+        this.init(icon, speed);
+    }
 
+    playOnScroll(icon, speed, animation) {
+        this.icon = icon;
+        this.speed = speed;
+        this.animation = animation;
         document.addEventListener('scroll', () => {
-            const elem = document.querySelector(
-                `.js-lottie-icon--${this.icon}`
-            );
+            const elem = document.querySelector(`.js-lottie-icon--${icon}`);
 
             if (elem) {
                 const targetPosition = {
@@ -41,6 +38,20 @@ class Animate {
                 }
             }
         });
+    }
+
+    init(icon, speed) {
+        this.icon = icon;
+        this.speed = speed;
+        const animation = lottie.loadAnimation({
+            container: document.querySelector(`.js-lottie-icon--${icon}`),
+            renderer: 'svg',
+            loop: false,
+            autoplay: false,
+            path: `./img/animations/${icon}.json`,
+        });
+
+        this.playOnScroll(icon, speed, animation);
     }
 }
 

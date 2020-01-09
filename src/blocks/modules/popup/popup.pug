@@ -8,15 +8,23 @@
         +form('Вход','form',[
             {
                 'label' : 'Логин',
-                'name' : 'login',
                 'type' : 'text',
+                'name' : 'login',
+                'id' : 'user-login',
+                'value' : '',
+                'placeholder' : '',
                 'required' : 'true',
+                'alert' : 'Введите логин'
             },
             {
                 'label' : 'Пароль',
-                'name' : 'password',
                 'type' : 'password',
+                'name' : 'password',
+                'name' : 'user-password',
+                'value' : '',
+                'placeholder' : '',
                 'required' : 'true',
+                'alert' : 'Введите пароль'
             }],
             {
                 'p' : 'Если у вас нет аккаунта вы можете' ,
@@ -29,6 +37,7 @@
             },
             'Войти'
         )
+
 .popup.popup--user-register
     .popup__wrapper
         button.popup__close.button.popup__close-user
@@ -36,17 +45,19 @@
         include ../form/form
         +form('Регистрация','form-alert','Для регистрации обратитесь к вашему менеджеру по телефону +7 (495) 795-16-80',
             {
-                'p' : 'Если у вас уже есть аккаунта' ,
+                'p' : 'Если у вас уже есть аккаунт' ,
                 'button' : 'Войти',
                 'name' : 'button-user',
             },
             '',
             'Хорошо'
         )
+
 .popup.popup--menu
     .popup__container.container
         .popup__wrapper.row
             include ../menu/menu
+
 .popup.popup--consultation
     .popup__wrapper
         button.popup__close.button.popup__close-consultation
@@ -55,21 +66,33 @@
         +form('Оставьте заявку на консультацию','form',[
             {
                 'label' : 'Имя',
-                'name' : 'name',
                 'type' : 'text',
+                'name' : 'name',
+                'id' : 'consultation-name',
+                'value' : '',
+                'placeholder' : '',
                 'required' : 'true',
+                'alert' : 'Введите имя'
             },
             {
                 'label' : 'Телефон',
-                'name' : 'phone',
                 'type' : 'tel',
+                'name' : 'phone',
+                'id' : 'consultation-tel',
+                'value' : '',
+                'placeholder' : '',
                 'required' : 'true',
+                'alert' : 'Введите телефон'
             },
             {
                 'label' : 'E-mail',
-                'name' : 'email',
                 'type' : 'email',
+                'name' : 'email',
+                'id' : 'consultation-email',
+                'value' : '',
+                'placeholder' : '',
                 'required' : 'true',
+                'alert' : 'Введите e-mail'
             },
             {
                 'label' : 'Сообщение',
@@ -87,12 +110,13 @@
             },
             'Отправить'
         )
+
 .popup.popup--partners
     .popup__wrapper
         button.popup__close.button.popup__close-partners
             +icon('close', '')
-        .form(data-aos="fade-up")
-            form.form__wrapper
+        .form
+            form(action="", enctype="multipart/form-data").form__wrapper
                 .title Стать партнером РУСЭКСПОРТ
                 .form__content
                     .custom-input
@@ -100,44 +124,32 @@
                         input(type="text",name="name").custom-input__input
                     .radio-block
                         p Вы хотите стать:
-                        .custom-input
-                            label.custom-input__label Клиентом
-                            input(type="radio",name="become").custom-input__input
-                        .custom-input
-                            label.custom-input__label Клиентом
-                            input(type="radio",name="become").custom-input__input
-                        .custom-input
-                            label.custom-input__label Клиентом
-                            input(type="radio",name="become").custom-input__input
+                        .radio-block__wrapper
+                            +radio('Клиентом', 'partner', 'partner-client', 'client', 'true')
+                            +radio('Инвестором', 'partner', 'partner-investor', 'investor')
+                            +radio('Клиентом', 'partner', 'partner-supplier', 'supplier')
                     .custom-textarea
                         label.custom-textarea__label Сообщение
                         textarea.custom-textarea__area(name="message")
-                    .custom-input-file
-                        //- CUSTOM INPUT FILE
-                    .custom-input
-                        label.custom-input__label E-mail
-                            input(type="email",name="email").custom-input__input
-                    .custom-input
-                        label.custom-input__label Телефон
-                            input(required,type="tel",name="tel").custom-input__input
-                    .custom-checkbox
-                        input(type="checkbox", id="politic", name="politic")
-                        label(for="politic")
-                            span.custom-checkbox__toggle
-                                <svg height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 6L5 10L11.5 1" stroke="#1E428F" stroke-width="2"/>
-                                </svg>
-                            span.custom-checkbox__text Согласен на обработку персональных данных
-                                a(href="/politic") Политика конфиденциальности
+                    +file('Прикрепить файл', 'partners-file')
+                    +input('E-mail', 'email', 'email', 'partner-email', '', '', 'true', 'Введите e-mail')
+                    +input('Телефон', 'tel', 'tel', 'partner-tel', '', '', 'true', 'Введите телефон')
+                    +checkbox('Согласен на обработку персональных данных.', 'partner-politic', {
+                        'title' : 'Политика конфиденциальности',
+                        'href' : '/politic'
+                    })
                     button.button.button--action(type="submit") Отправить
-.popup.popup--consultation-success
+                    p.form__disclamer * Обязательное поле для заполнения
+
+.popup.popup--success
     .popup__wrapper
-        button.popup__close.button.popup__close-consultation
+        button.popup__close.button
             +icon('close', '')
-        include ../form/form
-        +form('Спасибо','form-alert','Мы свяжемся с вами в ближайшее время',
-            '',
-            '',
-            'Хорошо'
-        )
+        .form
+            .form__wrapper
+                .title Спасибо
+                .form__content
+                    p Мы свяжемся с вами в ближайшее время
+                    button(type="button").button.button--action Хорошо
+
 .overlay

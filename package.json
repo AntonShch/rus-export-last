@@ -83,6 +83,7 @@
         "animejs": "^3.1.0",
         "aos": "^3.0.0-beta.6",
         "disable-scroll": "^0.5.0",
+        "imask": "^6.0.1",
         "lottie-web": "^5.5.10",
         "perfect-scrollbar": "^1.4.0",
         "swiper": "^5.0.4"

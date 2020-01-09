@@ -20,6 +20,17 @@ export default class Fade {
             popups.forEach(e => {
                 e.style.display = 'none';
             });
+            const textareas = el.querySelectorAll('textarea');
+            if (textareas) {
+                textareas.forEach(textarea => {
+                    textarea.addEventListener('focus', () => {
+                        disableScroll.off();
+                    });
+                    textarea.addEventListener('blur', () => {
+                        disableScroll.on();
+                    });
+                });
+            }
             anime({
                 targets: el,
                 opacity: 1,
@@ -60,13 +71,18 @@ export default class Fade {
 }
 
 const overlay = document.querySelector('.overlay');
+const overlayFade = new Fade('.overlay');
+
+const popupSuccess = document.querySelector('.popup--success');
+const popupSuccessFade = new Fade('.popup--success');
+const popupSuccessClose = document.querySelectorAll('.popup--success .button');
+
 const userButtonsLogin = document.querySelectorAll('.button-user');
 const userButtonRegister = document.querySelector('.button-user-register');
 const userButtonsClose = document.querySelectorAll('.popup__close-user');
 
 const userPopupLogin = new Fade('.popup--user');
 const userPopupRegister = new Fade('.popup--user-register');
-const overlayFade = new Fade('.overlay');
 
 if (userButtonsLogin) {
     userButtonsLogin.forEach(button => {
@@ -84,6 +100,7 @@ if (userButtonRegister) {
         userPopupRegister.fadeIn(350, 'flex');
     });
 }
+
 if (overlay) {
     overlay.addEventListener('click', () => {
         overlayFade.fadeOut(350);
@@ -98,6 +115,7 @@ if (userButtonsClose) {
             overlayFade.fadeOut(250);
             userPopupLogin.fadeOut(250);
             userPopupRegister.fadeOut(250);
+            console.log(overlay);
         });
     });
 }
@@ -105,14 +123,10 @@ if (userButtonsClose) {
 const consultationButtons = document.querySelectorAll(
     '.services-about button.button'
 );
-const consultationSuccessButtons = document.querySelectorAll(
-    '.popup--consultation button[type="button"]'
-);
 const consultationButtonsClose = document.querySelectorAll(
     '.popup__close-consultation'
 );
 const consultationPopup = new Fade('.popup--consultation');
-const consultationSuccessPopup = new Fade('.popup.popup--consultation-success');
 const consultationPopupContent = document.querySelector(
     '.popup--consultation .popup__wrapper'
 );
@@ -130,24 +144,11 @@ if (consultationButtons) {
     });
 }
 
-if (consultationSuccessButtons) {
-    consultationSuccessButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            consultationPopup.fadeOut(250);
-            consultationSuccessPopup.fadeIn(350, 'flex');
-        });
-
-        if (consultationPopupContent) {
-            new PerfectScrollbar(consultationPopupContent);
-        }
-    });
-}
-
 if (overlay) {
     overlay.addEventListener('click', () => {
         overlayFade.fadeOut(350);
         consultationPopup.fadeOut(350);
-        consultationSuccessPopup.fadeOut(350);
+        popupSuccessFade.fadeOut(350);
     });
 }
 
@@ -156,7 +157,7 @@ if (consultationButtonsClose) {
         button.addEventListener('click', () => {
             overlayFade.fadeOut(250);
             consultationPopup.fadeOut(250);
-            consultationSuccessPopup.fadeOut(250);
+            popupSuccessFade.fadeOut(250);
         });
     });
 }
@@ -189,6 +190,7 @@ if (overlay) {
     overlay.addEventListener('click', () => {
         overlayFade.fadeOut(350);
         partnersPopup.fadeOut(350);
+        popupSuccessFade.fadeOut(350);
     });
 }
 
@@ -197,6 +199,16 @@ if (partnersButtonsClose) {
         button.addEventListener('click', () => {
             overlayFade.fadeOut(250);
             partnersPopup.fadeOut(250);
+            popupSuccessFade.fadeOut(250);
+        });
+    });
+}
+
+if (popupSuccess) {
+    popupSuccessClose.forEach(button => {
+        button.addEventListener('click', () => {
+            overlayFade.fadeOut(250);
+            popupSuccessFade.fadeOut(250);
         });
     });
 }

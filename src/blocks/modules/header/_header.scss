@@ -104,15 +104,14 @@
                         ul {
                             padding-left: 18px;
                             border-left: 2px solid #f2f4f8;
-
                             column-count: 2;
                             column-fill: balance;
+                            min-height: 170px;
 
                             li {
                                 width: 100%;
                                 display: block;
                                 margin-bottom: 24px;
-
                                 page-break-inside: avoid;
 
                                 a {

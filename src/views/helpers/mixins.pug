@@ -3,15 +3,19 @@ mixin icon(name,mod)
     svg(class="icon icon-" + name + ' ' + mod)
         use(xlink:href="./img/svg/sprite.svg#" + name)
 
-mixin input(label,type,name,required)
-    if required == 'true'
-        .custom-input
-            label.custom-input__label #{label}*
-            input(required,type=type,name=name).custom-input__input
-    else
-        .custom-input
-            label.custom-input__label #{label}
-            input(type=type,name=name).custom-input__input
+mixin input(label, type, name, id, value, placeholder, require, alert)
+    .custom-input
+        - value = value || ''
+        - placeholder = placeholder || ''
+        - if (require == '' || require == 'false')
+            label(for=id).custom-input__label #{label}
+            input(type=type, name=name, id=id, value=value, placeholder=placeholder).custom-input__input
+        - else
+            label(for=id).custom-input__label.custom-input__label--require #{label}
+                span *
+            input(require, type=type, name=name, id=id, value=value, placeholder=placeholder).custom-input__input
+        .custom-input__alert
+            p #{alert}
 
 mixin checkbox(text,name, link)
     .custom-checkbox
@@ -25,6 +29,34 @@ mixin checkbox(text,name, link)
                 | #{text}
                 - if(link)
                     a(href=link.href) #{link.title}
+
+mixin radio(label, name, id, value, checked, icon)
+    .custom-radio
+        - icon = icon || ''
+        - if (icon != '')
+            - checked = checked || ''
+            - if (checked != 'true')
+                input(type='radio', name=name, id=id, value=value).custom-radio__input
+            - else
+                input(checked, type='radio', name=name, id=id, value=value).custom-radio__input
+            label(for=id).custom-radio__label.custom-radio__label--iconic
+                +icon(icon)
+                span #{label}
+        - else
+            - checked = checked || ''
+            - if (checked != 'true')
+                input(type='radio', name=name, id=id, value=value).custom-radio__input
+            - else
+                input(checked, type='radio', name=name, id=id, value=value).custom-radio__input
+            label(for=id).custom-radio__label
+                span #{label}
+
+mixin file(label, id)
+    .custom-inputfile
+        input(type="file", id=id, data-multiple-caption="Выбрано файлов: {count}", multiple).custom-inputfile__input
+        label(for=id).custom-inputfile__label
+            +icon('file')
+            span #{label}
 
 mixin toAllLink(text,link)
     .back-link.col-12

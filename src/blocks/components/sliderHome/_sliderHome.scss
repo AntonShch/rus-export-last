@@ -307,6 +307,17 @@
     }
 }
 
+@media screen and (min-height: 1200px) {
+    .slider {
+        height: 115vh;
+        padding-top: 200px;
+    }
+
+    .slider-home::after {
+        top: 0;
+    }
+}
+
 @media screen and (max-width: 1400px) {
     .slider-home {
         max-height: 530px;

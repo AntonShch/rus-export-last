@@ -53,7 +53,7 @@ mixin radio(label, name, id, value, checked, icon)
 
 mixin file(label, id)
     .custom-inputfile
-        input(type="file", id=id, data-multiple-caption="Выбрано файлов: {count}", multiple).custom-inputfile__input
+        input(type="file", id=id, data-multiple-caption="Выбрано файлов: {count}", multiple, accept="image/*,image/jpeg").custom-inputfile__input
         label(for=id).custom-inputfile__label
             +icon('file')
             span #{label}

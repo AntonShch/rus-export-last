@@ -175,34 +175,38 @@ class Form {
     // }
 
     send(form) {
-        const formData = new FormData(form);
+        if (form.querySelector('#privacy-policy-agree').checked) {
+            const formData = new FormData(form);
 
-        if (this.files.length > 0) {
-            for (let i = 0; i < this.files.length; i++) {
-                const file = this.files[i];
-                formData.append('files[]', file);
-            }
-        }
-
-        const action = form.getAttribute('action');
-        const xmlhttp = new XMLHttpRequest();
-
-        xmlhttp.onreadystatechange = function() {
-            if (xmlhttp.readyState === XMLHttpRequest.DONE) {
-                if (xmlhttp.status === 200) {
-                    const consultationPopup = new Fade('.popup--consultation');
-                    const popupSuccess = new Fade('.popup--success');
-
-                    console.log('HTTPRequest done!');
-                    consultationPopup.fadeOut(250);
-                    popupSuccess.fadeIn(350, 'flex');
+            if (this.files.length > 0) {
+                for (let i = 0; i < this.files.length; i++) {
+                    const file = this.files[i];
+                    formData.append('files[]', file);
                 }
             }
-        };
 
-        xmlhttp.open('POST', action, true);
+            const action = form.getAttribute('action');
+            const xmlhttp = new XMLHttpRequest();
 
-        xmlhttp.send(formData);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState === XMLHttpRequest.DONE) {
+                    if (xmlhttp.status === 200) {
+                        const consultationPopup = new Fade(
+                            '.popup--consultation'
+                        );
+                        const popupSuccess = new Fade('.popup--success');
+
+                        console.log('HTTPRequest done!');
+                        consultationPopup.fadeOut(250);
+                        popupSuccess.fadeIn(350, 'flex');
+                    }
+                }
+            };
+
+            xmlhttp.open('POST', action, true);
+
+            xmlhttp.send(formData);
+        }
     }
 
     initForm(form) {

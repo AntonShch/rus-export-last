@@ -2,43 +2,416 @@
     .information-incoterms__header(data-aos="fade-up")
         .information-incoterms__text
             p.text-big-lh Инкотермс — международные правила в формате словаря, обеспечивающие однозначные толкования наиболее широко используемых торговых терминов в области внешней торговли частного характера, прежде всего, относительно франко — места перехода ответственности от продавца к покупателю.
-        a(href="").button.button--border Скачать схему
+        a(href="./img/incoterms.png" download).button.button--border Скачать схему
     .information-incoterms__content(data-aos="fade-up")
+        .incoterms.incoterms--image
+            img(src="./img/incoterms.png", alt="Инкотермс")
         .incoterms
+            mixin guidlines
+                .incoterms-item__progress-guidlines
+                    span(aria-hidden="true")
+                        <svg width="1" height="75" viewBox="0 0 1 75" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 0V75" stroke="#948080" stroke-dasharray="1 2"/></svg>
+                    span(aria-hidden="true")
+                        <svg width="1" height="75" viewBox="0 0 1 75" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 0V75" stroke="#948080" stroke-dasharray="1 2"/></svg>
+                    span(aria-hidden="true")
+                        <svg width="1" height="75" viewBox="0 0 1 75" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 0V75" stroke="#948080" stroke-dasharray="1 2"/></svg>
+                    span(aria-hidden="true")
+                        <svg width="1" height="75" viewBox="0 0 1 75" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 0V75" stroke="#948080" stroke-dasharray="1 2"/></svg>
+                    span(aria-hidden="true")
+                        <svg width="1" height="75" viewBox="0 0 1 75" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 0V75" stroke="#948080" stroke-dasharray="1 2"/></svg>
+                    span(aria-hidden="true")
+                        <svg width="1" height="75" viewBox="0 0 1 75" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 0V75" stroke="#948080" stroke-dasharray="1 2"/></svg>
+                    span(aria-hidden="true")
+                        <svg width="1" height="75" viewBox="0 0 1 75" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 0V75" stroke="#948080" stroke-dasharray="1 2"/></svg>
+                    span(aria-hidden="true")
+                        <svg width="1" height="75" viewBox="0 0 1 75" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 0V75" stroke="#948080" stroke-dasharray="1 2"/></svg>
+                    span(aria-hidden="true")
+                        <svg width="1" height="75" viewBox="0 0 1 75" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 0V75" stroke="#948080" stroke-dasharray="1 2"/></svg>
+            .incoterms-header
+                .incoterms-header__title
+                    span.incoterms__title-rus Затраты и риски
+                    span.incoterms__title-eng Expenses & risks
+                    .incoterms-header__title-type.incoterms-header__title-type--seller
+                        span.incoterms__title-rus Поставщик
+                        span.incoterms__title-eng Seller
+                    .incoterms-header__title-type.incoterms-header__title-type--buyer
+                        span.incoterms__title-rus Получатель
+                        span.incoterms__title-eng Buyer
+                .incoterms-header__steps
+                    .incoterms-step
+                        .incoterms-step__img
+                            //- IMG
+                        .incoterms-step__title
+                            span.incoterms__title-rus Фабрика
+                            span.incoterms__title-eng Works
+                    .incoterms-step
+                        .incoterms-step__img
+                            //- IMG
+                        .incoterms-step__title
+                            span.incoterms__title-rus Перевозчик
+                            span.incoterms__title-eng Carrier
+                    .incoterms-step
+                        .incoterms-step__img
+                            //- IMG
+                        .incoterms-step__title
+                            span.incoterms__title-rus До судна
+                            span.incoterms__title-eng Alongside ship
+                    .incoterms-step
+                        .incoterms-step__img
+                            //- IMG
+                        .incoterms-step__title
+                            span.incoterms__title-rus На борту судна
+                            span.incoterms__title-eng On board
+                    .incoterms-step
+                        .incoterms-step__img
+                            //- IMG
+                        .incoterms-step__title
+                            span.incoterms__title-rus Граница
+                            span.incoterms__title-eng Border
+                    .incoterms-step
+                        .incoterms-step__img
+                            //- IMG
+                        .incoterms-step__title
+                            span.incoterms__title-rus Прибытие
+                            span.incoterms__title-eng Arrival
+                    .incoterms-step
+                        .incoterms-step__img
+                            //- IMG
+                        .incoterms-step__title
+                            span.incoterms__title-rus Порт выгрузки
+                            span.incoterms__title-eng Quay
+                    .incoterms-step
+                        .incoterms-step__img
+                            //- IMG
+                        .incoterms-step__title
+                            span.incoterms__title-rus Место доставки
+                            span.incoterms__title-eng Destination’s place
+                    .incoterms-step
+                        .incoterms-step__img
+                            //- IMG
+                        .incoterms-step__title
+                            span.incoterms__title-rus Склад получателя
+                            span.incoterms__title-eng Buyer’s warehouse
+                .incoterms-header__markers
+                    span.incoterms-header__markers-marker.incoterms-header__markers-marker--sea Морские пути
+                    span.incoterms-header__markers-marker.incoterms-header__markers-marker--all Все виды транспорта
             .incoterms-main
-                .incoterms-main__type
-                    .incoterms-type
-                        span.incoterms-type__abbr exw
-                        span.incoterms-type__title Франко перевозчик
-                        span.incoterms-type__title-eng Ex works
-                    .incoterms-type
-                        span.incoterms-type__abbr exw
-                        span.incoterms-type__title Франко перевозчик
-                        span.incoterms-type__title-eng Ex works
-                .incoterms-main__progress
-                    .incoterms-progress
-                        .incoterms-progress__abbr
-                            span exw
-                        .incoterms-progress__bar
-                            .incoterms-progress__bar-active
-                    .incoterms-progress
-                        .incoterms-progress__abbr
-                            span exp
-                        .incoterms-progress__bar
-                            .incoterms-progress__bar-active
-                        .incoterms-progress-double
-                            .incoterms-progress.incoterms-progress--mini
-                                .incoterms-progress__abbr
-                                    span Затраты и риски (без фрахта)
-                                    p Expenses & risks (no freight)
-                                .incoterms-progress__bar
-                                    .incoterms-progress__bar-active
-                                .incoterms-progress__abbr
-                                    span exp
-                            .incoterms-progress.incoterms-progress--mini
-                                .incoterms-progress__abbr
-                                    span Фрахт
-                                    p freight
-                                .incoterms-progress__bar
-                                    .incoterms-progress__bar-active
-
+                .incoterms-main__delivery-title
+                    span.incoterms__title-rus Вид транспорта
+                    span.incoterms__title-eng Principal transport
+                .incoterms-main__item.incoterms-main__item--all.incoterms-main__item--exw
+                    .incoterms-item__type
+                        span.incoterms-item__title Exw
+                            .incoterms-item__hint-icon
+                                +icon('question')
+                                .incoterms-item__hint-popup
+                                    <svg width="15" height="40" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 0V40V39.1421C15 36.49 13.9464 33.9464 12.0711 32.0711L0 20L12.0711 7.92893C13.9464 6.05357 15 3.51003 15 0.857864V0Z" fill="white"/></svg>
+                                    p  Продавец не отвечает за погрузку товара на транспортное средство, а также за таможенную очистку экспорта. Покупатель несет все расходы и риски с момента, когда забирает товар.
+                        span.incoterms__title-rus Франко завод
+                        span.incoterms__title-eng Ex works
+                    .incoterms-item__progress
+                        +guidlines
+                        .incoterms-item__progress-title-from
+                            span Exw
+                        .incoterms-item__progress-bar
+                    .incoterms-item__delivery-to
+                        .incoterms-item__delivery-to-place
+                            span.incoterms__title-rus Оговоренное место
+                            span.incoterms__title-eng Agreed place
+                        .incoterms-item__delivery-to-transport
+                            img(src="./img/50x70.png", alt="")
+                .incoterms-main__item.incoterms-main__item--all.incoterms-main__item--fca
+                    .incoterms-item__type
+                        span.incoterms-item__title Fca
+                            .incoterms-item__hint-icon
+                                +icon('question')
+                                .incoterms-item__hint-popup
+                                    <svg width="15" height="40" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 0V40V39.1421C15 36.49 13.9464 33.9464 12.0711 32.0711L0 20L12.0711 7.92893C13.9464 6.05357 15 3.51003 15 0.857864V0Z" fill="white"/></svg>
+                                    p  Продавец не отвечает за погрузку товара на транспортное средство, а также за таможенную очистку экспорта. Покупатель несет все расходы и риски с момента, когда забирает товар.
+                        span.incoterms__title-rus Франко перевозчик
+                        span.incoterms__title-eng Free carrier
+                    .incoterms-item__progress
+                        +guidlines
+                        .incoterms-item__progress-title-from
+                            span Exp
+                        .incoterms-item__progress-bar
+                        .incoterms-item__progress-title-to
+                            span Imp
+                    .incoterms-item__delivery-to
+                        .incoterms-item__delivery-to-place
+                            span.incoterms__title-rus Оговоренное место
+                            span.incoterms__title-eng Agreed place
+                        .incoterms-item__delivery-to-transport
+                            img(src="./img/50x70.png", alt="")
+                .incoterms-main__item.incoterms-main__item--sea.incoterms-main__item--fas
+                    .incoterms-item__type
+                        span.incoterms-item__title Fas
+                            .incoterms-item__hint-icon
+                                +icon('question')
+                                .incoterms-item__hint-popup
+                                    <svg width="15" height="40" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 0V40V39.1421C15 36.49 13.9464 33.9464 12.0711 32.0711L0 20L12.0711 7.92893C13.9464 6.05357 15 3.51003 15 0.857864V0Z" fill="white"/></svg>
+                                    p  Продавец не отвечает за погрузку товара на транспортное средство, а также за таможенную очистку экспорта. Покупатель несет все расходы и риски с момента, когда забирает товар.
+                        span.incoterms__title-rus Свободно вдоль борта судна
+                        span.incoterms__title-eng Free alongside ship
+                    .incoterms-item__progress
+                        +guidlines
+                        .incoterms-item__progress-title-from
+                            span Exp
+                        .incoterms-item__progress-bar
+                        .incoterms-item__progress-title-to
+                            span Imp
+                    .incoterms-item__delivery-to
+                        .incoterms-item__delivery-to-place
+                            span.incoterms__title-rus Порт отгрузки
+                            span.incoterms__title-eng Embarcation’s port
+                        .incoterms-item__delivery-to-transport
+                            img(src="./img/50x70.png", alt="")
+                .incoterms-main__item.incoterms-main__item--sea.incoterms-main__item--fob
+                    .incoterms-item__type
+                        span.incoterms-item__title Fob
+                            .incoterms-item__hint-icon
+                                +icon('question')
+                                .incoterms-item__hint-popup
+                                    <svg width="15" height="40" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 0V40V39.1421C15 36.49 13.9464 33.9464 12.0711 32.0711L0 20L12.0711 7.92893C13.9464 6.05357 15 3.51003 15 0.857864V0Z" fill="white"/></svg>
+                                    p  Продавец не отвечает за погрузку товара на транспортное средство, а также за таможенную очистку экспорта. Покупатель несет все расходы и риски с момента, когда забирает товар.
+                        span.incoterms__title-rus Свободно на борту судна
+                        span.incoterms__title-eng Free on board
+                    .incoterms-item__progress
+                        +guidlines
+                        .incoterms-item__progress-title-from
+                            span Exp
+                        .incoterms-item__progress-bar
+                        .incoterms-item__progress-title-to
+                            span Imp
+                    .incoterms-item__delivery-to
+                        .incoterms-item__delivery-to-place
+                            span.incoterms__title-rus Порт отгрузки
+                            span.incoterms__title-eng Embarcation’s port
+                        .incoterms-item__delivery-to-transport
+                            img(src="./img/50x70.png", alt="")
+                .incoterms-main__item.incoterms-main__item--sea.incoterms-main__item--cfr
+                    .incoterms-item__type
+                        span.incoterms-item__title Cfr
+                            .incoterms-item__hint-icon
+                                +icon('question')
+                                .incoterms-item__hint-popup
+                                    <svg width="15" height="40" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 0V40V39.1421C15 36.49 13.9464 33.9464 12.0711 32.0711L0 20L12.0711 7.92893C13.9464 6.05357 15 3.51003 15 0.857864V0Z" fill="white"/></svg>
+                                    p  Продавец не отвечает за погрузку товара на транспортное средство, а также за таможенную очистку экспорта. Покупатель несет все расходы и риски с момента, когда забирает товар.
+                        span.incoterms__title-rus Стоимость и фрахт
+                        span.incoterms__title-eng Cost and freight
+                    .incoterms-item__progress
+                        +guidlines
+                        .incoterms-item__progress-title-from
+                            span Exp
+                        .incoterms-item__progress-bar
+                        .incoterms-item__progress-title-to
+                            .incoterms-item__progress-title-to-inner.incoterms-item__progress-title-to-inner--first
+                                span.incoterms__title-rus Затраты и риски (без фрахта)
+                                span.incoterms__title-eng Expenses & risks (no freight)
+                                span.incoterms-item__progress-title-to-text Imp
+                            .incoterms-item__progress-title-to-inner.incoterms-item__progress-title-to-inner--second
+                                .incoterms-item__progress-bar
+                                span.incoterms__title-rus Фрахт
+                                span.incoterms__title-eng Freight
+                    .incoterms-item__delivery-to
+                        .incoterms-item__delivery-to-place
+                            span.incoterms__title-rus Порт назначения
+                            span.incoterms__title-eng Destination’s port
+                        .incoterms-item__delivery-to-transport
+                            img(src="./img/50x70.png", alt="")
+                .incoterms-main__item.incoterms-main__item--sea.incoterms-main__item--cif
+                    .incoterms-item__type
+                        span.incoterms-item__title Cif
+                            .incoterms-item__hint-icon
+                                +icon('question')
+                                .incoterms-item__hint-popup
+                                    <svg width="15" height="40" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 0V40V39.1421C15 36.49 13.9464 33.9464 12.0711 32.0711L0 20L12.0711 7.92893C13.9464 6.05357 15 3.51003 15 0.857864V0Z" fill="white"/></svg>
+                                    p  Продавец не отвечает за погрузку товара на транспортное средство, а также за таможенную очистку экспорта. Покупатель несет все расходы и риски с момента, когда забирает товар.
+                        span.incoterms__title-rus Стоимость, страх. в фрахт
+                        span.incoterms__title-eng Cost, insurance and fraight
+                    .incoterms-item__progress
+                        +guidlines
+                        .incoterms-item__progress-title-from
+                            span Exp
+                        .incoterms-item__progress-bar
+                        .incoterms-item__progress-title-to
+                            .incoterms-item__progress-title-to-inner.incoterms-item__progress-title-to-inner--first
+                                span.incoterms__title-rus Затраты и риски (без фрахта)
+                                span.incoterms__title-eng Expenses & risks (no freight)
+                                span.incoterms-item__progress-title-to-text Imp
+                            .incoterms-item__progress-title-to-inner.incoterms-item__progress-title-to-inner--second
+                                .incoterms-item__progress-bar
+                                span.incoterms__title-rus Фрахт
+                                span.incoterms__title-eng Freight
+                    .incoterms-item__delivery-to
+                        .incoterms-item__delivery-to-place
+                            span.incoterms__title-rus Порт назначения
+                            span.incoterms__title-eng Destination’s port
+                        .incoterms-item__delivery-to-transport
+                            img(src="./img/50x70.png", alt="")
+                .incoterms-main__item.incoterms-main__item--all.incoterms-main__item--cpt
+                    .incoterms-item__type
+                        span.incoterms-item__title Cpt
+                            .incoterms-item__hint-icon
+                                +icon('question')
+                                .incoterms-item__hint-popup
+                                    <svg width="15" height="40" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 0V40V39.1421C15 36.49 13.9464 33.9464 12.0711 32.0711L0 20L12.0711 7.92893C13.9464 6.05357 15 3.51003 15 0.857864V0Z" fill="white"/></svg>
+                                    p  Продавец не отвечает за погрузку товара на транспортное средство, а также за таможенную очистку экспорта. Покупатель несет все расходы и риски с момента, когда забирает товар.
+                        span.incoterms__title-rus Перевозка оплачена до
+                        span.incoterms__title-eng Carriage paid to
+                    .incoterms-item__progress
+                        +guidlines
+                        .incoterms-item__progress-title-from
+                            span Exp
+                        .incoterms-item__progress-bar
+                        .incoterms-item__progress-title-to
+                            .incoterms-item__progress-title-to-inner.incoterms-item__progress-title-to-inner--first
+                                span.incoterms__title-rus Затраты и риски (без фрахта)
+                                span.incoterms__title-eng Expenses & risks (no freight)
+                                span.incoterms-item__progress-title-to-text Imp
+                            .incoterms-item__progress-title-to-inner.incoterms-item__progress-title-to-inner--second
+                                .incoterms-item__progress-bar
+                                span.incoterms__title-rus Фрахт
+                                span.incoterms__title-eng Freight
+                    .incoterms-item__delivery-to
+                        .incoterms-item__delivery-to-place
+                            span.incoterms__title-rus Место доставки
+                            span.incoterms__title-eng destination’s place
+                        .incoterms-item__delivery-to-transport
+                            img(src="./img/50x70.png", alt="")
+                .incoterms-main__item.incoterms-main__item--all.incoterms-main__item--cip
+                    .incoterms-item__type
+                        span.incoterms-item__title Cip
+                            .incoterms-item__hint-icon
+                                +icon('question')
+                                .incoterms-item__hint-popup
+                                    <svg width="15" height="40" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 0V40V39.1421C15 36.49 13.9464 33.9464 12.0711 32.0711L0 20L12.0711 7.92893C13.9464 6.05357 15 3.51003 15 0.857864V0Z" fill="white"/></svg>
+                                    p  Продавец не отвечает за погрузку товара на транспортное средство, а также за таможенную очистку экспорта. Покупатель несет все расходы и риски с момента, когда забирает товар.
+                        span.incoterms__title-rus Перевозка и страх. оплач. до
+                        span.incoterms__title-eng carriage and insurance paid to
+                    .incoterms-item__progress
+                        +guidlines
+                        .incoterms-item__progress-title-from
+                            span Exp
+                        .incoterms-item__progress-bar
+                        .incoterms-item__progress-title-to
+                            .incoterms-item__progress-title-to-inner.incoterms-item__progress-title-to-inner--first
+                                span.incoterms__title-rus Затраты и риски (без фрахта)
+                                span.incoterms__title-eng Expenses & risks (no freight)
+                            .incoterms-item__progress-title-to-inner.incoterms-item__progress-title-to-inner--second
+                                .incoterms-item__progress-bar
+                                span.incoterms__title-rus Фрахт
+                                span.incoterms__title-eng Freight
+                    .incoterms-item__delivery-to
+                        .incoterms-item__delivery-to-place
+                            span.incoterms__title-rus Место доставки
+                            span.incoterms__title-eng destination’s place
+                        .incoterms-item__delivery-to-transport
+                            img(src="./img/50x70.png", alt="")
+                .incoterms-main__item.incoterms-main__item--all.incoterms-main__item--dat
+                    .incoterms-item__type
+                        span.incoterms-item__title Dat
+                            .incoterms-item__hint-icon
+                                +icon('question')
+                                .incoterms-item__hint-popup
+                                    <svg width="15" height="40" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 0V40V39.1421C15 36.49 13.9464 33.9464 12.0711 32.0711L0 20L12.0711 7.92893C13.9464 6.05357 15 3.51003 15 0.857864V0Z" fill="white"/></svg>
+                                    p  Продавец не отвечает за погрузку товара на транспортное средство, а также за таможенную очистку экспорта. Покупатель несет все расходы и риски с момента, когда забирает товар.
+                        span.incoterms__title-rus Поставка на терминале
+                        span.incoterms__title-eng Delivered at terminal
+                    .incoterms-item__progress
+                        +guidlines
+                        .incoterms-item__progress-title-from
+                            span Exp
+                        .incoterms-item__progress-bar
+                        .incoterms-item__progress-title-to
+                            span Imp
+                    .incoterms-item__delivery-to
+                        .incoterms-item__delivery-to-place
+                            span.incoterms__title-rus Место доставки
+                            span.incoterms__title-eng Destination’s place
+                        .incoterms-item__delivery-to-transport
+                            img(src="./img/50x70.png", alt="")
+                .incoterms-main__item.incoterms-main__item--all.incoterms-main__item--dap
+                    .incoterms-item__type
+                        span.incoterms-item__title Dap
+                            .incoterms-item__hint-icon
+                                +icon('question')
+                                .incoterms-item__hint-popup
+                                    <svg width="15" height="40" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 0V40V39.1421C15 36.49 13.9464 33.9464 12.0711 32.0711L0 20L12.0711 7.92893C13.9464 6.05357 15 3.51003 15 0.857864V0Z" fill="white"/></svg>
+                                    p  Продавец не отвечает за погрузку товара на транспортное средство, а также за таможенную очистку экспорта. Покупатель несет все расходы и риски с момента, когда забирает товар.
+                        span.incoterms__title-rus Поставка в пункте
+                        span.incoterms__title-eng Delivered at place
+                    .incoterms-item__progress
+                        +guidlines
+                        .incoterms-item__progress-title-from
+                            span Exp
+                        .incoterms-item__progress-bar
+                        .incoterms-item__progress-title-to
+                            span Imp
+                    .incoterms-item__delivery-to
+                        .incoterms-item__delivery-to-place
+                            span.incoterms__title-rus Место доставки
+                            span.incoterms__title-eng Destination’s place
+                        .incoterms-item__delivery-to-transport
+                            img(src="./img/50x70.png", alt="")
+                .incoterms-main__item.incoterms-main__item--all.incoterms-main__item--ddp
+                    .incoterms-item__type
+                        span.incoterms-item__title Ddp
+                            .incoterms-item__hint-icon
+                                +icon('question')
+                                .incoterms-item__hint-popup
+                                    <svg width="15" height="40" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 0V40V39.1421C15 36.49 13.9464 33.9464 12.0711 32.0711L0 20L12.0711 7.92893C13.9464 6.05357 15 3.51003 15 0.857864V0Z" fill="white"/></svg>
+                                    p  Продавец не отвечает за погрузку товара на транспортное средство, а также за таможенную очистку экспорта. Покупатель несет все расходы и риски с момента, когда забирает товар.
+                        span.incoterms__title-rus Доставка с оплатой пошлин
+                        span.incoterms__title-eng Delivered duty paid
+                    .incoterms-item__progress
+                        +guidlines
+                        .incoterms-item__progress-title-from
+                            span Exp
+                        .incoterms-item__progress-bar
+                        .incoterms-item__progress-title-to
+                            span Imp
+                    .incoterms-item__delivery-to
+                        .incoterms-item__delivery-to-place
+                            span.incoterms__title-rus Место доставки
+                            span.incoterms__title-eng Destination’s place
+                        .incoterms-item__delivery-to-transport
+                            img(src="./img/50x70.png", alt="")
+            .incoterms-footer
+                .incoterms-footer__title
+                    span.incoterms__title-rus Основные категории
+                    span.incoterms__title-eng Обязанности поставщика
+                .incoterms-footer__steps
+                    .incoterms-footer__steps-item
+                        .incoterms-footer__steps-letter
+                            span E
+                        .incoterms-footer__steps-text
+                            span.incoterms__title-rus Вывоз с производства
+                            span.incoterms__title-eng Ex works
+                    .incoterms-footer__steps-item
+                        .incoterms-footer__steps-letter
+                            span F
+                        .incoterms-footer__steps-text
+                            span.incoterms__title-rus Оплачено
+                            span.incoterms__title-eng Free
+                    .incoterms-footer__steps-item
+                        .incoterms-footer__steps-letter
+                            span C
+                        .incoterms-footer__steps-text
+                            span.incoterms__title-rus Перевозки
+                            span.incoterms__title-eng Carriage
+                    .incoterms-footer__steps-item
+                        .incoterms-footer__steps-letter
+                            span D
+                        .incoterms-footer__steps-text
+                            span.incoterms__title-rus Доставка
+                            span.incoterms__title-eng Delivered
+                .incoterms-footer__markers
+                    .incoterms-footer__markers-item
+                        span.incoterms-footer__markers-title Exp
+                        span.incoterms__title-rus Экспортное <br>таможенное <br>оформление
+                        span.incoterms__title-eng Export clearence
+                    .incoterms-footer__markers-item
+                        span.incoterms-footer__markers-title Imp
+                        span.incoterms__title-rus Импортное <br>таможенное <br>оформление
+                        span.incoterms__title-eng Import clearence

@@ -1,12 +1,11 @@
 mixin form(title, typeForm, inputs, footer, checkbox, button)
-    .form(data-aos="fade-up")
+    .form
         form(action="", enctype="multipart/form-data").form__wrapper.form__wrapper
             .title #{title}
             .form__content
                 -if (typeForm == 'form')
                     -for (var i = 0; i < inputs.length; i++)
                         - if (inputs[i].type != 'textarea')
-                            //- +input(inputs[i].label,inputs[i].type, inputs[i].name, inputs[i].required)
                             +input(inputs[i].label, inputs[i].type, inputs[i].name, inputs[i].id, inputs[i].value, inputs[i].placeholder, inputs[i].require, inputs[i].alert)
                         - else
                             .custom-textarea

@@ -50,3 +50,19 @@ const helpbox = new Swiper('.helpbox .swiper-container', {
         prevEl: '.helpbox .swiper-navigation .swiper-button-prev',
     },
 });
+
+// const incotermsHelps = document.querySelectorAll('.incoterms-item__title');
+
+// incotermsHelps.forEach(incotermsHelp => {
+//     const incotermsHelpBtn = incotermsHelp.querySelector('.incoterms-item__hint-icon');
+//     const incotermsHelpPopup = incotermsHelp.querySelector('.incoterms-item__hint-popup');
+
+//     incotermsHelpBtn.addEventListener('mouseenter', function() {
+//         incotermsHelpPopup.classList.add('.incoterms-item__hint-popup--active');
+//         console.log('Hi');
+//     });
+//     incotermsHelpBtn.addEventListener('mouseleave', function() {
+//         incotermsHelpPopup.classList.remove('.incoterms-item__hint-popup--active');
+//         console.log("Bue ");
+//     });
+// });

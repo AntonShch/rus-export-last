@@ -3,19 +3,6 @@
         position: relative;
         padding-bottom: 170px;
 
-        &--back-rect {
-            &::before {
-                content: "";
-                position: absolute;
-                top: 250px;
-                right: 430px;
-                display: block;
-                width: 70px;
-                height: 125px;
-                background-color: $grey;
-            }
-        }
-
         &--sm-space {
             padding-top: 30px;
             padding-bottom: 30px;
@@ -45,26 +32,26 @@
             flex-direction: column;
             justify-content: flex-start;
             overflow: hidden;
+        }
 
-            &:hover {
-                cursor: pointer;
+        &:hover {
+            cursor: pointer;
 
-                .specialists-item__icon {
-                    opacity: 0;
+            .specialists-item__icon {
+                opacity: 0;
+            }
+
+            .specialists-item__content {
+                top: 0;
+
+                p:not(.subtitle) {
+                    margin-top: 0;
                 }
+            }
 
-                .specialists-item__content {
-                    top: 0;
-
-                    p:not(.subtitle) {
-                        margin-top: 0;
-                    }
-                }
-
-                .specialists-item__button {
-                    bottom: 150px;
-                    opacity: 0;
-                }
+            .specialists-item__button {
+                bottom: 150px;
+                opacity: 0;
             }
         }
 
@@ -102,6 +89,31 @@
             cursor: pointer;
             color: $main;
             transition: 0.3s;
+        }
+
+        &--back-rect {
+            &::after {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                top: 350px;
+                right: 430px;
+                display: block;
+                width: 70px;
+                height: 25px;
+                background-color: $grey;
+                opacity: 0;
+                transition: 0.3s;
+                pointer-events: none;
+            }
+
+            &:hover {
+                &::after {
+                    top: 200px;
+                    height: 125px;
+                    opacity: 1;
+                }
+            }
         }
     }
 }

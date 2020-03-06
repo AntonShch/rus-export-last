@@ -2,13 +2,13 @@
     overflow: hidden;
 
     &__title {
-        display: -webkit-flex;
-        display:    -moz-flex;
-        display:     -ms-flex;
-        display:      -o-flex;
-        display:         flex;
+        display: flex;
         justify-content: space-between;
         padding-bottom: 50px;
+    }
+
+    &__slider {
+        overflow: hidden;
     }
 
     &-item {
@@ -42,22 +42,24 @@
         &__cart {
             position: absolute;
             top: 0;
-            right: 24px;
-            max-width: 260px;
-            margin-top: -25%;
-            padding: 30px 10px 30px 30px;
-            color: white;
+            right: 15px;
+            width: 220px;
+            height: 150px;
+            margin-top: -20px;
+            padding: 20px 25px 30px;
+            color: #ffffff;
             background: $main;
         }
 
         &__position {
-            min-height: 60px;
+            min-height: 45px;
             flex: 0 0 auto;
             color: #5e91ff;
+            font-size: 14px;
         }
 
         &__name {
-            padding-bottom: 22px;
+            font-size: 20px;
             line-height: 1.2;
         }
     }

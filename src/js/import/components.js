@@ -10,3 +10,4 @@ import '%components%/team/team';
 import '%components%/sliderMini/sliderMini';
 import '%components%/specialists/specialists';
 import '%components%/advantages/advantages';
+import '%components%/video-about/video-about';

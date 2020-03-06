@@ -2,7 +2,7 @@ import Swiper from 'swiper';
 
 new Swiper('.our-team__slider', {
     speed: 400,
-    slidesPerView: 3,
+    slidesPerView: 4,
     navigation: {
         nextEl: '.our-team .slider-arrows__right',
         prevEl: '.our-team .slider-arrows__left',
@@ -13,14 +13,18 @@ new Swiper('.our-team__slider', {
             slidesPerView: 1,
             spaceBetween: 20,
         },
-        // when window width is >= 640px
+        // when window width is >= 568px
         568: {
             slidesPerView: 2,
             spaceBetween: 40,
         },
-        // when window width is >= 640px
+        // when window width is >= 992px
         992: {
             slidesPerView: 3,
+            spaceBetween: 40,
+        },
+        1440: {
+            slidesPerView: 4,
             spaceBetween: 40,
         },
     },

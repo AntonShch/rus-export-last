@@ -35,16 +35,17 @@ const swiperOptions = {
         },
     },
     breakpoints: {
-        // when window width is >= 320px
         320: {
-            spaceBetween: 49,
+            spaceBetween: 40,
+        },
+        640: {
+            spaceBetween: 65,
         },
         992: {
-            spaceBetween: 59,
+            spaceBetween: 65,
         },
-        // when window width is >= 640px
         1400: {
-            spaceBetween: 59,
+            spaceBetween: 65,
         },
     },
     on: {

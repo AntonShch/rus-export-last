@@ -5,6 +5,9 @@ const swiperOptions = {
     initialSlide: 0,
     slidesPerView: 1,
     spaceBetween: 59,
+    autoplay: {
+        delay: 5000,
+    },
     loop: false,
     watchSlidesProgress: true,
     mousewheelControl: true,
@@ -22,14 +25,12 @@ const swiperOptions = {
         },
     },
     breakpoints: {
-        // when window width is >= 320px
         320: {
             spaceBetween: 49,
         },
         992: {
             spaceBetween: 59,
         },
-        // when window width is >= 640px
         1400: {
             spaceBetween: 59,
         },

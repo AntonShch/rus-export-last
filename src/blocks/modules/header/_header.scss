@@ -11,7 +11,7 @@
     height: $header;
 
     &:before {
-        content: "";
+        content: '';
         position: absolute;
         z-index: 1;
         top: 0;
@@ -25,10 +25,11 @@
         box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
 
         -webkit-backdrop-filter: saturate(180%) blur(8px);
-                backdrop-filter: saturate(180%) blur(8px);
+        backdrop-filter: saturate(180%) blur(8px);
     }
 
-    &--fixed, &:hover {
+    &--fixed,
+    &:hover {
         &:before {
             height: 100%;
             opacity: 1;
@@ -115,6 +116,8 @@
                                 page-break-inside: avoid;
 
                                 a {
+                                    @include transition;
+
                                     position: relative;
                                     width: 100%;
                                     height: 100%;
@@ -122,10 +125,10 @@
                                     align-items: center;
                                     padding-left: 0;
 
-                                    @include transition;
-
                                     &:before {
-                                        content: "";
+                                        @include transition;
+
+                                        content: '';
                                         position: absolute;
                                         top: 10px;
                                         left: 0;
@@ -134,8 +137,6 @@
                                         display: inline-flex;
                                         flex: 0 0 auto;
                                         background: $hover;
-
-                                        @include transition;
                                     }
 
                                     &:hover {
@@ -152,9 +153,9 @@
                         }
 
                         a {
-                            color: $main;
-
                             @include transition;
+
+                            color: $main;
 
                             &:hover {
                                 color: $hover;
@@ -206,56 +207,56 @@
             cursor: pointer;
         }
 
-    &-item {
-        display: flex;
-        flex-direction: column;
-        transition: 0.3s;
-
-        > * {
-            display: block;
-            line-height: 1;
-        }
-
-        &__label {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-bottom: 9px;
-            cursor: pointer;
-            font-size: 12px;
-            line-height: 1.4;
-        }
-    }
-
-    &-all {
-        position: absolute;
-        top: $header;
-        right: 0;
-        width: 100%;
-        height: 290px;
-
-        .header-phone-item {
-            position: relative;
-            min-height: 72px;
+        &-item {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            padding-right: 22px;
-            padding-left: 22px;
-            border-bottom: 1px solid $grey;
+            transition: 0.3s;
 
-            &:before {
-                content: "";
-                position: absolute;
-                z-index: 0;
-                bottom: 0;
-                left: 0;
-                width: 0;
-                height: 2px;
+            > * {
                 display: block;
-                transition: 0.3s;
-                background: $hover;
+                line-height: 1;
             }
+
+            &__label {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-bottom: 9px;
+                cursor: pointer;
+                font-size: 12px;
+                line-height: 1.4;
+            }
+        }
+
+        &-all {
+            position: absolute;
+            top: $header;
+            right: 0;
+            width: 100%;
+            height: 290px;
+
+            .header-phone-item {
+                position: relative;
+                min-height: 72px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-right: 22px;
+                padding-left: 22px;
+                border-bottom: 1px solid $grey;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    z-index: 0;
+                    bottom: 0;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    display: block;
+                    transition: 0.3s;
+                    background: $hover;
+                }
 
                 > * {
                     position: relative;
@@ -461,12 +462,13 @@
             font-weight: 700;
 
             .icon {
+                @include transition;
+
                 width: 0.4em;
                 flex: 0 0 auto;
                 margin-right: 8px;
 
                 fill: $main;
-                @include transition;
             }
 
             &:hover {
@@ -486,14 +488,16 @@
     }
 
     .link-nav {
+        @include transition;
+
         position: relative;
         border: none;
         background: none;
 
-        @include transition;
-
         &:after {
-            content: "";
+            @include transition;
+
+            content: '';
             position: absolute;
             right: 0;
             bottom: 0;
@@ -502,8 +506,6 @@
             display: block;
             opacity: 0;
             background: $main;
-
-            @include transition;
         }
 
         &:hover {
@@ -519,7 +521,9 @@
             }
         }
 
-        &--active, &.dropdown-trigger--active, &:hover {
+        &--active,
+        &.dropdown-trigger--active,
+        &:hover {
             color: $hover;
             background: white;
 
@@ -533,7 +537,8 @@
         }
     }
 
-    .notebook-link, .mobile-link {
+    .notebook-link,
+    .mobile-link {
         display: none;
     }
 
@@ -570,6 +575,10 @@
 
 @media screen and (max-width: 1600px) {
     .header {
+        .header .icon-drop-down-triangle {
+            margin-left: 5px;
+        }
+
         &__menu {
             margin-left: 0;
 
@@ -577,22 +586,28 @@
                 > ul {
                     > li {
                         > a {
-                            padding: 0 8px;
+                            padding: 0 4px;
                         }
                     }
                 }
             }
         }
 
+        &__languages {
+            a {
+                padding: 0 4px;
+            }
+        }
+
         &__buttons {
             .link-nav {
-                width: 56px;
+                width: 37px;
             }
         }
     }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1279px) {
     .header {
         &__wrapper {
             max-width: 1180px;
@@ -667,10 +682,10 @@
 
         .mobile-link {
             display: -webkit-flex;
-            display:    -moz-flex;
-            display:     -ms-flex;
-            display:      -o-flex;
-            display:         flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
         }
     }
 }

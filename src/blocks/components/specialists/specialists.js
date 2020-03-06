@@ -14,7 +14,6 @@ class Animate {
         this.animation = animation;
         document.addEventListener('scroll', () => {
             const elem = document.querySelector(`.js-lottie-icon--${icon}`);
-
             if (elem) {
                 const targetPosition = {
                     top: window.pageYOffset + elem.getBoundingClientRect().top,
@@ -48,7 +47,11 @@ class Animate {
             renderer: 'svg',
             loop: false,
             autoplay: false,
-            path: `./img/animations/${icon}.json`,
+            // path: `./img/animations/${icon}.json`,
+            path: '/wp-content/themes/rusexport/assets/img/animations/'.concat(
+                icon,
+                '.json'
+            ),
         });
 
         this.playOnScroll(icon, speed, animation);

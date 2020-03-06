@@ -1,7 +1,6 @@
 .sidebar {
     &__wrapper {
         width: 100%;
-        // max-width: 282px;
         margin-bottom: 50px;
     }
 
@@ -10,7 +9,7 @@
 
         &--first-level {
             min-height: 44px;
-            display:         flex;
+            display: flex;
 
             > .link {
                 padding: 6px;
@@ -22,6 +21,10 @@
 
                 > .accordion__button {
                     height: 44px;
+                }
+
+                &--active {
+                    height: auto;
                 }
             }
 
@@ -44,7 +47,7 @@
                     }
 
                     &:before {
-                        content: "";
+                        content: '';
                         position: absolute;
                         top: 0;
                         left: 0;
@@ -81,7 +84,7 @@
                         color: #576789;
 
                         &:before {
-                            content: "";
+                            content: '';
                             position: absolute;
                             top: 0;
                             left: -20px;
@@ -101,6 +104,10 @@
                         }
                     }
                 }
+
+                &--active {
+                    height: auto;
+                }
             }
         }
 
@@ -119,7 +126,7 @@
 
         &__button {
             width: 100%;
-            display:         flex;
+            display: flex;
             align-items: center;
             justify-content: space-between;
             cursor: pointer;

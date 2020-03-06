@@ -120,9 +120,7 @@ if (userButtonsClose) {
     });
 }
 
-const consultationButtons = document.querySelectorAll(
-    '.services-about button.button'
-);
+const consultationButtons = document.querySelectorAll('.consultation-button');
 const consultationButtonsClose = document.querySelectorAll(
     '.popup__close-consultation'
 );

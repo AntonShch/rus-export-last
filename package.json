@@ -87,7 +87,7 @@
         "imask": "^6.0.1",
         "lottie-web": "^5.5.10",
         "perfect-scrollbar": "^1.4.0",
-        "swiper": "^5.0.4"
+        "swiper": "^5.3.6"
     },
     "husky": {
         "hooks": {

@@ -17,10 +17,18 @@ block content
                     .content__information.col-lg-9
                         .page.page--services
                             .page__content.text-big-lh
-                                h2.subtitle Импорт в Россию
-                                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem dolorem nobis ipsa. Eum magni laborum cum repudiandae perferendis iste minus itaque laudantium nihil. Odit molestias velit eos aperiam ut itaque laborum? Ab, sunt. In quam, iure labore est quos et at molestias perferendis beatae ea, adipisci dolorum. A, facere possimus!
+                                h2.subtitle(data-aos="fade-up") Импорт в Россию
+                                include ../../blocks/components/download-docs/download-docs-import
+                                p(data-aos="fade-up", data-aos-delay="150") Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem dolorem nobis ipsa. Eum magni laborum cum repudiandae perferendis iste minus itaque laudantium nihil. Odit molestias velit eos aperiam ut itaque laborum? Ab, sunt. In quam, iure labore est quos et at molestias perferendis beatae ea, adipisci dolorum. A, facere possimus!
+                                .clear-both
                                 include ../../blocks/components/keypoints/keypoints-import
-                                include ../../blocks/components/gridLinks/gridLinks-import
+                                include ../../blocks/components/services/services-related-import
+                                include ../../blocks/components/services/services-related-full-import
+                                include ../../blocks/components/services/services-definition
+                                +definition('Наша компания оказывает, как полный комплекс услуг "от двери до двери", так и отдельные виды услуг, по желанию клиента.<br><br>Мы оказываем услуги по экспорту товаров из России, как под собственные контракты, так и под контракты наших клиентов.')
+                                include ../../blocks/components/services/services-subtitle-with-image-import
+                                include ../../blocks/components/services/services-advantages-import
+                                //- include ../../blocks/components/gridLinks/gridLinks-import
                                 include ../../blocks/modules/form/form
                                 +form('Оставьте заявку на консультацию','form',[
                                     {

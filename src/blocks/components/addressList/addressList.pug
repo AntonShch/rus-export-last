@@ -1,17 +1,59 @@
 .address-list
     .address-list__container.container
         ul.address-list__wrapper.row
-            -for (var i = 0; i < 24; i++)
-                li.address-item.col-md-4(data-aos="fade-up")
-                    .address-item__wrapper
-                        .address-item__title.subtitle Челябинск
-                        .address-item__content
-                            a(href="tel:+73517000204").address-item__link
-                                +icon('contacts-phone','')
-                                span +7 (351) 700-02-04
-                            a(href="mailto:info@trans-s.su").address-item__link
-                                +icon('contacts-email','')
-                                span info@trans-s.su
-                            address.address-item__link
-                                +icon('contacts-adress','')
-                                span ул. Энтузиастов 30, офис 405, 406 <br>454020, г. Челябинск
+            li.address-item.col-lg-3.col-md-6.col-sm-12(data-aos="fade-up")
+                a(href="#").address-item__wrapper
+                    .address-item__suptitle Русэкспорт
+                    .address-item__title Москва
+                    .address-item__content
+                        address.address-item__link.address-item__link--address
+                            span 141400, Россия, Московская область, г. Химки, Международный аэропорт «Шереметьево»
+                .address-item__link
+                    a(href="tel:+74957951680").address-item__link-wrapper
+                        +icon('contacts-phone','')
+                        span +7 (495) 795-16-80
+                .address-item__link
+                    +icon('contacts-email','')
+                    span info@rusexport.su
+            li.address-item.col-lg-3.col-md-6.col-sm-12(data-aos="fade-up")
+                a(href="#").address-item__wrapper
+                    .address-item__suptitle Русэкспорт
+                    .address-item__title Санкт-Петербург
+                    .address-item__content
+                        address.address-item__link.address-item__link--address
+                            span 196140, Россия, г. Санкт-Петербург, Пулковское шоссе, д. 41, Международный аэропорт «Пулково»
+                .address-item__link
+                    a(href="tel:+74957951680").address-item__link-wrapper
+                        +icon('contacts-phone','')
+                        span +7 (812) 703-84-06
+                .address-item__link
+                    +icon('contacts-email','')
+                    span info@trans-s.su
+            li.address-item.col-lg-3.col-md-6.col-sm-12(data-aos="fade-up")
+                a(href="#").address-item__wrapper
+                    .address-item__suptitle Русэкспорт
+                    .address-item__title Екатеринбург
+                    .address-item__content
+                        address.address-item__link.address-item__link--address
+                            span 620025, Россия, г. Екатеринбург, площадь Бахчиванджи, д. 1, Международный аэропорт «Кольцово»
+                .address-item__link
+                    a(href="tel:+74957951680").address-item__link-wrapper
+                        +icon('contacts-phone','')
+                        span +7 (343) 345-52-82
+                .address-item__link
+                    +icon('contacts-email','')
+                    span info@trans-s.su
+            li.address-item.col-lg-3.col-md-6.col-sm-12(data-aos="fade-up")
+                a(href="#").address-item__wrapper
+                    .address-item__suptitle Русэкспорт
+                    .address-item__title Челябинск
+                    .address-item__content
+                        address.address-item__link.address-item__link--address
+                            span 454048, Россия, г. Челябинск, ул. Энтузиастов, д.30, оф.406 Время работы с 09.00 - 18.00
+                .address-item__link
+                    a(href="tel:+74957951680").address-item__link-wrapper
+                        +icon('contacts-phone','')
+                        span +7 (495) 795-16-80
+                .address-item__link
+                    +icon('contacts-email','')
+                    span info@trans-s.su

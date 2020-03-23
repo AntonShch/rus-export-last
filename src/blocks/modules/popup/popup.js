@@ -61,7 +61,7 @@ export default class Fade {
                 duration: delay,
                 complete() {
                     flag = false;
-                    el.style.display = 'none';
+                    if (el) el.style.display = 'none';
                 },
             });
         } else {
@@ -77,136 +77,217 @@ const popupSuccess = document.querySelector('.popup--success');
 const popupSuccessFade = new Fade('.popup--success');
 const popupSuccessClose = document.querySelectorAll('.popup--success .button');
 
-const userButtonsLogin = document.querySelectorAll('.button-user');
-const userButtonRegister = document.querySelector('.button-user-register');
-const userButtonsClose = document.querySelectorAll('.popup__close-user');
+{
+    const userButtonsLogin = document.querySelectorAll('.button-user');
+    const userButtonRegister = document.querySelector('.button-user-register');
+    const userButtonsClose = document.querySelectorAll('.popup__close-user');
 
-const userPopupLogin = new Fade('.popup--user');
-const userPopupRegister = new Fade('.popup--user-register');
+    const userPopupLogin = new Fade('.popup--user');
+    const userPopupRegister = new Fade('.popup--user-register');
 
-if (userButtonsLogin) {
-    userButtonsLogin.forEach(button => {
-        button.addEventListener('click', () => {
-            overlayFade.fadeIn(350, 'block');
-            userPopupRegister.fadeOut(250);
-            userPopupLogin.fadeIn(350, 'flex');
+    if (userButtonsLogin) {
+        userButtonsLogin.forEach(button => {
+            button.addEventListener('click', () => {
+                overlayFade.fadeIn(350, 'block');
+                userPopupRegister.fadeOut(250);
+                userPopupLogin.fadeIn(350, 'flex');
+            });
         });
-    });
-}
+    }
 
-if (userButtonRegister) {
-    userButtonRegister.addEventListener('click', () => {
-        userPopupLogin.fadeOut(250);
-        userPopupRegister.fadeIn(350, 'flex');
-    });
-}
-
-if (overlay) {
-    overlay.addEventListener('click', () => {
-        overlayFade.fadeOut(350);
-        userPopupLogin.fadeOut(350);
-        userPopupRegister.fadeOut(350);
-    });
-}
-
-if (userButtonsClose) {
-    userButtonsClose.forEach(button => {
-        button.addEventListener('click', () => {
-            overlayFade.fadeOut(250);
+    if (userButtonRegister) {
+        userButtonRegister.addEventListener('click', () => {
             userPopupLogin.fadeOut(250);
-            userPopupRegister.fadeOut(250);
-            console.log(overlay);
+            userPopupRegister.fadeIn(350, 'flex');
         });
-    });
-}
+    }
 
-const consultationButtons = document.querySelectorAll('.consultation-button');
-const consultationButtonsClose = document.querySelectorAll(
-    '.popup__close-consultation'
-);
-const consultationPopup = new Fade('.popup--consultation');
-const consultationPopupContent = document.querySelector(
-    '.popup--consultation .popup__wrapper'
-);
-
-if (consultationButtons) {
-    consultationButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            overlayFade.fadeIn(350, 'block');
-            consultationPopup.fadeIn(350, 'flex');
+    if (overlay) {
+        overlay.addEventListener('click', () => {
+            overlayFade.fadeOut(350);
+            userPopupLogin.fadeOut(350);
+            userPopupRegister.fadeOut(350);
         });
+    }
 
-        if (consultationPopupContent) {
-            new PerfectScrollbar(consultationPopupContent);
-        }
-    });
-}
-
-if (overlay) {
-    overlay.addEventListener('click', () => {
-        overlayFade.fadeOut(350);
-        consultationPopup.fadeOut(350);
-        popupSuccessFade.fadeOut(350);
-    });
-}
-
-if (consultationButtonsClose) {
-    consultationButtonsClose.forEach(button => {
-        button.addEventListener('click', () => {
-            overlayFade.fadeOut(250);
-            consultationPopup.fadeOut(250);
-            popupSuccessFade.fadeOut(250);
+    if (userButtonsClose) {
+        userButtonsClose.forEach(button => {
+            button.addEventListener('click', () => {
+                overlayFade.fadeOut(250);
+                userPopupLogin.fadeOut(250);
+                userPopupRegister.fadeOut(250);
+            });
         });
-    });
+    }
 }
 
-const partnersButtons = document.querySelectorAll(
-    '.partnership__text button.button'
-);
-const partnersButtonsClose = document.querySelectorAll(
-    '.popup__close-partners'
-);
-const partnersPopup = new Fade('.popup--partners');
-const partnersPopupContent = document.querySelector(
-    '.popup--partners .popup__wrapper'
-);
+{
+    const consultationButtons = document.querySelectorAll(
+        '.consultation-button'
+    );
+    const consultationButtonsClose = document.querySelectorAll(
+        '.popup__close-consultation'
+    );
+    const consultationPopup = new Fade('.popup--consultation');
+    const consultationPopupContent = document.querySelector(
+        '.popup--consultation .popup__wrapper'
+    );
 
-if (partnersButtons) {
-    partnersButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            overlayFade.fadeIn(350, 'block');
-            partnersPopup.fadeIn(350, 'flex');
+    if (consultationButtons) {
+        consultationButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                overlayFade.fadeIn(350, 'block');
+                consultationPopup.fadeIn(350, 'flex');
+            });
+
+            if (consultationPopupContent) {
+                new PerfectScrollbar(consultationPopupContent);
+            }
         });
+    }
 
-        if (partnersPopupContent) {
-            new PerfectScrollbar(partnersPopupContent);
-        }
-    });
-}
-
-if (overlay) {
-    overlay.addEventListener('click', () => {
-        overlayFade.fadeOut(350);
-        partnersPopup.fadeOut(350);
-        popupSuccessFade.fadeOut(350);
-    });
-}
-
-if (partnersButtonsClose) {
-    partnersButtonsClose.forEach(button => {
-        button.addEventListener('click', () => {
-            overlayFade.fadeOut(250);
-            partnersPopup.fadeOut(250);
-            popupSuccessFade.fadeOut(250);
+    if (overlay) {
+        overlay.addEventListener('click', () => {
+            overlayFade.fadeOut(350);
+            consultationPopup.fadeOut(350);
+            popupSuccessFade.fadeOut(350);
         });
-    });
+    }
+
+    if (consultationButtonsClose) {
+        consultationButtonsClose.forEach(button => {
+            button.addEventListener('click', () => {
+                overlayFade.fadeOut(250);
+                consultationPopup.fadeOut(250);
+                popupSuccessFade.fadeOut(250);
+            });
+        });
+    }
 }
 
-if (popupSuccess) {
-    popupSuccessClose.forEach(button => {
-        button.addEventListener('click', () => {
-            overlayFade.fadeOut(250);
-            popupSuccessFade.fadeOut(250);
+{
+    const partnersButtons = document.querySelectorAll(
+        '.partnership__text button.button'
+    );
+    const partnersButtonsClose = document.querySelectorAll(
+        '.popup__close-partners'
+    );
+    const partnersPopup = new Fade('.popup--partners');
+    const partnersPopupContent = document.querySelector(
+        '.popup--partners .popup__wrapper'
+    );
+
+    if (partnersButtons) {
+        partnersButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                overlayFade.fadeIn(350, 'block');
+                partnersPopup.fadeIn(350, 'flex');
+            });
+
+            if (partnersPopupContent) {
+                new PerfectScrollbar(partnersPopupContent);
+            }
         });
-    });
+    }
+
+    if (overlay) {
+        overlay.addEventListener('click', () => {
+            overlayFade.fadeOut(350);
+            partnersPopup.fadeOut(350);
+            popupSuccessFade.fadeOut(350);
+        });
+    }
+
+    if (partnersButtonsClose) {
+        partnersButtonsClose.forEach(button => {
+            button.addEventListener('click', () => {
+                overlayFade.fadeOut(250);
+                partnersPopup.fadeOut(250);
+                popupSuccessFade.fadeOut(250);
+            });
+        });
+    }
+
+    if (popupSuccess) {
+        popupSuccessClose.forEach(button => {
+            button.addEventListener('click', () => {
+                overlayFade.fadeOut(250);
+                popupSuccessFade.fadeOut(250);
+            });
+        });
+    }
+}
+
+{
+    const downloadDocsExportButtons = document.querySelectorAll(
+        '.download-docs--export'
+    );
+    const downloadDocsExportButtonsClose = document.querySelectorAll(
+        '.popup--download-docs-export .popup__close'
+    );
+    const downloadDocsExportPopup = new Fade('.popup--download-docs-export');
+
+    if (downloadDocsExportButtons) {
+        downloadDocsExportButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                overlayFade.fadeIn(350, 'block');
+                downloadDocsExportPopup.fadeIn(350, 'flex');
+            });
+        });
+    }
+
+    if (overlay) {
+        overlay.addEventListener('click', () => {
+            overlayFade.fadeOut(350);
+            downloadDocsExportPopup.fadeOut(350);
+            popupSuccessFade.fadeOut(350);
+        });
+    }
+
+    if (downloadDocsExportButtonsClose) {
+        downloadDocsExportButtonsClose.forEach(button => {
+            button.addEventListener('click', () => {
+                overlayFade.fadeOut(250);
+                downloadDocsExportPopup.fadeOut(250);
+                popupSuccessFade.fadeOut(250);
+            });
+        });
+    }
+}
+
+{
+    const downloadDocsImportButtons = document.querySelectorAll(
+        '.download-docs--import'
+    );
+    const downloadDocsImportButtonsClose = document.querySelectorAll(
+        '.popup--download-docs-import .popup__close'
+    );
+    const downloadDocsImportPopup = new Fade('.popup--download-docs-import');
+
+    if (downloadDocsImportButtons) {
+        downloadDocsImportButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                overlayFade.fadeIn(350, 'block');
+                downloadDocsImportPopup.fadeIn(350, 'flex');
+            });
+        });
+    }
+
+    if (overlay) {
+        overlay.addEventListener('click', () => {
+            overlayFade.fadeOut(350);
+            downloadDocsImportPopup.fadeOut(350);
+            popupSuccessFade.fadeOut(350);
+        });
+    }
+
+    if (downloadDocsImportButtonsClose) {
+        downloadDocsImportButtonsClose.forEach(button => {
+            button.addEventListener('click', () => {
+                overlayFade.fadeOut(250);
+                downloadDocsImportPopup.fadeOut(250);
+                popupSuccessFade.fadeOut(250);
+            });
+        });
+    }
 }

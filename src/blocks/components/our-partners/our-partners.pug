@@ -1,45 +1,68 @@
-section.our-partners.section-offset
+section.our-partners.section-offset(data-aos="fade-up")
     .our-partners__container.container
         .our-partners__header.row
-            .our-partners__title.col-12
+            .our-partners__title.col-8
                 h6.subtitle Среди наших партнеров
-        .our-partners__wrapper.row
-            .our-partners-item.col-sm-4.col-md-3.col-lg-2(data-aos="fade-up")
-                .our-partners-item__wrapper
-                    img(src="./img/partners/DHL.png", alt="DHL")
-            .our-partners-item.col-sm-4.col-md-3.col-lg-2(data-aos="fade-up")
-                .our-partners-item__wrapper
-                    img(src="./img/partners/Schenker.png", alt="Schenker")
-            .our-partners-item.col-sm-4.col-md-3.col-lg-2(data-aos="fade-up")
-                .our-partners-item__wrapper
-                    img(src="./img/partners/CHrobinson.png", alt="CHrobinson")
-            .our-partners-item.col-sm-4.col-md-3.col-lg-2(data-aos="fade-up")
-                .our-partners-item__wrapper
-                    img(src="./img/partners/DSV.png", alt="DSV")
-            .our-partners-item.col-sm-4.col-md-3.col-lg-2(data-aos="fade-up")
-                .our-partners-item__wrapper
-                    img(src="./img/partners/Synnex.png", alt="Synnex")
-            .our-partners-item.col-sm-4.col-md-3.col-lg-2(data-aos="fade-up")
-                .our-partners-item__wrapper
-                    img(src="./img/partners/AWIN.png", alt="AWIN")
-            .our-partners-item.col-sm-4.col-md-3.col-lg-2(data-aos="fade-up")
-                .our-partners-item__wrapper
-                    img(src="./img/partners/DSV.png", alt="DSV")
-            .our-partners-item.col-sm-4.col-md-3.col-lg-2(data-aos="fade-up")
-                .our-partners-item__wrapper
-                    img(src="./img/partners/Synnex.png", alt="Synnex")
-            .our-partners-item.col-sm-4.col-md-3.col-lg-2(data-aos="fade-up")
-                .our-partners-item__wrapper
-                    img(src="./img/partners/AWIN.png", alt="AWIN")
-            .our-partners-item.col-sm-4.col-md-3.col-lg-2(data-aos="fade-up")
-                .our-partners-item__wrapper
-                    img(src="./img/partners/Schenker.png", alt="Schenker")
-            .our-partners-item.col-sm-4.col-md-3.col-lg-2(data-aos="fade-up")
-                .our-partners-item__wrapper
-                    img(src="./img/partners/DHL.png", alt="DHL")
-            .our-partners-item.col-sm-4.col-md-3.col-lg-2(data-aos="fade-up")
-                .our-partners-item__wrapper
-                    img(src="./img/partners/CHrobinson.png", alt="CHrobinson")
+            .our-partners__navigation.col-4
+                .our-partners__navigation-button.our-partners__navigation-button--prev.swiper-button-prev
+                .our-partners__navigation-button.our-partners__navigation-button--next.swiper-button-next
+
+        .our-partners__wrapper.swiper-container
+            .our-partners__inner.swiper-wrapper
+                .our-partners-item.swiper-slide
+                    .our-partners-item__wrapper
+                        img(src="./img/partners/DHL.png", alt="DHL")
+                .our-partners-item.swiper-slide
+                    .our-partners-item__wrapper
+                        img(src="./img/partners/Schenker.png", alt="Schenker")
+                .our-partners-item.swiper-slide
+                    .our-partners-item__wrapper
+                        img(src="./img/partners/CHrobinson.png", alt="CHrobinson")
+                .our-partners-item.swiper-slide
+                    .our-partners-item__wrapper
+                        img(src="./img/partners/DSV.png", alt="DSV")
+                .our-partners-item.swiper-slide
+                    .our-partners-item__wrapper
+                        img(src="./img/partners/Synnex.png", alt="Synnex")
+                .our-partners-item.swiper-slide
+                    .our-partners-item__wrapper
+                        img(src="./img/partners/AWIN.png", alt="AWIN")
+                .our-partners-item.swiper-slide
+                    .our-partners-item__wrapper
+                        img(src="./img/partners/DSV.png", alt="DSV")
+                .our-partners-item.swiper-slide
+                    .our-partners-item__wrapper
+                        img(src="./img/partners/Synnex.png", alt="Synnex")
+                .our-partners-item.swiper-slide
+                    .our-partners-item__wrapper
+                        img(src="./img/partners/AWIN.png", alt="AWIN")
+                .our-partners-item.swiper-slide
+                    .our-partners-item__wrapper
+                        img(src="./img/partners/Schenker.png", alt="Schenker")
+                .our-partners-item.swiper-slide
+                    .our-partners-item__wrapper
+                        img(src="./img/partners/DHL.png", alt="DHL")
+                .our-partners-item.swiper-slide
+                    .our-partners-item__wrapper
+                        img(src="./img/partners/CHrobinson.png", alt="CHrobinson")
+                .our-partners-item.swiper-slide
+                    .our-partners-item__wrapper
+                        img(src="./img/partners/AWIN.png", alt="AWIN")
+                .our-partners-item.swiper-slide
+                    .our-partners-item__wrapper
+                        img(src="./img/partners/Schenker.png", alt="Schenker")
+                .our-partners-item.swiper-slide
+                    .our-partners-item__wrapper
+                        img(src="./img/partners/DHL.png", alt="DHL")
+                .our-partners-item.swiper-slide
+                    .our-partners-item__wrapper
+                        img(src="./img/partners/CHrobinson.png", alt="CHrobinson")
+                .our-partners-item.swiper-slide
+                    .our-partners-item__wrapper
+                        img(src="./img/partners/DHL.png", alt="DHL")
+                .our-partners-item.swiper-slide
+                    .our-partners-item__wrapper
+                        img(src="./img/partners/CHrobinson.png", alt="CHrobinson")
         .our-partners__footer.row
             include ../to-request/to-request
             +to-request('./img/invest-request.svg' , '', 'Мы заинтересованы в долгосрочных партнерских отношениях, основанных на уважении, доверии и взаимопомощи, поэтому индивидуально подходим к решению задач каждого клиента' , 'Инвесторам')

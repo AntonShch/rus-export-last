@@ -295,8 +295,11 @@
 
             .icon {
                 font-size: 30px;
-
                 fill: $main;
+
+                &-contacts-phone {
+                    font-size: 1.4rem;
+                }
             }
 
             &:hover {

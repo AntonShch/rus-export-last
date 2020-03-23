@@ -3,9 +3,54 @@
         padding-bottom: 50px;
     }
 
+    &__inner {
+        height: 484px; // 118(height) + 30(v-offset) + 118 + 50 + 118 + 50
+    }
+
+    &__navigation {
+        max-width: 100px;
+        margin-right: 0;
+        margin-left: auto;
+        padding: 0;
+        padding-right: 20px;
+
+        &-button {
+            &--prev {
+                left: 0;
+
+                &::after {
+                    content: "";
+                    width: 22px;
+                    height: 40px;
+                    background-image: url(../img/svg/arrow-left.svg);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center center;
+                }
+            }
+
+            &--next {
+                right: 20px;
+
+                &::after {
+                    content: "";
+                    width: 22px;
+                    height: 40px;
+                    background-image: url(../img/svg/arrow-right.svg);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center center;
+                }
+            }
+        }
+    }
+
     &-item {
-        height: 118px;
+        max-height: 118px;
         margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         &__wrapper {
             width: 100%;
@@ -34,5 +79,45 @@
 
     &__footer {
         padding-top: 50px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .our-partners {
+        &-item {
+            &__wrapper {
+                padding: 10px 70px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .our-partners {
+        &-item {
+            max-height: 90px;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .our-partners {
+        &-item {
+            &__wrapper {
+                padding: 10px 50px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .our-partners {
+        &-item {
+            max-height: 118px;
+
+            &__wrapper {
+                padding: 40px 20px;
+            }
+        }
     }
 }

@@ -18,9 +18,19 @@ block content
                         .page.page--services
                             .page__content.text-big-lh
                                 h2.subtitle(data-aos="fade-up") Экспорт из России
-                                p(data-aos="fade-up", data-aos-delay="150") Экспорт&nbsp;&mdash; вывоз, за&nbsp;границу товаров, проданных иностранным покупателям, предназначенных для продажи на&nbsp;иностранных рынках или для переработки в&nbsp;другой стране.
+                                include ../../blocks/components/download-docs/download-docs-export
+                                p(data-aos="fade-up", data-aos-delay="150") Экспорт&nbsp;&mdash; это таможенная процедура, применяемая в&nbsp;отношении товаров государства, в&nbsp;соответствии с&nbsp;которой такие товары вывозятся с&nbsp;таможенной территории государства для постоянного нахождения за&nbsp;ее&nbsp;пределами.
+                                p(data-aos="fade-up", data-aos-delay="150") Говоря по&nbsp;простому Экспорт&nbsp;&mdash; это вывоз за&nbsp;границу товаров, проданных иностранному покупателю или предназначенных для продажи на&nbsp;иностранном рынке.
+                                p(data-aos="fade-up", data-aos-delay="150") Российское законодательство определяет экспорт как &laquo;вывоз товара, работ, услуг, результатов интеллектуальной деятельности, в&nbsp;том числе исключительных прав на&nbsp;них, с&nbsp;таможенной территории за&nbsp;границу без обязательства об&nbsp;обратном ввозе&raquo;.
+                                .clear-both
                                 include ../../blocks/components/keypoints/keypoints-export
-                                include ../../blocks/components/gridLinks/gridLinks-export
+                                include ../../blocks/components/services/services-related-export
+                                include ../../blocks/components/services/services-related-full-export
+                                include ../../blocks/components/services/services-definition
+                                +definition('Наша компания оказывает, как полный комплекс услуг "от двери до двери", так и отдельные виды услуг, по желанию клиента.<br><br>Мы оказываем услуги по экспорту товаров из России, как под собственные контракты, так и под контракты наших клиентов.')
+                                include ../../blocks/components/services/services-subtitle-with-image-export
+                                include ../../blocks/components/services/services-advantages-export
+                                //- include ../../blocks/components/gridLinks/gridLinks-export
                                 include ../../blocks/modules/form/form
                                 +form('Оставьте заявку на консультацию','form',[
                                     {

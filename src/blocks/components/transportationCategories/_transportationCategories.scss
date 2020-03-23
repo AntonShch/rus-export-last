@@ -67,6 +67,38 @@
             }
         }
     }
+
+    &__note {
+        padding-top: 30px;
+
+        .transportation-categories__title {
+            padding-right: 50px;
+            display: flex;
+            align-items: center;
+
+            .title {
+                padding-bottom: 0;
+                font-size: 24px;
+                font-weight: 700;
+            }
+        }
+
+        .transportation-categories__insurance-wrapper {
+            img {
+                width: auto;
+                max-height: 150px;
+                margin: 0;
+            }
+
+            p {
+                line-height: 150%;
+            }
+        }
+    }
+
+    .services-request {
+        padding-top: 50px;
+    }
 }
 
 .transportation-category {
@@ -112,6 +144,44 @@
     }
 }
 
+@media screen and (max-width: 1440px) {
+    .transportation-categories {
+        &__note {
+            margin-right: -20px;
+            margin-left: -20px;
+            padding-top: 30px;
+            justify-content: center;
+
+            .transportation-categories__title {
+                width: 50%;
+                max-width: initial;
+                flex-basis: initial;
+
+                .title {
+                    font-size: 24px;
+                    padding-bottom: 0;
+                }
+            }
+
+            .transportation-categories__insurance {
+                width: 50%;
+                max-width: initial;
+                flex-basis: initial;
+
+                img {
+                    width: auto;
+                    max-height: 130px;
+                    margin: 0;
+                }
+
+                p {
+                    line-height: 150%;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 992px) {
     .transportation-categories {
         &__insurance {
@@ -124,6 +194,12 @@
     .transportation-categories {
         &__insurance {
             display: none;
+        }
+
+        &__note {
+            .transportation-categories__title {
+                width: 100%;
+            }
         }
     }
 

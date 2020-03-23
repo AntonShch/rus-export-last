@@ -109,6 +109,33 @@
             margin: 0;
         }
     }
+
+    &--download-docs {
+        .popup__content {
+            padding: 50px;
+            padding-top: 60px;
+        }
+
+        ol {
+            margin-left: 20px;
+            padding-top: 30px;
+
+            > li {
+                > .link {
+                    color: #000000;
+                    font-weight: 400;
+
+                    &:hover {
+                        color: $hover;
+                    }
+                }
+
+                &:not(:first-of-type) {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {

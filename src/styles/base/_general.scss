@@ -697,6 +697,10 @@ a {
     }
 }
 
+.clear-both {
+    clear: both;
+}
+
 @media screen and (max-width: 1600px) {
     .title {
         font-size: 30px;

@@ -1,12 +1,17 @@
 section.transportation-categories
     .transportation-categories__container.container
-        .transportation-categories__header.row.row--between
-            .transportation-categories__title.transportation-categories__title--inner.col-12.col-md-6.col-lg-8
+        .transportation-categories__header.row
+            .transportation-categories__title.transportation-categories__title--inner.col-12
                 h2.subtitle(data-aos="fade-up") Услуги перевозки грузов
-                p(data-aos="fade-up") Мы&nbsp;разрабатываем и&nbsp;используем логистические решения, которые созданы под&nbsp;конкретные потребности клиента и&nbsp;сочетают надежность и&nbsp;конкурентоспособность на&nbsp;протяжении всей цепочки поставок для решения любых бизнес-задач.
-                p(data-aos="fade-up") Партнерские отношения с&nbsp;ведущими автомобильными, железнодорожными и&nbsp;морскими перевозчиками дают нашей компании возможность осуществлять перевозки на&nbsp;межконтинентальные расстояния без ограничения по&nbsp;объему груза и&nbsp;видам транспортных средств.
-            a(href="", data-aos="fade-left", data-aos-delay="150").transportation-categories__insurance.col-12.col-md-6.col-lg-4
-                .transportation-categories__insurance-wrapper.transportation-categories__insurance-wrapper--inner
+                p(data-aos="fade-up") Компания &laquo;РУСЭКСПОРТ&raquo; профессионально оказывает услуги по&nbsp;перевозке грузов автомобильным, железнодорожным, морским, речным и&nbsp;авиационным транспортом, включая страхование и&nbsp;таможенное оформление.
+                p(data-aos="fade-up") Партнерские отношения с&nbsp;ведущими автомобильными, железнодорожными, морскими, речными и&nbsp;авиационными перевозчиками дают нашей компании возможность осуществлять перевозки на&nbsp;межконтинентальные расстояния без ограничения по&nbsp;объему груза и&nbsp;видам транспортных средств.
+        include ../services/services-request
+        +request('Мы&nbsp;разрабатываем и&nbsp;используем логистические решения, которые созданы под конкретные потребности клиента и&nbsp;сочетают надежность и&nbsp;конкурентоспособность на&nbsp;протяжении всей цепочки поставок для решения любых бизнес-задач.')
+        .transportation-categories__note.row.row--between
+            .transportation-categories__title.col-12.col-md-7
+                h3.title.title-offset(data-aos="fade-up") Дополнительно мы имеем возможность таможенного страхования всех отправляемых грузов
+            a(href="", data-aos="fade-left").transportation-categories__insurance.substrate.col-12.col-md-5
+                .transportation-categories__insurance-wrapper
                     img(src="./img/transportation-categories/insurance.png", alt="insurance.png")
                     p Страхование грузов
         .transportation-categories__content.row.row--center

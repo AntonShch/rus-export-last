@@ -14,7 +14,7 @@
     max-height: 630px;
 
     &:after {
-        content: '';
+        content: "";
         position: absolute;
         z-index: -1;
         top: 50%;
@@ -22,7 +22,7 @@
         width: 100%;
         height: inherit;
         display: block;
-        background-image: url('../img/background_slider_after.svg');
+        background-image: url("../img/background_slider_after.svg");
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -54,6 +54,9 @@
         }
 
         &-colored {
+            position: relative;
+            z-index: 10;
+            pointer-events: all;
             color: $main;
         }
     }
@@ -66,7 +69,7 @@
         margin-left: auto;
 
         &:before {
-            content: '';
+            content: "";
             position: absolute;
             top: 0;
             left: -36px;
@@ -76,7 +79,7 @@
         }
 
         &:after {
-            content: '';
+            content: "";
             position: absolute;
             top: 0;
             left: -36px;
@@ -125,7 +128,7 @@
                 }
 
                 &::before {
-                    content: '';
+                    content: "";
                     width: 9px;
                     height: 3px;
                     display: block;
@@ -154,7 +157,7 @@
         border: none;
         background: none;
 
-        &[aria-disabled='true'] {
+        &[aria-disabled="true"] {
             cursor: default;
             pointer-events: none;
 
@@ -163,7 +166,7 @@
             }
         }
 
-        &:hover:not([aria-disabled='true']) {
+        &:hover:not([aria-disabled="true"]) {
             .icon {
                 fill: $hover;
             }
@@ -212,7 +215,7 @@
         margin: auto;
 
         &__image {
-            content: '';
+            content: "";
             position: relative;
             z-index: 1;
             width: 100%;
@@ -230,7 +233,7 @@
             }
 
             &-main {
-                content: '';
+                content: "";
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -243,7 +246,7 @@
             }
 
             &-mask {
-                content: '';
+                content: "";
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -258,7 +261,7 @@
         }
 
         &__background {
-            content: '';
+            content: "";
             position: absolute;
             z-index: 0;
             top: 50px;

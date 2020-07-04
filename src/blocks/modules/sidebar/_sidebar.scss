@@ -1,4 +1,9 @@
 .sidebar {
+
+    .is-active {
+        color: $main!important;
+        font-weight: 700!important;;
+    }
     &__wrapper {
         width: 100%;
         margin-bottom: 50px;
@@ -7,9 +12,10 @@
     &-link {
         overflow: hidden;
 
-        &--first-level {
+        &--1-level {
             min-height: 44px;
             display: flex;
+            flex-direction: column;
 
             > .link {
                 padding: 6px;
@@ -17,7 +23,6 @@
 
             &.accordion {
                 height: 44px;
-                display: block;
 
                 > .accordion__button {
                     height: 44px;
@@ -36,8 +41,9 @@
                     position: relative;
                     width: 100%;
                     display: block;
-                    padding-right: 6px;
+                    padding-right: 16px;
                     padding-left: 20px;
+                    margin-left: 10px;
                     color: #000000;
 
                     &:not(.accordion) {
@@ -67,7 +73,7 @@
             }
         }
 
-        &--second-level {
+        &--2-level {
             &.accordion {
                 height: 44px;
 
@@ -76,6 +82,18 @@
                 }
 
                 > .accordion__content {
+                    position: relative;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: -20px;
+                        width: 4px;
+                        height: 100%;
+                        display: block;
+                        background: #f2f4f8;
+                    }
+
                     a {
                         position: relative;
                         width: 100%;
@@ -83,24 +101,8 @@
                         padding: 7px;
                         color: #576789;
 
-                        &:before {
-                            content: '';
-                            position: absolute;
-                            top: 0;
-                            left: -20px;
-                            width: 4px;
-                            height: 100%;
-                            display: block;
-                            background: #f2f4f8;
-                        }
-
                         &:hover {
                             color: $hover;
-                        }
-
-                        &.is-active {
-                            color: $main;
-                            font-weight: 700;
                         }
                     }
                 }
@@ -113,8 +115,8 @@
 
         &.accordion--active {
             > .sidebar-link__button {
-                .icon {
-                    transform: rotate(180deg);
+                &.accordion__button:after {
+                    transform: rotate(180deg) translateY(-3px);
                 }
             }
 
@@ -134,21 +136,27 @@
             span {
                 max-width: 220px;
             }
-
-            .icon {
-                transition: 0.3s;
-                transform: rotate(0deg);
+            &.accordion__button {
+                flex: 0 0 auto;
+                &:after {
+                    transition: 0.3s;
+                    transform: rotate(0deg);
+                    content: '▾';
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 12px;
+                    width: 12px;
+                    font-size: 14px;
+                    color: inherit;
+                }
             }
         }
 
         &__content {
-            transition: 0.3s 0.2s;
+            transition: 0.2s 0.35s;
             pointer-events: none;
             opacity: 0;
-
-            a {
-                display: block;
-            }
         }
     }
 }

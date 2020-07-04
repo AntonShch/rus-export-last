@@ -13,15 +13,18 @@ const swiperOptions = {
     mousewheelControl: true,
     keyboardControl: true,
     grabCursor: true,
-    autoHeight: true,
-
+    autoHeight: false,
+    navigation: {
+        nextEl: '.team-slider-arrows__right',
+        prevEl: '.team-slider-arrows__left',
+    },
     thumbs: {
         swiper: {
             el: '.team-slider-thumbs',
             loop: false,
             speed: 400,
             spaceBetween: 19,
-            slidesPerView: 'auto',
+            slidesPerView: 4,
         },
     },
     breakpoints: {

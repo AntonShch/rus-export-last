@@ -12,7 +12,10 @@ class Accordion {
     open(btn) {
         if (btn != null && btn != undefined) {
             const dropdownContent = btn.parentElement;
-            this.closeSublings(dropdownContent);
+            if (!dropdownContent.classList.contains('accordion--not-sublings')) {
+                this.closeSublings(dropdownContent);
+            }
+            dropdownContent.style.height = btn.clientHeight + 'px';
             btn.classList.add('accordion__button--active');
             dropdownContent.classList.add('accordion--active');
             anime({
@@ -53,15 +56,22 @@ class Accordion {
         );
         for (const activeAccordion of allAccordions) {
             const btn = activeAccordion.querySelector('.accordion__button');
-            console.log(btn);
             $this.close(btn);
         }
+    }
+
+    checkIsParent(item) {
+        const hasDropdown = item.parentNode.querySelector('.accordion__content');
+        const isParent = item.parentNode.classList.contains('accordion--1-level') || item.parentNode.classList.contains('accordion--2-level');
+        return isParent && hasDropdown
     }
 
     init(btn) {
         const btnClicked = btn;
         const $this = this;
+        const $isParent = $this.checkIsParent(btn);
         btnClicked.addEventListener('click', function(e) {
+            if ($isParent) e.preventDefault();
             // Берем классы кликнутой кнопки и проверяем - есть ли у нее аналог. Нужно, чтобы дублировать функционал
             const analogClass = btnClicked.className.replace(/[\n\t]/g, ' ');
             const analogAll = document.querySelectorAll(

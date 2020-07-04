@@ -1,13 +1,20 @@
 .team {
     overflow: hidden;
-    // margin-bottom: 100px;
-    padding-top: 100px;
+    padding-top: 3%;
+    min-height: 600px;
+    height: calc(100vh - 100px);
     background: linear-gradient(0deg, #f5f5f5, #f5f5f5);
-
+    &__container {
+        height: 100%;
+    }
+    &__wrapper {
+        height: inherit;
+    }
     &-slide {
         transition: 0.63s;
         transform: translateY(20%);
         opacity: 0;
+        height: auto;
 
         &.swiper-slide-active {
             transform: translateY(0%);
@@ -81,9 +88,9 @@
         }
 
         &__name {
-            margin-top: 30px;
-            margin-bottom: 40px;
-            font-size: 60px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 48px;
             font-weight: 900;
             line-height: 1.3;
         }
@@ -91,10 +98,12 @@
         &__content {
             width: 100%;
             max-width: 360px;
+            padding-bottom: 40px;
+            position: relative;
+            z-index: 4;
             display: flex;
             align-items: flex-start;
             flex-direction: column;
-            padding-bottom: 340px;
         }
 
         &__contact {
@@ -111,16 +120,17 @@
             width: 70px;
             height: 70px;
             display: flex;
-            display: flex;
             overflow: hidden;
-            align-items: center;
             align-items: center;
             flex: 0 0 auto;
             justify-content: center;
-            justify-content: center;
             cursor: pointer;
-            border: 4px solid transparent;
-
+            border: 2px solid transparent;
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
             &.swiper-slide-thumb-active {
                 border-color: $main;
             }
@@ -128,12 +138,71 @@
     }
 
     &-slider {
+        height: 100%;
         &-thumbs {
             position: absolute;
+            z-index: 3;
             bottom: 30px;
-            left: 20px;
+            left: 60px;
             width: 100%;
-            max-width: 330px;
+            max-width: 340px;
+            overflow: hidden;
+        }
+        &-arrows {
+            position: absolute;
+            z-index: 2;
+            bottom: 50px;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 460px;
+            .button {
+                svg {
+                    font-size: 14px;
+                    height: 20px;
+                    width: 20px;
+                    fill: $main;
+                }
+                &.swiper-button-disabled {
+                    opacity: 0.5;
+                    pointer-events: none;
+                    svg {
+                        fill: slategrey;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px){
+    .team {
+        height: calc(100vh - 70px);
+        &-slide {
+            &__name {
+                font-size: 20px;
+            }
+            &__contact {
+                font-size: 12px;
+            }
+            &__image {
+                &-content {
+                    right: 0;
+                }
+            }
+        }
+        &-slider {
+            &-arrows {
+                bottom: 30px;
+            }
+            &-thumbs {
+                max-width: 320px;
+                left: 0;
+                right: 0;
+                bottom: 10px;
+                margin: 0 auto;
+            }
         }
     }
 }

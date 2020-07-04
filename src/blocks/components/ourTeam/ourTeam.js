@@ -23,7 +23,7 @@ new Swiper('.our-team__slider', {
             slidesPerView: 3,
             spaceBetween: 40,
         },
-        1440: {
+        1200: {
             slidesPerView: 4,
             spaceBetween: 40,
         },

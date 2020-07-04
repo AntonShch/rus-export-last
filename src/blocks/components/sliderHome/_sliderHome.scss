@@ -227,7 +227,8 @@
             background-repeat: no-repeat;
             background-position: center center;
             background-size: auto 100%;
-
+            opacity: .2;
+            filter: grayscale(100%);
             > * {
                 transition: 0.4s ease-in-out 0s;
             }
@@ -245,19 +246,6 @@
                 background-size: auto 100%;
             }
 
-            &-mask {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                display: block;
-                opacity: 1;
-                background-repeat: no-repeat;
-                background-position: center center;
-                background-size: auto 100%;
-            }
         }
 
         &__background {
@@ -282,14 +270,14 @@
         &.swiper-slide-active {
             z-index: 1;
             opacity: 1;
-
-            .slider-home-item__image-main {
+            .slider-home-item__image {
+                filter: grayscale(0%);
                 opacity: 1;
+                &-main{
+                    opacity: 1;
+                }
             }
 
-            .slider-home-item__image-mask {
-                opacity: 0;
-            }
         }
 
         &.swiper-slide-prev {
@@ -308,9 +296,6 @@
                 opacity: 1;
             }
 
-            .slider-home-item__image-mask {
-                opacity: 0.8;
-            }
         }
     }
 }
@@ -326,7 +311,14 @@
     }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1400px){
+    .slider-home {
+        &__text {
+            margin-bottom: 9%;
+        }
+    }
+}
+@media screen and (max-width: 1200px) {
     .slider-home {
         max-height: 530px;
         margin-bottom: 100px;
@@ -359,9 +351,6 @@
                     background-size: contain;
                 }
 
-                &-mask {
-                    background-size: contain;
-                }
             }
 
             &__background {
@@ -425,8 +414,7 @@
             }
 
             &__image {
-                &-main,
-                &-mask {
+                &-main{
                     top: 40px;
                     left: 0;
                     width: 90%;

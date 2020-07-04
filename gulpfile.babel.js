@@ -17,6 +17,14 @@ const requireDir = require('require-dir'),
                 './src/styles/**/*.{scss,sass}',
             ],
         },
+        stylesToProduction: {
+            src: './src/styles/main.{scss,sass}',
+            dist: './../rusexport.dm/wp-content/themes/rusexport/assets/styles/',
+            watch: [
+                './src/blocks/**/*.{scss,sass}',
+                './src/styles/**/*.{scss,sass}',
+            ],
+        },
         scripts: {
             src: './src/js/index.js',
             dist: './dist/js/',
@@ -75,6 +83,7 @@ export const development = gulp.series(
     gulp.parallel([
         'views',
         'styles',
+        'stylesToProduction',
         'scripts',
         'images',
         'animations',
@@ -90,6 +99,7 @@ export const prod = gulp.series(
     gulp.series([
         'views',
         'styles',
+        'stylesToProduction',
         'scripts',
         'images',
         'animations',

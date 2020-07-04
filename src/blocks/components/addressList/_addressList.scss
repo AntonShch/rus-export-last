@@ -22,6 +22,7 @@
     flex-basis: calc(25% - 20px) !important;
     padding-bottom: 30px;
     display: flex;
+    cursor: pointer;
     flex-direction: column;
     border: 2px solid #eceff5;
     background: white;
@@ -35,6 +36,28 @@
         padding-left: 35px;
     }
 
+    &--active {
+        cursor: default;
+        pointer-events: none;
+        &[data-aos].aos-animate {
+            pointer-events: none;
+        }
+        .address-item__loader .icon-check {
+            display: inline-block;
+        }
+    }
+    &--loading {
+        cursor: default;
+        pointer-events: none;
+        .address-item__loader .spinner {
+            display: block;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
     &__suptitle {
         color: $main;
         font-size: 12px;
@@ -62,7 +85,22 @@
         display: flex;
         flex-direction: column;
     }
-
+    &__loader {
+        position: absolute;
+        right: 24px;
+        top: 24px;
+        .icon-check {
+            display: none;
+        }
+        .spinner {
+            display: none;
+        }
+        svg {
+            height: 20px;
+            width: 20px;
+            fill: $main
+        }
+    }
     &__link {
         display: flex;
         align-items: center;

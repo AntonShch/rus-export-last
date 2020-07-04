@@ -11,7 +11,7 @@ const sliderMini = new Swiper('.slider-mini .swiper-container', {
         prevEl: '.slider-mini .swiper-button-prev',
     },
     breakpoints: {
-        1440: {
+        1200: {
             slidesPerView: 4,
             spaceBetween: 20,
         },

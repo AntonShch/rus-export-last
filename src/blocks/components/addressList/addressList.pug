@@ -1,8 +1,11 @@
 .address-list
     .address-list__container.container
         ul.address-list__wrapper.row
-            li.address-item.col-lg-3.col-md-6.col-sm-12(data-aos="fade-up")
-                a(href="#").address-item__wrapper
+            li.address-item.col-lg-3.col-md-6.col-sm-12(data-aos="fade-up", data-address="/")
+                .address-item__wrapper
+                    .address-item__loader
+                        .spinner
+                        +icon('check','')
                     .address-item__suptitle Русэкспорт
                     .address-item__title Москва
                     .address-item__content
@@ -15,8 +18,11 @@
                 .address-item__link
                     +icon('contacts-email','')
                     span info@rusexport.su
-            li.address-item.col-lg-3.col-md-6.col-sm-12(data-aos="fade-up")
-                a(href="#").address-item__wrapper
+            li.address-item.col-lg-3.col-md-6.col-sm-12(data-aos="fade-up", data-address="/")
+                .address-item__wrapper
+                    .address-item__loader
+                        .spinner
+                        +icon('check','')
                     .address-item__suptitle Русэкспорт
                     .address-item__title Санкт-Петербург
                     .address-item__content
@@ -29,8 +35,11 @@
                 .address-item__link
                     +icon('contacts-email','')
                     span info@trans-s.su
-            li.address-item.col-lg-3.col-md-6.col-sm-12(data-aos="fade-up")
-                a(href="#").address-item__wrapper
+            li.address-item.col-lg-3.col-md-6.col-sm-12(data-aos="fade-up", data-address="/")
+                .address-item__wrapper
+                    .address-item__loader
+                        .spinner
+                        +icon('check','')
                     .address-item__suptitle Русэкспорт
                     .address-item__title Екатеринбург
                     .address-item__content
@@ -43,8 +52,11 @@
                 .address-item__link
                     +icon('contacts-email','')
                     span info@trans-s.su
-            li.address-item.col-lg-3.col-md-6.col-sm-12(data-aos="fade-up")
-                a(href="#").address-item__wrapper
+            li.address-item.address-item--active.col-lg-3.col-md-6.col-sm-12(data-aos="fade-up", data-address="/")
+                .address-item__wrapper
+                    .address-item__loader
+                        .spinner
+                        +icon('check','')
                     .address-item__suptitle Русэкспорт
                     .address-item__title Челябинск
                     .address-item__content

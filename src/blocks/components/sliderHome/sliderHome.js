@@ -5,6 +5,9 @@ const swiperOptions = {
     initialSlide: 0,
     slidesPerView: 1,
     spaceBetween: 59,
+    autoplay: {
+        delay: 3000,
+    },
     virtualTranslate: true,
     loop: false,
     pagination: {

@@ -173,6 +173,9 @@ a {
     line-height: 1.5;
     font-weight: bold;
     font-style: normal;
+    &--20 {
+        font-size: 20px;
+    }
 }
 
 .link {

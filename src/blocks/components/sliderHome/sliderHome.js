@@ -45,7 +45,7 @@ const swiperOptions = {
             spaceBetween: 65,
         },
         992: {
-            spaceBetween: 65,
+            spaceBetween: 45,
         },
         1400: {
             spaceBetween: 65,

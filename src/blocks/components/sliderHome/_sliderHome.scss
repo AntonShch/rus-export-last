@@ -224,9 +224,6 @@
             margin-right: auto;
             margin-left: auto;
             transition: all 1.05s ease-in-out 0s;
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: auto 100%;
             opacity: .2;
             filter: grayscale(100%);
             > * {
@@ -313,8 +310,43 @@
 
 @media screen and (max-width: 1400px){
     .slider-home {
+        max-height: calc(600px - 100px);
+        &__arrow {
+            &-prev {
+                bottom: 5%;
+                left: 20%;
+            }
+            &-next {
+                right: 22%;
+                top: 13%;
+            }
+        }
+        &-item {
+            &__background {
+                top: 25px;
+                background-size: auto 80%;
+            }
+            &__image {
+                &-main {
+                    background-size: auto 80%;
+                }
+            }
+        }
         &__text {
-            margin-bottom: 9%;
+            height: auto;
+            margin-bottom: 3%;
+            max-width: 300px;
+            &-counter {
+                span {
+                    font-size: 30px;
+                }
+            }
+            &-links {
+                padding-top: 6px;
+            }
+            .subtitle {
+                font-size: 20px;
+            }
         }
     }
 }

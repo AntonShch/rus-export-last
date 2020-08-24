@@ -15,7 +15,7 @@ class Accordion {
             if (!dropdownContent.classList.contains('accordion--not-sublings')) {
                 this.closeSublings(dropdownContent);
             }
-            dropdownContent.style.height = btn.clientHeight + 'px';
+            dropdownContent.style.height = `${btn.clientHeight  }px`;
             btn.classList.add('accordion__button--active');
             dropdownContent.classList.add('accordion--active');
             anime({
@@ -63,7 +63,7 @@ class Accordion {
     checkIsParent(item) {
         const hasDropdown = item.parentNode.querySelector('.accordion__content');
         const isParent = item.parentNode.classList.contains('accordion--1-level') || item.parentNode.classList.contains('accordion--2-level');
-        return isParent && hasDropdown
+        return isParent && hasDropdown;
     }
 
     init(btn) {

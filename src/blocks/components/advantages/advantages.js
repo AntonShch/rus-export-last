@@ -36,6 +36,7 @@ const popupAdvContents = document.querySelectorAll(
 );
 
 if (advLinks) {
+    let popupContentScroll;
     const advPopupListScroll = document.querySelector(
         '.popup-advantages__content-wrapper'
     );
@@ -44,7 +45,7 @@ if (advLinks) {
     );
 
     if (advPopupListScroll && advPopupContentScroll) {
-        new PerfectScrollbar(advPopupListScroll);
+        popupContentScroll = new PerfectScrollbar(advPopupListScroll);
         new PerfectScrollbar(advPopupContentScroll);
     }
 
@@ -102,6 +103,8 @@ if (advLinks) {
                                 'popup-advantages__content-item--active'
                             );
                         }
+                        advPopupListScroll.scrollTop = 0;
+                        popupContentScroll.update();
                     });
                 });
             });

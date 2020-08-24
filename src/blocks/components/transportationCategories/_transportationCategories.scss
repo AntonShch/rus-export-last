@@ -42,11 +42,11 @@
             }
 
             img {
-                max-height: 186px;
+                max-height: 196px;
                 margin-right: 50px;
                 margin-left: 40px;
 
-                @media screen and (max-width: 1440px) {
+                @media screen and (max-width: 1200px) {
                     max-height: 130px;
                 }
 

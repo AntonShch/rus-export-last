@@ -578,7 +578,7 @@
 
 @media screen and (max-width: 1600px) {
     .header {
-        .header .icon-drop-down-triangle {
+        .icon-drop-down-triangle {
             margin-left: 5px;
         }
 
@@ -589,7 +589,7 @@
                 > ul {
                     > li {
                         > a {
-                            padding: 0 4px;
+                            padding: 0 8px;
                         }
                     }
                 }
@@ -610,7 +610,7 @@
     }
 }
 
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1300px) {
     .header {
         &__wrapper {
             max-width: 1180px;

@@ -45,7 +45,7 @@
             right: 15px;
             width: 220px;
             height: 200px;
-            margin-top: -20px;
+            margin-top: -25%;
             padding: 20px 25px 30px;
             color: #ffffff;
             background: $main;
@@ -67,9 +67,20 @@
 
 @media screen and (max-width: 1400px){
     .our-team {
+        &__title {
+            padding-bottom: 30px;
+        }
         &-item {
+            &__cart {
+                margin-top: -60px;
+                min-height: 156px;
+                height: auto;
+            }
             &__image {
                 max-height: 370px;
+            }
+            &__name {
+                font-size: 18px;
             }
         }
     }
